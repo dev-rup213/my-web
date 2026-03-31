@@ -114,4 +114,9 @@
         background-color: #2196f3;
         cursor: pointer;
     }
+    @media  (max-width: 768px){
+      .Search{
+        max-width: 	90%;
+      }
+    }
     
