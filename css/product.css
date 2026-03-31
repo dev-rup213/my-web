@@ -88,7 +88,7 @@
       box-sizing: border-box;
       padding: 6px 18px;
       height: 30px;
-      margin-left: 30px;
+      margin-left: 10px;
       margin-top: 10px;
 
     }
@@ -127,6 +127,7 @@
         color: #f39609;
     }
     footer{
+        margin-top: 30px;
       background-color: #92b48d;
     }
     .btn{
