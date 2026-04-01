@@ -168,6 +168,8 @@
       .Search{
         max-width: 	90%;
       }
+    }
+   @media {max-width: 200px}{
       .product-card{
         max-width: 90%;
       }
