@@ -169,7 +169,7 @@
         max-width: 	90%;
       }
     }
-   @media {max-width: 200px}{
+   @media {max-width: 250px}{
       .product-card{
         max-width: 90%;
       }
