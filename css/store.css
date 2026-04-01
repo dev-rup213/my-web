@@ -19,7 +19,7 @@
     header{
     text-align: center;
     color: #fafafa;
-    font-size: 32px;
+    font-size: 64px;
     font-weight: 700;
     margin-top: 0;
     margin-bottom: 0;
@@ -104,9 +104,14 @@
     font-size: 18px;
     font-weight: 600;
     }
-    .h2{
+    .h2{font-size: 32px;
     background-color: #06fa0e;
     padding: 10px;
+    }
+    h3{
+      font-size: 24px;}
+    .p{
+      font-size: 16px;
     }
     .btn{
       border-radius: 8px;

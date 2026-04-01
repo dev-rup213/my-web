@@ -100,7 +100,8 @@
     h1 {
      
      color: #fafafa;
-     font-size: 18px;
+     font-size: 32px;
+     font-weight: 700;
      margin-bottom: 10px;
      font-weight: none;
 
@@ -110,7 +111,11 @@
     h2 {
      color: #179307;
      font-size: 24px;
+     font-weight: 600;
      margin-top: 0;
+    }
+    p{
+      font-size: 16px;
     }
     ol{font-size: larger;
     color: rgb(255, 255, 255);
