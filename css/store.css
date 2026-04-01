@@ -28,17 +28,18 @@
       display: grid;
       grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
       gap: 20px;
-      padding: 10px
+      padding: 10px;
 
 
     }
     .product-card{
-
+      box-sizing: content-box;
       border: 1px solid;
       padding: 20px;
       text-align: center;
      background-color: #2f2f2f;
-        box-sizing: content-box;
+ 
+
 
     }
     .product-card img{
@@ -66,7 +67,7 @@
     }
    
     footer{
-    margin-top: 50px;
+      margin-top: 30px;
     background-color: #92b48d;
     }
     a{
@@ -106,8 +107,7 @@
     .search-container{
       display: flex;
       justify-content: center;
-      margin-top: 10px;
-      margin-bottom: 10px;
+      margin: 10px;
 
 
     }
@@ -165,6 +165,9 @@
     @media  (max-width: 768px){
       .Search{
         max-width: 	90%;
+      }
+      .product-card{
+        max-width: 90%;
       }
     }
       
