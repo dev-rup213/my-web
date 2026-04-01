@@ -73,6 +73,23 @@
       background-color: #4CAF50;
       color: white;
       box-sizing: content-box;
+      transition: all 0.2s ease;
+    }
+    .product-card:hover{
+     
+      transform: translatey(-4px);
+      box-shadow: 0 8px 12px rgb(4, 4, 4);
+  
+      cursor: pointer;
+      color: greenyellow;
+    }
+    .product-card a{
+      text-decoration: none;
+      color: #e9e9e9;
+    }
+    .product-card a:hover{
+      text-decoration: dashed;
+      color: greenyellow;
     }
 
     footer {
