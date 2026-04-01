@@ -98,6 +98,7 @@
     button{
         background-color: #179307;
         color: #fafafa;
+        border-radius: 8px;
     }
     a{
         color: white
