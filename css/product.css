@@ -172,6 +172,14 @@
         background-color: #2196f3;
         cursor: pointer;
     }
+    .product-grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 0px;
+      padding: 10px;
+
+
+    }
     @media  (max-width: 768px){
       .Search{
         max-width: 	90%;

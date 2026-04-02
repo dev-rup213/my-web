@@ -5,7 +5,7 @@
     <!-- stores.html -->
     <link rel="stylesheet" href="css/store.css">
 <head>
-  <script src="js.scipt/script.js"defer></script>
+  <script src="js.scipt/script2.js"defer></script>
   <style>
 
     </style>
@@ -16,10 +16,24 @@
   <a href="Product.html">Product details</a>
   <a class ="active" href="Stores.html">Visit Store</a>
   <a href="cart.html">My Cart</a>
-  <a href="Help.html">Help</a></div>        
-  <header>Eat IT stores</header>
+  <a href="Help.html">Help</a>
+</div>        
+  <header>Eat IT stores
+    
+  </header>
+  
   <div class="search-container">
   <input class="Search" id="search-input"  placeholder="Search" ><button class="shd-btn">🔍</button>
+  </div>
+
+  </div>
+  <div class="main-section">
+   <div class="cart-section">
+    <div style="float: left;"><button id="buy" class="add-buy" style="background-color: darkgreen;color: ghostwhite;border-color: darkgreen;height: 30px;width: 150px;cursor: pointer;">Buy Now</button> 
+    <button id="remove" class="less-cart" style="background-color: red;color: #fffefe;border-color: red;height: 30px;width: 150px;cursor: pointer;">Remove</button></div>
+   <p id="storecart" style="margin-left: 20px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 32px;">🛒 My Cart:  Items Seleted 0</p> 
+
+   </div>
   </div>
   <div class="product-grid">
     <div class="product-card">
@@ -31,14 +45,14 @@
       <p>No. of Spoon: 10</p>
       <p>Price: 30Rs.</p>
       <p>Delivery time: 3-4 days</p>
-      <button class="add-buy">Buy Now</button><div class="section" >  <button class="add-cart">+ Add to Cart</button></div> 
+      <button class="add-buy">Buy Now</button><div class="section" >  <button id="bot1" class="add-cart">+ Add to Cart</button></div> 
       <h3>Flavour: Chocolate</h3>
       <p>Packet: 1</p>
       <p>No. of Spoon: 10</p>
       <p>Price: 35Rs.</p>
       <p>Delivery time: 3-4 days</p>
-      <button class="add-buy">Buy Now</button><div class="section" >  <button class="add-cart">+ Add to Cart</button></div> 
- 
+      <button class="add-buy">Buy Now</button><div class="section" >  <button id="bot2" class="add-cart">+ Add to Cart</button></div> 
+    
     </div>
     <div class="product-card">
       <h2>Edible Fork🍴</h2>
@@ -49,13 +63,13 @@
       <p>No. of Fork: 10</p>
       <p>Price: 30Rs.</p>
       <p>Delivery time: 3-4 days</p>
-      <button class="add-buy">Buy Now</button><div class="section" >  <button class="add-cart">+ Add to Cart</button></div> 
+      <button class="add-buy">Buy Now</button><div class="section" >  <button id="bot3" class="add-cart">+ Add to Cart</button></div> 
       <h3>Flavour: Chocolate</h3>
       <p>Packet: 1</p>
       <p>No. of Fork: 10</p>
       <p>Price: 35Rs.</p>
       <p>Delivery time: 3-4 days</p>
-      <button class="add-buy">Buy Now</button><div class="section" >  <button class="add-cart">+ Add to Cart</button></div>     
+      <button class="add-buy">Buy Now</button><div class="section" >  <button id="bot4" class="add-cart">+ Add to Cart</button></div>     
 
     </div>
     
@@ -68,13 +82,13 @@
       <p>Fork: 12; Spoon: 12; Bowl: 6</p>
       <p>Price: 100Rs.</p>
       <p>Delivery time: 3-4 days</p>
-      <button class="add-buy">Buy Now</button><div class="section" > <button class="add-cart" >+ Add to Cart</button></div>
+      <button class="add-buy">Buy Now</button><div class="section" > <button id="bot5" class="add-cart" >+ Add to Cart</button></div>
       <h3>Flavour: Chocolate</h3>
       <p>Packet: 1</p>
       <p>Item consists same as Classic</p>
       <p>Price: 120Rs.</p>
       <p>Delivery time: 4-5 days</p>
-      <button class="add-buy">Buy Now</button><div class="section" >  <button class="add-cart">+ Add to Cart</button></div>
+      <button class="add-buy">Buy Now</button><div class="section" >  <button id="bot6" class="add-cart">+ Add to Cart</button></div>
 
     </div>
    
@@ -87,16 +101,17 @@
       <p>No. of Bowl: 5</p>
       <p>Price: 30Rs.</p>
       <p>Delivery time: 3-4 days</p>
-      <button class="add-buy">Buy Now</button><div class="section" >  <button class="add-cart">+ Add to Cart</button></div>     
+      <button class="add-buy">Buy Now</button><div class="section" >  <button id="bot7" class="add-cart">+ Add to Cart</button></div>     
       <h3>Flavour: Chocolate</h3>
       <p>Packet: 1</p>
       <p>No. of Bowl: 10</p>
       <p>Price: 35Rs.</p>
       <p>Delivery time: 3-4 days</p>
-      <button class="add-buy">Buy Now</button><div class="section" >  <button class="add-cart">+ Add to Cart</button></div> 
+      <button class="add-buy">Buy Now</button><div class="section" >  <button id="bot8" class="add-cart">+ Add to Cart</button></div> 
 
     </div>
 
+  </div>
   </div>
   </body>
   

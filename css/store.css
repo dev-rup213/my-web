@@ -190,6 +190,25 @@
     .add-cart:hover{
       background-color: #575757;
     }
+    .main-section{
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+
+    }
+    .cart-section{
+      flex: 2;
+      margin-right: 20px;
+      
+
+    }
+    .cart-section button{
+      border-radius: 8px;
+      margin-left: 20px;
+    }
+    .cart-section button.buy:hover{
+      background-color: bisque;
+    }
     @media  (max-width: 768px){
       .Search{
         max-width: 	90%;
