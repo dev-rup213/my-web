@@ -8,6 +8,15 @@ let classicforkCount=0;//localStorage.getItem('classicforkCount') ||0;
 let chocolateforkCount=0;//localStorage.getItem('chocolateforkCoun') ||0;
 let classicbowlCount=0;//localStorage.getItem('classicbowlCount') ||0;
 let chocolatebowlCount=0;//localStorage.getItem('chocolatebowlCount') ||0;
+let prices = {
+    classicspoon: 30,
+    chocolatespoon: 35,
+    classicfork: 30,
+    chocolatefork: 35,
+    classicbowl: 30,
+    chocolatebowl: 35
+};
+
 function addEvent(elementId, handler) {
     let element = document.getElementById(elementId);
     element.addEventListener("click",handler);
@@ -106,11 +115,29 @@ addEvent("buyall",function(){
     classicbowlCount=0;
     classicforkCount=0;
     classicspoonCount=0;
+    totalPrice=0;
     document.getElementById("display1").innerText =  + classicspoonCount;
     document.getElementById("display2").innerText =  + chocolatespoonCount;
     document.getElementById("display3").innerText =  + chocolateforkCount;
     document.getElementById("display4").innerText =  + classicforkCount;
     document.getElementById("display5").innerText =  + classicbowlCount;
     document.getElementById("display6").innerText =  + chocolatebowlCount;
-    document.getElementById("cart").innerText ="Item selected: " + count;
+    document.getElementById("cart").innerText ="🛒 Your Cart is empty!!";
+    document.getElementById("total").innerText ="";
 });
+function calculatetotal(){
+    let total =
+        (classicspoonCount * prices.classicspoon)+
+        (chocolatespoonCount *prices.chocolatespoon)+
+        (classicforkCount * prices.classicfork)+
+        (chocolateforkCount * prices.chocolatefork)+
+        (classicbowlCount * prices.classicbowl)+
+        (chocolatebowlCount * prices.chocolatebowl);
+    return total
+}
+
+document.getElementById("seeprice").addEventListener("click",function(){
+    let totalPrice = calculatetotal();
+    document.getElementById("total").innerText ="Total price: Rs." + totalPrice;
+});
+
