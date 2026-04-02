@@ -8,6 +8,11 @@ let classicforkCount=0;//localStorage.getItem('classicforkCount') ||0;
 let chocolateforkCount=0;//localStorage.getItem('chocolateforkCoun') ||0;
 let classicbowlCount=0;//localStorage.getItem('classicbowlCount') ||0;
 let chocolatebowlCount=0;//localStorage.getItem('chocolatebowlCount') ||0;
+function addEvent(elementId, handler) {
+    let element = document.getElementById(elementId);
+    element.addEventListener("click",handler);
+    element.addEventListener("touchstart",handler);
+}
 
 document.getElementById("btn1").addEventListener("click",function(){
     classicspoonCount++;
@@ -93,7 +98,7 @@ document.getElementById("btn12").addEventListener("click",function(){
     document.getElementById("cart").innerText ="Item selected: " + count;
     }
 });
-document.getElementById("buyall").addEventListener("click",function(){
+addEvent("buyall",function(){
     count=0;
     chocolatebowlCount=0;
     chocolateforkCount=0;
@@ -107,5 +112,5 @@ document.getElementById("buyall").addEventListener("click",function(){
     document.getElementById("display4").innerText =  + classicforkCount;
     document.getElementById("display5").innerText =  + classicbowlCount;
     document.getElementById("display6").innerText =  + chocolatebowlCount;
-    document.getElementById("cart").innerText = "Item selected: " + count;
+    document.getElementById("cart").innerText ="Item selected: " + count;
 });
