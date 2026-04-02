@@ -3,6 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product_details</title>
     <link rel="stylesheet" href="css/product.css">
+    <script src="js.scipt/script.js"defer></script>
 
 <style>
     button{
@@ -11,10 +12,24 @@
         margin: 5px;
         cursor: pointer;
         color: aliceblue;
-        border-color: green;
     }
     p{
         line-height: 1.6;
+    }
+    p button{
+        width: 150px;
+        background-color: darkcyan;
+        border-color: darkcyan;
+        color: #fefcfc;
+        border-radius: 8px;
+        height: 30px;
+        transition: all 0.3s ease;
+    }
+    p button:hover{
+        background-color: aqua;
+        border-color: aqua;
+        transform: translateZ(100px);
+        box-shadow: 0 4px 8px rgb(52, 52, 51);
     }
     a{
         color: white;
@@ -27,7 +42,29 @@
       margin-left: 20px;
         
     }
+    .section{
 
+        width: 150px;
+
+
+        
+    }
+    .section button{
+        width: 100px;
+        background-color: chartreuse;
+    }
+    .product-row button{
+        background-color: darkgray;
+        transition: all 0.2s ease;
+
+
+    }
+    .product-row button:hover{
+        background-color: aquamarine;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgb(52, 52, 51);
+        transform: translateZ(1000px);
+    }
 </style>
 </head>
 <body>
@@ -39,11 +76,12 @@
       <a href="Help.html">Help</a>
     </div>
 
-<div class="product-card" style="border: 1px dashed white;text-align: center;margin: 50px;background-color: dimgrey;justify-content: center;display: flex;align-items: center;flex-direction: column;border-radius: 8px;">
-    <p style="font-size: 64px;">🛒 Your Cart is empty!!!</p>
-    <button style="width: 150px;height: 50px;cursor: pointer;" ><a style="text-decoration: none;cursor: pointer" href=" Stores.html">Visit Stores</a></button>
+<div class="product-card" style="border: 1px dashed white;text-align: center;margin: 50px;background: dimgrey;justify-content: center;display: flex;align-items: center;flex-direction: column;border-radius: 8px;">
+    <p id="cart" style="font-size: 64px;">🛒 Your cart is empty</p>
+    <p id="cart" style="font-size: 32px;">Add Items and Click on Buy Now</p>
+    <p><button><a style="text-decoration: none;cursor: pointer" href=" Stores.html">Visit Stores</a></button><button class="add-buy">Buy Now</button></p>
 </div>
-<h1>Recommended For you</h1>
+<h1>Recommended For you :</h1>
 <div class="product-row">
     <img src="image/Spoon.jpeg" class="product-img" style="height: 150px;width: 150px;">
     <div>
@@ -51,7 +89,8 @@
       <p style="word-spacing: 30px;font-size: 18px;">Flavour:Classic  Quatity:10pcs 🚚Delivery-time:3-4days</p>
         <p style="word-spacing: 30px;font-size: 18px;">Price:30Rs   🔄️Return-Policy:1Day</p>
       <p style="word-spacing: 30px;font-size: 18px;">Rating:4.5⭐   💵Cash-on-delivery:Available</p>
-      <button>➕</button><button disabled style="background-color:   rgb(52, 52, 51);">0</button><button>➖</button>
+      <button id="btn1" class="add-cart">➕</button><button id="display1" disabled style="background-color:   rgb(52, 52, 51);">0</button><button id="btn2" class="less-cart">➖</button>
+      <div class="section"><button class="add-buy" >Buy Now</button></div>
     </div>
   </div>
 
@@ -63,8 +102,8 @@
         <p style="word-spacing: 30px;font-size: 18px;">Flavour:Chocolate  Quatity:10pcs  🚚Delivery-time:3-4days</p>
         <p style="word-spacing: 30px;font-size: 18px;">Price:35Rs    🔄️Return-Policy:1Day</p>
       <p style="word-spacing: 30px;font-size: 18px;">Rating:4.5⭐    💵Cash-on-delivery:Available</p>
-
-        <button>➕</button><button disabled style="background-color:   rgb(52, 52, 51);">0</button><button>➖</button>
+           <button id="btn3" class="add-cart">➕</button><button id="display2" disabled style="background-color:   rgb(52, 52, 51);">0</button><button id="btn4" class="less-cart">➖</button>
+      <div class="section"><button class="add-buy" >Buy Now</button></div>
     </div>
   </div>
 <div class="product-row">
@@ -75,7 +114,8 @@
         <p style="word-spacing: 30px;font-size: 18px;">Price:35Rs   🔄️Return-Policy:1Day</p>
       <p style="word-spacing: 30px;font-size: 18px;">Rating:4.5⭐   💵Cash-on-delivery:Available</p>
 
-        <button>➕</button><button disabled style="background-color:   rgb(52, 52, 51);">0</button><button>➖</button>
+           <button id="btn5" class="add-cart">➕</button><button id="display3" disabled style="background-color:   rgb(52, 52, 51);">0</button><button id="btn6" class="less-cart">➖</button>
+      <div class="section"><button class="add-buy" >Buy Now</button></div>
     </div>
   </div>
 <div class="product-row">
@@ -85,7 +125,8 @@
         <p style="word-spacing: 30px;font-size: 18px;">Flavour:Classic  Quatity:10pcs 🚚Delivery-time:3-4days</p>
         <p style="word-spacing: 30px;font-size: 18px;">Price:30Rs                     🔄️Return-Policy:1Day</p>
       <p style="word-spacing: 30px;font-size: 18px;">Rating:4.5⭐                     💵Cash-on-delivery:Available</p>
-        <button>➕</button><button disabled style="background-color:   rgb(52, 52, 51);">0</button><button>➖</button>
+              <button id="btn7" class="add-cart">➕</button><button id="display4" disabled style="background-color:   rgb(52, 52, 51);">0</button><button id="btn8" class="less-cart">➖</button>
+      <div class="section"><button class="add-buy" >Buy Now</button></div>
     </div>
   </div>
 <div class="product-row">
@@ -95,7 +136,8 @@
               <p style="word-spacing: 30px;font-size: 18px;">Flavour:Classic  Quatity:5pcs 🚚Delivery-time:3-4days</p>
         <p style="word-spacing: 30px;font-size: 18px;">Price:30Rs  🔄️Return-Policy:1Day</p>
       <p style="word-spacing: 30px;font-size: 18px;">Rating:4.1⭐ 💵Cash-on-delivery:Available</p>
-        <button>➕</button><button disabled style="background-color:   rgb(52, 52, 51);">0</button><button>➖</button>
+              <button id="btn9" class="add-cart">➕</button><button id="display5" disabled style="background-color:   rgb(52, 52, 51);">0</button><button id="btn10" class="less-cart">➖</button>
+      <div class="section"><button class="add-buy" >Buy Now</button></div>
     </div>
   </div>
 <div class="product-row">
@@ -105,7 +147,8 @@
               <p style="word-spacing: 30px;font-size: 18px;">Flavour:Chocolate  Quatity:5pcs 🚚Delivery-time:3-4days</p>
         <p style="word-spacing: 30px;font-size: 18px;">Price:35Rs 🔄️Return-Policy:1Day</p>
       <p style="word-spacing: 30px;font-size: 18px;">Rating:4.5⭐ 💵Cash-on-delivery:Available</p>
-        <button>➕</button><button disabled style="background-color:   rgb(52, 52, 51);">0</button><button>➖</button>
+                   <button id="btn11" class="add-cart">➕</button><button id="display6" disabled style="background-color:   rgb(52, 52, 51);">0</button><button id="btn12" class="less-cart">➖</button>
+      <div class="section"><button class="add-buy" >Buy Now</button></div>
     </div>
   </div>
    
