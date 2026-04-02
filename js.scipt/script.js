@@ -107,5 +107,5 @@ document.getElementById("buyall").addEventListener("click",function(){
     document.getElementById("display4").innerText =  + classicforkCount;
     document.getElementById("display5").innerText =  + classicbowlCount;
     document.getElementById("display6").innerText =  + chocolatebowlCount;
-    document.getElementById("cart").innerText ="Item selected: " + count;
+    document.getElementById("cart").innerText = "Item selected: " + count;
 });
