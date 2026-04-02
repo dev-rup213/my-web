@@ -1,7 +1,8 @@
 document.querySelectorAll('.add-cart').forEach(function(button){button.onclick=function(){alert("Item Added to cart!");};});
 document.querySelectorAll('.add-buy').forEach(function(button){button.onclick=function(){alert("Congratulations !!! Your order recorded sucessfully.");};});
 document.querySelectorAll('.less-cart').forEach(function(button){button.onclick=function(){alert("Item is deducted from your cart!!")}})
-let count =0;
+let count = 0;
+let storecount = 0;
 let classicspoonCount=localStorage.getItem('classicspooncount') || 0;
 let chocolatespoonCount=localStorage.getItem('chocolatespoonCount') ||0;
 let classicforkCount=localStorage.getItem('classicforkCount') ||0;
@@ -86,10 +87,11 @@ document.getElementById("btn11").addEventListener("click",function(){
     document.getElementById("cart").innerText ="Item selected: " + count;
 });
 document.getElementById("btn12").addEventListener("click",function(){
-    if (count > 0) {
+    if (count > 0)  {
     chocolatebowlCount--;
     count--;
     document.getElementById("display6").innerText =   chocolatebowlCount;
     document.getElementById("cart").innerText ="Item selected: " + count;
     }
 });
+
