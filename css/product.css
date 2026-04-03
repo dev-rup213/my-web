@@ -210,7 +210,7 @@
 
   .product-row {
     flex-direction: column; /* stack items */
-    text-align: center;
+    text-align: left;
   }
   .product-row div {
     text-align: right;}
