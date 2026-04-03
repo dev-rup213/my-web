@@ -30,17 +30,17 @@
     }
     .product-grid{
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+      grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
       gap: 20px;
       padding: 10px;
-      max-width: 1200px;
+      max-width: 1200;
 
 
     }
     .product-card{
       box-sizing: border-box;
       border:none;
-      height: 650px;
+
       padding: 20px;
       text-align: center;
       background-color: #2f2f2f;

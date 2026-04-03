@@ -36,8 +36,11 @@
     }
 
     .product-img {
-      width: 400px;
-      height: 400px;
+
+      width: 100%;
+      max-width: 400px;
+      height: 100%;
+      max-height: 400px;
       object-fit: cover;
       margin-right: 20px;
       box-shadow: 0 4px 12px rgba(71, 71, 71, 0.08);
@@ -183,6 +186,11 @@
     }
     @media  (max-width: 768px){
       .Search{
+        max-width: 	90%;
+      }
+    }
+        @media  (max-width: 768px){
+      .product-row{
         max-width: 	90%;
       }
     }
