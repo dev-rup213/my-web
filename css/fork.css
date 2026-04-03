@@ -115,7 +115,7 @@
     @media  (max-width: 768px){
     .product-row {
     flex-direction: column; /* stack items */
-    text-align: flex-end;
+    text-align: center;
   }
 
   .product-img {
@@ -139,9 +139,9 @@
   h1 {
     font-size: 24px;
   }
-  .content,p{
+  .content,p {
       width:100%;
-      text-align: right;
+      text-align: left;
   }
 
   h2 {
