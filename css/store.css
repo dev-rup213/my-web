@@ -206,6 +206,9 @@
       
 
     }
+    .cart-section div a{
+      font-size: 18px;
+    }
     .cart-section button{
       border-radius: 8px;
       margin-left: 20px;
@@ -240,12 +243,7 @@
   }
 
   /* GRID SMALLER */
-  
-  .product-card img{
-      width: 100px;
-      height: 100px; 
-      
-  }
+
 
   /* STACK LAYOUT */
   .main-section {
@@ -256,11 +254,13 @@
     margin-right: 0;
   }
   .cart-section div a{
-    font-size: 14px;
+    font-size: 16px;
   }
-  . product-card{
-      height: 400px;
+  .product-card img{
+    height: 110px;
+    width: 110px;
   }
+
   /* TEXT SCALE */
   h2 {
     font-size: 22px;

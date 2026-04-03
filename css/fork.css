@@ -2,7 +2,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     margin: 0;
     padding: 0;
@@ -112,8 +112,32 @@
         text-decoration: none;
         color: #fafafa;
     }
-            @media  (max-width: 768px){
-      .product-row{
-        max-width: 	90%;
-      }
+    @media  (max-width: 768px){
+    .product-row {
+    flex-direction: column; /* stack items */
+    text-align: center;
+  }
+
+  .product-img {
+    margin: 0 0 15px 0;
+    max-width: 100%;
+  }
+  .product-row div {
+    flex: 1;
+    min-width: 250px;
     }
+
+  header {
+    font-size: 36px;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
+    
