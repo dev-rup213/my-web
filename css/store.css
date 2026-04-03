@@ -30,7 +30,7 @@
     }
     .product-grid{
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(600px,1fr));
+      grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
       gap: 20px;
       padding: 10px;
       
@@ -40,7 +40,7 @@
     .product-card{
       box-sizing: border-box;
       border:none;
-      height: 980px
+      height: 900px;
       padding: 20px;
       text-align: center;
       background-color: #2f2f2f;
