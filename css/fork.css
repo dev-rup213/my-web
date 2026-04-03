@@ -120,7 +120,9 @@
 
   .product-img {
     margin: 0 0 15px 0;
-    max-width: 100%;
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
   }
   .product-row div {
     flex: 1;
