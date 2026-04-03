@@ -115,7 +115,7 @@
     @media  (max-width: 768px){
     .product-row {
     flex-direction: column; /* stack items */
-    text-align: left;
+    text-align: right;
   }
 
   .product-img {
@@ -141,7 +141,7 @@
   }
   .content,p{
       width:100%;
-      text-align: left;
+      text-align: right;
   }
 
   h2 {
