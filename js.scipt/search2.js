@@ -19,6 +19,6 @@ searchinput.value.toLowerCase().trim();
 
         }
         });
-        noResult.style.display = matchfound ? "none" : "flex" ;
+        noResult.style.display = matchfound ? "none" : "block" ;
         
     });

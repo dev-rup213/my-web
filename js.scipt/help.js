@@ -1,5 +1,5 @@
 const searchinput = document.getElementById("search-input")
-const products = document.querySelectorAll(".Product")
+const products = document.querySelectorAll(".help-card")
 const noResult = document.getElementById("noResults")
 searchinput.addEventListener("input",function(){
     const query =
@@ -10,7 +10,7 @@ searchinput.value.toLowerCase().trim();
         const text =
         Product.innerText.toLowerCase();
         if (text.includes(query)) {
-            Product.style.display = "flex";
+            Product.style.display = "";
             matchfound= true;
         }
         else{
@@ -22,4 +22,3 @@ searchinput.value.toLowerCase().trim();
         noResult.style.display = matchfound ? "none" : "block" ;
         
     });
-
