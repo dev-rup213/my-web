@@ -112,3 +112,8 @@
         text-decoration: none;
         color: #fafafa;
     }
+            @media  (max-width: 768px){
+      .product-row{
+        max-width: 	90%;
+      }
+    }
