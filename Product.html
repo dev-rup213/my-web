@@ -3,6 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product_details</title>
     <link rel="stylesheet" href="css/product.css">
+    <script src="js.scipt/search.js" defer></script>
     <!-- products.html -->
 
 <body>
@@ -15,14 +16,14 @@
       </div>
    <header>Our Products</header>
    <div class="search-container">
-    <input class="Search" id="search-input"  placeholder="Search" ><button class="shd-btn">🔍</button></div> 
-  <div class="product-row">
+    <input class="Search" id="search-input"  placeholder="Search" ></div> 
+  <div class="product-row Product">
     <img src="image/Spoon.jpeg" class="product-img">
     <div>
       <h2>Edible Spoon</h2>
       <ol>Zero Waste: Can be eaten or composted; eliminates plastic disposal.</ol>
       <ol> User Experience: Memorable “eat your spoon” novelty.</ol>
-      <ol> Premium Positioning: Eco-friendly and innovative → higher pricing.</ol>
+      <ol > Premium Positioning: Eco-friendly and innovative → higher pricing.</ol>
       <ol> Food Compatibility: Works with hot/cold items; can be flavored.</ol>
       <ol> Convenience: Lightweight, easy to transport, no washing needed.</ol>
       <ol>Marketing Advantage: Social media-friendly; strengthens sustainability branding.</ol>
@@ -33,10 +34,10 @@
       <ol><button class="btn"><a style="color: #fafafa;text-decoration: none;" href="Stores.html">Visit Store to buy now</a></button></ol>
     </div>
   </div>
-  <div class="product-row">
-    <img src="image/Fork.jpeg" class="product-img">
-    <div>
-      <h2>Edible Fork</h2>
+  <div class="product-row Product">
+    <img src="image/Fork.jpeg" class="product-img ">
+    <div >
+      <h2 class="Product">Edible Fork</h2>
       <ol>Zero Waste: Edible or biodegradable → eliminates plastic forks.</ol>
        <ol> User Experience: Novelty enhances dining, especially for solid foods.</ol>
         <ol>Premium Positioning: Innovative, eco-conscious product → higher value.</ol>
@@ -49,7 +50,7 @@
        <ol><button class="btn"><a style="color: #fafafa;text-decoration: none;" href="Stores.html">Visit Store to buy now</a></button></ol>
     </div>
   </div>
-  <div class="product-row">
+  <div class="product-row Product">
     <img src="image/bowl.jpeg" class="product-img">
     <div>
     <h2>Biodegradable Bowl</h2>
@@ -63,10 +64,10 @@
 
     <ol>Rating: 4.1⭐</ol>
     <ol><button class="btn"><a style="color: #fafafa;text-decoration: none;" href="Stores.html">Visit Store to buy now</a></button></ol>
-
+    
     </div>
   </div>
-
+  <p id="noResults" style="display: none;">No product found</p>
   
 
 </body>

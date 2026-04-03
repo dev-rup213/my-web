@@ -4,8 +4,12 @@
     <title>Product_details</title>
     <link rel="stylesheet" href="css/product.css">
     <script src="js.scipt/script.js"defer></script>
+    <script src="js.scipt/search.js"defer></script>
 
 <style>
+    body{
+      font-family: 'Segoe UI', sans-serif;
+    }
     button{
         width: 50px;
         height: 30px;
@@ -78,6 +82,8 @@
       <a href="Help.html">Help</a>
 
     </div>
+    <div class="search-container">
+    <input class="Search" id="search-input"  placeholder="Search" ></div> 
 
 
 <div class="product-card" style="border: 1px dashed white;text-align: center;margin: 50px;background: dimgrey;justify-content: center;display: flex;align-items: center;flex-direction: column;border-radius: 8px;">
@@ -87,7 +93,7 @@
     <p><button><a style="text-decoration: none;cursor: pointer" href=" Stores.html">Visit Stores</a></button><button id="buyall" class="add-buy">Buy Now</button><button id="seeprice">Total Price</button>
 </div>
 <h1>Recommended For you :</h1>
-<div class="product-row">
+<div class="product-row Product">
     <img src="image/Spoon.jpeg" class="product-img" style="height: 150px;width: 150px;">
     <div>
       <h2>Edible Spoon</h2>
@@ -100,7 +106,7 @@
   </div>
 
 
-<div class="product-row">
+<div class="product-row Product">
     <img src="image/bowl2.jpeg" class="product-img" style="height: 150px;width: 150px;">
     <div>
         <h2>Edible Spoon🥄</h2>
@@ -111,7 +117,7 @@
       <div class="section"><button class="add-buy" >Buy Now</button></div>
     </div>
   </div>
-<div class="product-row">
+<div class="product-row Product">
     <img src="image/fork2.jpeg" class="product-img" style="height: 150px;width: 150px;">
     <div>
         <h2>Edible Fork</h2>
@@ -123,7 +129,7 @@
       <div class="section"><button class="add-buy" >Buy Now</button></div>
     </div>
   </div>
-<div class="product-row">
+<div class="product-row Product">
     <img src="image/Fork.jpeg" class="product-img" style="height: 150px;width: 150px;">
     <div>
         <h2>Edible Fork</h2>
@@ -134,7 +140,7 @@
       <div class="section"><button class="add-buy" >Buy Now</button></div>
     </div>
   </div>
-<div class="product-row">
+<div class="product-row Product">
     <img src="image/bowl.jpeg" class="product-img" style="height: 150px;width: 150px;">
     <div>
         <h2>Edible Bowl🥣</h2>
@@ -145,7 +151,7 @@
       <div class="section"><button class="add-buy" >Buy Now</button></div>
     </div>
   </div>
-<div class="product-row">
+<div class="product-row Product">
     <img src="image/spoon2.jpeg" class="product-img" style="height: 150px;width: 150px;">
     <div>
         <h2>Edible Bowl</h2>
@@ -156,6 +162,6 @@
       <div class="section"><button class="add-buy" >Buy Now</button></div>
     </div>
   </div>
-   
+  <p id="noResults" style="display: none;">No product found</p>
 
 </div>

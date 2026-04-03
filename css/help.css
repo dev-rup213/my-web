@@ -10,7 +10,7 @@
       color: #a5a4a4;
       
     }
-            .topnav {overflow : hidden ; background-color : #e9e9e9 ; vertical-align: top;}
+            .topnav {overflow : hidden ; background-color : #e9e9e9 ; vertical-align: top;font-family: 'Segoe UI', sans-serif;}
     .topnav a{float: left;display: block;color: black;text-align: center;padding: 14px 16px;text-decoration: dashed;font-size: 17px;text-decoration: none;}
     .topnav a:hover {background-color: #ddd;color: black;}
     .topnav a.active {background-color: #2196f3;color: #e9e9e9;}
