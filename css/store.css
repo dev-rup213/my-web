@@ -2,7 +2,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     margin: 0;
     padding: 0;
@@ -20,7 +20,7 @@
     header{
     text-align: center;
     color: #fafafa;
-    font-size: 64px;
+    font-size: 48px;
     font-weight: 700;
     margin-top: 0;
     margin-bottom: 0;
@@ -33,7 +33,7 @@
       grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
       gap: 20px;
       padding: 10px;
-      max-width: 1200;
+      
 
 
     }
@@ -60,7 +60,8 @@
       width: 100%;
       height: 100%;
       max-width: 300px;
-      max-height: 200px;
+      max-height: 300px;
+      
       object-fit: cover;
       margin-bottom: 10px;
       transition: all 0.2s ease;
@@ -217,9 +218,59 @@
         max-width: 	90%;
       }
     }
-    @media (max-width: 250px){
-      .product-card{
-        max-width: 90%;
-      }
-    }
+    /* 📱 MOBILE FIXES */
+@media (max-width: 768px) {
+
+  /* NAVBAR STACK */
+  .topnav a {
+    float: none;
+    width: 100%;
+    text-align: left;
+  }
+
+  .topnav input[type=text] {
+    float: none;
+    width: 90%;
+    margin: 10px;
+  }
+
+  /* HEADER */
+  header {
+    font-size: 32px;
+  }
+
+  /* GRID SMALLER */
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  /* STACK LAYOUT */
+  .main-section {
+    flex-direction: column;
+  }
+
+  .cart-section {
+    margin-right: 0;
+  }
+
+  /* TEXT SCALE */
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+/* EXTRA SMALL DEVICES */
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
       
