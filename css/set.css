@@ -195,7 +195,7 @@
       }
       .product-row1 {
     flex-direction: column; /* stack items */
-    text-align: right;
+    text-align: left;
   }
 
   .product-img1 {
@@ -204,7 +204,7 @@
   }
         .product-row2 {
     flex-direction: column; /* stack items */
-    text-align: right;
+    text-align: left;
   }
 
   .product-img2 {
@@ -216,7 +216,7 @@
     min-width: 250px;
     }
   .content { 
-    text-align: right;
+    text-align: left;
   }
 
   header {
