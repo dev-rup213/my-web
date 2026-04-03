@@ -40,9 +40,6 @@
     .product-card{
       box-sizing: border-box;
       border:none;
-      
-      height: 400px;
-
       padding: 20px;
       text-align: center;
       background-color: #2f2f2f;
