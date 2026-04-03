@@ -115,14 +115,12 @@
     @media  (max-width: 768px){
     .product-row {
     flex-direction: column; /* stack items */
-    text-align: right;
+    text-align: center;
   }
 
   .product-img {
     margin: 0 0 15px 0;
-    width: 100%;
-    max-width: 400px;
-    height: 300px;
+    max-width: 100%;
   }
   .product-row div {
     flex: 1;
