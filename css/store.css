@@ -240,12 +240,11 @@
   }
 
   /* GRID SMALLER */
-  .product-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
+  
   .product-card img{
-      max-width: 90%;
-      max-height: 90%;
+      width: 100px;
+      height: 100px; 
+      
   }
 
   /* STACK LAYOUT */
