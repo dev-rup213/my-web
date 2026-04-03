@@ -256,9 +256,11 @@
     margin-right: 0;
   }
   .cart-section div a{
-    font-size: 16px;
+    font-size: 14px;
   }
-
+  . product-card{
+      height: 400px;
+  }
   /* TEXT SCALE */
   h2 {
     font-size: 22px;
