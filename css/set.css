@@ -215,6 +215,9 @@
     flex: 1;
     min-width: 250px;
     }
+  .content { 
+    text-align: right;
+  }
 
   header {
     font-size: 36px;
