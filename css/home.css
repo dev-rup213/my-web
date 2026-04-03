@@ -98,3 +98,13 @@
       text-align: center;
       padding: 1rem;
     }
+    @media (max-width: 768px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+        text-align: left;
+    }
+    .topnav input[type=text]{
+        float: none;
+        width: 90%;
+        margin: 10px;}}
