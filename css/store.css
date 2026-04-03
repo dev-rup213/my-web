@@ -33,7 +33,7 @@
       grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
       gap: 20px;
       padding: 10px;
-      max-width: 1800px;
+      max-width: 1200px;
 
 
     }
