@@ -193,18 +193,18 @@
       .Search{
         max-width: 	90%;
       }
-      .product-row1 {
+    .product-row1 {
     flex-direction: column; /* stack items */
-    text-align: center;
+    text-align: left;
   }
 
   .product-img1 {
     margin: 0 0 15px 0;
     max-width: 100%;
   }
-        .product-row2 {
+    .product-row2 {
     flex-direction: column; /* stack items */
-    text-align: center;
+    text-align: left;
   }
 
   .product-img2 {

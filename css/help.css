@@ -128,9 +128,7 @@
       @media (max-width: 768px) {
 
   .topnav a {
-    float: none;
-    width: 100%;
-    text-align: left;
+    font-size: 12px;
   }
 
   .topnav input[type=text] {

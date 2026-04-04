@@ -114,13 +114,13 @@
     @media  (max-width: 768px){
     .product-row {
     flex-direction: column; /* stack items */
-    text-align: right;
+    text-align: left;
   }
 
   .product-img {
     margin: 0 0 15px 0;
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
     height: 300px;
   }
   .product-row div {
@@ -131,7 +131,11 @@
   header {
     font-size: 36px;
     padding: 10px;
-    margin: 0;
+    margin: 100%;
+  }
+  .content, p {
+    width: 100%;
+
   }
 
   h1 {
