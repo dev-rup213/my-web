@@ -13,8 +13,8 @@ let prices = {
     chocolatespoon: 35,
     classicfork: 30,
     chocolatefork: 35,
-    classicbowl: 30,
-    chocolatebowl: 35
+    classicbowl: 60,
+    chocolatebowl: 70
 };
 
 function addEvent(elementId, handler) {
