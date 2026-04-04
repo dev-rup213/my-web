@@ -24,6 +24,7 @@
       box-shadow: 0 4px 12px rgba(71, 71, 71, 0.08);
       transition: all 0.2s ease;
       margin: 20px;
+      border-radius: 12px;
     }
     .product-row:hover{
       transform: translateX(-4px);
