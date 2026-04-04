@@ -135,5 +135,9 @@
     float: none;
     width: 90%;
     margin: 10px;
-  }}
+  }
+  #info{
+      font-size: 16px;
+  }
+}
     
