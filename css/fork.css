@@ -131,7 +131,7 @@
   header {
     font-size: 36px;
     padding: 10px;
-    margin: 100%;
+    width: 100%;
   }
   .content, p {
     width: 100%;
