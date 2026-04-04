@@ -215,6 +215,9 @@
     flex: 1;
     min-width: 250px;
     }
+  .product-row h1{
+      margin-left: 0px
+  }
 
   header {
     font-size: 36px;
