@@ -141,6 +141,10 @@
       justify-content: center;
       margin: 10px;
 
+    
+    }
+    .main-section button:hover{
+      background-color: rosybrown;
 
     }
     .Search:hover{
@@ -206,7 +210,8 @@
       
 
     }
-
+    .cart-section div a{
+      font-size: 18px;
     }
     .cart-section button{
       border-radius: 8px;
@@ -229,8 +234,6 @@
     width: 100%;
     text-align: left;
   }
-  .cart-section div a {
-      font-size: 11px;
 
   .topnav input[type=text] {
     float: none;

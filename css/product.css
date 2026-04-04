@@ -210,10 +210,9 @@
 
   .product-row {
     flex-direction: column; /* stack items */
-    text-align: left;
+    text-align: center;
   }
-  .product-row div {
-    text-align: left;}
+
   .product-img {
     margin: 0 0 15px 0;
     max-width: 100%;

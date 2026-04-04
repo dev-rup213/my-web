@@ -77,8 +77,8 @@
     }
     .product-card:hover{
      
-      transform: translatey(-4px);
-      box-shadow: 0 8px 12px rgb(4, 4, 4);
+      transform: translatey(-20px);
+      box-shadow: 0 8px 12px rgb(90, 89, 89);
   
       cursor: pointer;
       color: greenyellow;
@@ -99,9 +99,15 @@
       padding: 1rem;
     }
     @media (max-width: 768px) {
-    .topnav a {
-        font-size: 12px;
-        
-        
-    }
 
+  .topnav a {
+    float: none;
+    width: 100%;
+    text-align: left;
+  }
+
+  .topnav input[type=text] {
+    float: none;
+    width: 90%;
+    margin: 10px;
+  }}
