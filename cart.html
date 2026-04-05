@@ -43,12 +43,23 @@
         color: white;
         text-decoration: none;
     }
+    .product-grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+      gap: 0px;
+      padding: 10px;
+
+
+    }
     h1{
         text-align: left;
         background-color: rgb(52, 52, 51);
       color: #fefcfc;
       margin-left: 20px;
         
+    }
+    .product-row{
+      padding: 20px;
     }
     .section{
         width: 100%;
@@ -72,9 +83,7 @@
       font-size: 20px;
 
       }
-    .buy button{
-      background-color: darkgreen;
-    }
+    
     
     .product-row button:hover{
         background-color: aquamarine;
@@ -86,6 +95,8 @@
     @media (max-width: 768px){
       .product-row div{
         text-align: center;
+        font-size: 14px;
+        
       }
     }
 </style>
@@ -118,18 +129,18 @@
       <h2 style="margin-bottom: 10px;">Edible Spoon</h2>
     <div class="product-grid">
       <div><p >Flavour: Classic </p>
-          <p> Quatity: 10pcs</p>
+        <p> Quatity: 10pcs</p>
             <p>Price: 30Rs</p>
             <p >Rating: 4.5⭐</p></div>
       <div><p>🚚Delivery-time: 3-4 days</p>
         <p>🔄️Return-Policy: 1 Day</p>
          <p>💵COD: Available</p>
           </div>
-      <div style="justify-content: center;">
-      <button id="btn1" class="add-cart" style="margin-top: 50px;border: 2px solid white;">➕</button><button id="display1" disabled style="background-color:   rgb(52, 52, 51);margin-top: 50px;border: 2px solid white;">0</button><button id="btn2" class="less-cart" style="margin-top: 50px;border: 2px solid white;">➖</button>
-      <p><div class="section"><button class="add-buy buy" id="Buy1">Buy Now</button></div>
-      <P id="see1"><div class="section">Total Price: 0</div></P> 
-      <p><div class="section"><button id="price1">See Price</button></div></p>
+      <div>
+        <button id="btn1" class="add-cart" style="margin-top: 50px;border: 2px solid white;">➕</button><button id="display1" disabled style="background-color:   rgb(52, 52, 51);margin-top: 50px;border: 2px solid white;">0</button><button id="btn2" class="less-cart" style="margin-top: 50px;border: 2px solid white;">➖</button>
+        <p><div class="section"><button class="add-buy" id="Buy1" style="background-color: forestgreen;height: 30px;" >Buy Now</button></div>
+        <P id="see1"><div class="section">Total Price: 0</div></P> 
+        <p><div class="section"><button id="price1">See Price</button></div></p>
       </div>
 
     </div>
@@ -141,63 +152,122 @@
     <img src="image/bowl2.jpeg" alt="Chocolate Spoon" class="product-img" style="height: 150px;width: 150px;">
     <div>
         <h2>Edible Spoon🥄</h2>
-        <p style="word-spacing: 30px;font-size: 18px;">Flavour:Chocolate  Quatity:10pcs  🚚Delivery-time:3-4days</p>
-        <P id="see2"style="float: right;margin-right: 40px;">Total Price:0</P>
-        <p style="word-spacing: 30px;font-size: 18px;">Price:35Rs    🔄️Return-Policy:1Day</p>
-      <p style="word-spacing: 30px;font-size: 18px;">Rating:4.5⭐    💵COD:Available</p>
-           <button id="btn3" class="add-cart">➕</button><button id="display2" disabled style="background-color:   rgb(52, 52, 51);">0</button><button id="btn4" class="less-cart">➖</button><button id="price2" style="float: right;margin-right: 30px;width: 100px;">See Price</button>
-      <div class="section"><button class="add-buy" id="Buy2">Buy Now</button></div>
+      <div class="product-grid">
+      <div><p >Flavour: Chocolate </p>
+        <p> Quatity: 10pcs</p>
+            <p>Price: 35Rs</p>
+            <p >Rating: 4.5⭐</p></div>
+      <div><p>🚚Delivery-time: 3-4 days</p>
+        <p>🔄️Return-Policy: 1 Day</p>
+         <p>💵COD: Available</p>
+          </div>
+      <div>
+        <button id="btn1" class="add-cart" style="margin-top: 50px;border: 2px solid white;">➕</button><button id="display1" disabled style="background-color:   rgb(52, 52, 51);margin-top: 50px;border: 2px solid white;">0</button><button id="btn2" class="less-cart" style="margin-top: 50px;border: 2px solid white;">➖</button>
+        <p><div class="section"><button class="add-buy" id="Buy1" style="background-color: forestgreen;height: 30px;" >Buy Now</button></div>
+        <P id="see1"><div class="section">Total Price: 0</div></P> 
+        <p><div class="section"><button id="price1">See Price</button></div></p>
+      </div>
+
+    </div>
     </div>
   </div>
+
 <div class="product-row Product">
     <img src="image/fork2.jpeg" alt="Chocolate Fork" class="product-img" style="height: 150px;width: 150px;">
     <div>
         <h2>Edible Fork</h2>
-          <p style="word-spacing: 30px;font-size: 18px;">Flavour:Chocolate  Quatity:10pcs  🚚Delivery-time:3-4days</p>
-          <P id="see3"style="float: right;margin-right: 40px;">Total Price:0</P>
-        <p style="word-spacing: 30px;font-size: 18px;">Price:35Rs   🔄️Return-Policy:1Day</p>
-      <p style="word-spacing: 30px;font-size: 18px;">Rating:4.5⭐   💵COD:Available</p>
+            <div class="product-grid">
+      <div><p >Flavour: Chocolate </p>
+        <p> Quatity: 10pcs</p>
+          <p>Price: 35Rs</p>
+            <p >Rating: 4.5⭐</p></div>
+      <div><p>🚚Delivery-time: 3-4 days</p>
+        <p>🔄️Return-Policy: 1 Day</p>
+         <p>💵COD: Available</p>
+          </div>
+      <div>
+        <button id="btn1" class="add-cart" style="margin-top: 50px;border: 2px solid white;">➕</button><button id="display1" disabled style="background-color:   rgb(52, 52, 51);margin-top: 50px;border: 2px solid white;">0</button><button id="btn2" class="less-cart" style="margin-top: 50px;border: 2px solid white;">➖</button>
+        <p><div class="section"><button class="add-buy" id="Buy1" style="background-color: forestgreen;height: 30px;" >Buy Now</button></div>
+        <P id="see1"><div class="section">Total Price: 0</div></P> 
+        <p><div class="section"><button id="price1">See Price</button></div></p>
+      </div>
 
-           <button id="btn5" class="add-cart">➕</button><button id="display3" disabled style="background-color:   rgb(52, 52, 51);">0</button><button id="btn6" class="less-cart">➖</button><button id="price3" style="float: right;margin-right: 30px;width: 100px;">See Price</button>
-      <div class="section"><button class="add-buy" id="Buy3" >Buy Now</button></div>
+    </div>
     </div>
   </div>
+
 <div class="product-row Product">
     <img src="image/Fork.jpeg" alt="Classic Fork" class="product-img" style="height: 150px;width: 150px;">
     <div>
         <h2>Edible Fork</h2>
-        <p style="word-spacing: 30px;font-size: 18px;">Flavour:Classic  Quatity:10pcs 🚚Delivery-time:3-4days</p>
-        <P id="see4"style="float: right;margin-right: 40px;">Total Price:0</P>
-        <p style="word-spacing: 30px;font-size: 18px;">Price:30Rs                     🔄️Return-Policy:1Day</p>
-      <p style="word-spacing: 30px;font-size: 18px;">Rating:4.5⭐                     💵COD:Available</p>
-              <button id="btn7" class="add-cart">➕</button><button id="display4" disabled style="background-color:   rgb(52, 52, 51);">0</button><button id="btn8" class="less-cart">➖</button><button id="price4" style="float: right;margin-right: 30px;width: 100px;">See Price</button>
-      <div class="section"><button class="add-buy" id="Buy4" >Buy Now</button></div>
+            <div class="product-grid">
+      <div><p >Flavour: Classic </p>
+        <p> Quatity: 10pcs</p>
+            <p>Price: 30Rs</p>
+            <p >Rating: 4.5⭐</p></div>
+      <div><p>🚚Delivery-time: 3-4 days</p>
+        <p>🔄️Return-Policy: 1 Day</p>
+         <p>💵COD: Available</p>
+          </div>
+      <div>
+        <button id="btn1" class="add-cart" style="margin-top: 50px;border: 2px solid white;">➕</button><button id="display1" disabled style="background-color:   rgb(52, 52, 51);margin-top: 50px;border: 2px solid white;">0</button><button id="btn2" class="less-cart" style="margin-top: 50px;border: 2px solid white;">➖</button>
+        <p><div class="section"><button class="add-buy" id="Buy1" style="background-color: forestgreen;height: 30px;" >Buy Now</button></div>
+        <P id="see1"><div class="section">Total Price: 0</div></P> 
+        <p><div class="section"><button id="price1">See Price</button></div></p>
+      </div>
+
+    </div>
     </div>
   </div>
+
 <div class="product-row Product">
     <img src="image/bowl.jpeg" alt="Classic Bowl" class="product-img" style="height: 150px;width: 150px;">
     <div>
         <h2>Edible Bowl🥣</h2>
-              <p style="word-spacing: 30px;font-size: 18px;">Flavour:Classic  Quatity:10pcs  🚚Delivery-time:3-4days</p>
-              <P id="see5"style="float: right;margin-right: 40px;">Total Price:0</P>
-        <p style="word-spacing: 30px;font-size: 18px;">Price:60Rs  🔄️Return-Policy:1Day</p>
-      <p style="word-spacing: 30px;font-size: 18px;">Rating:4.1⭐ 💵COD:Available</p>
-              <button id="btn9" class="add-cart">➕</button><button id="display5" disabled style="background-color:   rgb(52, 52, 51);">0</button><button id="btn10" class="less-cart">➖</button><button id="price5" style="float: right;margin-right: 30px;width: 100px;">See Price</button>
-      <div class="section"><button class="add-buy" id="Buy5">Buy Now</button></div>
+            <div class="product-grid">
+      <div><p >Flavour: Classic </p>
+        <p> Quatity: 10pcs</p>
+            <p>Price: 60Rs</p>
+            <p >Rating: 4.5⭐</p></div>
+      <div><p>🚚Delivery-time: 3-4 days</p>
+        <p>🔄️Return-Policy: 1 Day</p>
+         <p>💵COD: Available</p>
+          </div>
+      <div>
+        <button id="btn1" class="add-cart" style="margin-top: 50px;border: 2px solid white;">➕</button><button id="display1" disabled style="background-color:   rgb(52, 52, 51);margin-top: 50px;border: 2px solid white;">0</button><button id="btn2" class="less-cart" style="margin-top: 50px;border: 2px solid white;">➖</button>
+        <p><div class="section"><button class="add-buy" id="Buy1" style="background-color: forestgreen;height: 30px;" >Buy Now</button></div>
+        <P id="see1"><div class="section">Total Price: 0</div></P> 
+        <p><div class="section"><button id="price1">See Price</button></div></p>
+      </div>
+
+    </div>
     </div>
   </div>
+
 <div class="product-row Product">
     <img src="image/spoon2.jpeg" alt="Chocolate Bowl" class="product-img" style="height: 150px;width: 150px;">
     <div>
         <h2>Edible Bowl</h2>
-              <p style="word-spacing: 30px;font-size: 18px;">Flavour:Chocolate  Quatity:10pcs 🚚Delivery-time:3-4days</p>
-              <P id="see6"style="float: right;margin-right: 40px;">Total Price:0</P>
-        <p style="word-spacing: 30px;font-size: 18px;">Price:70Rs 🔄️Return-Policy:1Day</p>
-      <p style="word-spacing: 30px;font-size: 18px;">Rating:4.5⭐ 💵COD:Available</p>
-      <button id="btn11" class="add-cart">➕</button><button id="display6" disabled style="background-color:   rgb(52, 52, 51);">0</button><button id="btn12" class="less-cart">➖</button><button id="price6" style="float: right;margin-right: 30px;width: 100px;">See Price</button>
-      <div class="section"><button class="add-buy" id="Buy6" >Buy Now</button></div>
+            <div class="product-grid">
+      <div><p >Flavour: Chocolate </p>
+        <p> Quatity: 10pcs</p>
+            <p>Price: 70Rs</p>
+            <p >Rating: 4.5⭐</p></div>
+      <div><p>🚚Delivery-time: 3-4 days</p>
+        <p>🔄️Return-Policy: 1 Day</p>
+         <p>💵COD: Available</p>
+          </div>
+      <div>
+        <button id="btn1" class="add-cart" style="margin-top: 50px;border: 2px solid white;">➕</button><button id="display1" disabled style="background-color:   rgb(52, 52, 51);margin-top: 50px;border: 2px solid white;">0</button><button id="btn2" class="less-cart" style="margin-top: 50px;border: 2px solid white;">➖</button>
+        <p><div class="section"><button class="add-buy" id="Buy1" style="background-color: forestgreen;height: 30px;" >Buy Now</button></div>
+        <P id="see1"><div class="section">Total Price: 0</div></P> 
+        <p><div class="section"><button id="price1">See Price</button></div></p>
+      </div>
+
+    </div>
     </div>
   </div>
+
   <p id="noResults" style="display: none;text-align: center;font-size: 24px;">No product found</p>
 
 </div>
