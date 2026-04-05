@@ -108,6 +108,7 @@ document.getElementById("btn12").addEventListener("click",function(){
     }
 });
 addEvent("buyall",function(){
+
     count=0;
     chocolatebowlCount=0;
     chocolateforkCount=0;
@@ -116,12 +117,19 @@ addEvent("buyall",function(){
     classicforkCount=0;
     classicspoonCount=0;
     totalPrice=0;
+
     document.getElementById("display1").innerText =  + classicspoonCount;
     document.getElementById("display2").innerText =  + chocolatespoonCount;
     document.getElementById("display3").innerText =  + chocolateforkCount;
     document.getElementById("display4").innerText =  + classicforkCount;
     document.getElementById("display5").innerText =  + classicbowlCount;
     document.getElementById("display6").innerText =  + chocolatebowlCount;
+    document.getElementById("see1").innerText ="Total Price:" +classicspoonCount;
+    document.getElementById("see2").innerText ="Total Price:" +chocolatespoonCount;
+    document.getElementById("see3").innerText ="Total Price:" +chocolateforkCount;
+    document.getElementById("see4").innerText ="Total Price:" +classicforkCount;
+    document.getElementById("see5").innerText ="Total Price:" +classicbowlCount;
+    document.getElementById("see6").innerText ="Total Price:" +chocolatebowlCount;
     document.getElementById("cart").innerText ="🛒 Your Cart is empty!!";
     document.getElementById("total").innerText ="";
 });
@@ -136,8 +144,95 @@ function calculatetotal(){
     return total
 }
 
+
 document.getElementById("seeprice").addEventListener("click",function(){
     let totalPrice = calculatetotal();
     document.getElementById("total").innerText ="Total price: Rs." + totalPrice;
+});
+document.getElementById("Buy1").addEventListener("click",function(){
+    if(classicspoonCount>0) {
+        count -=classicspoonCount;
+    
+    
+    classicspoonCount -=classicspoonCount;
+    document.getElementById("display1").innerText = +classicspoonCount;
+    document.getElementById("see1").innerText ="Total Price:" +classicspoonCount;
+    document.getElementById("cart").innerText="Item selected: " +count;
+
+    }
+});
+document.getElementById("Buy2").addEventListener("click",function(){
+    if (chocolatespoonCount>0){
+        count -=chocolatespoonCount
+        chocolatespoonCount -=chocolatespoonCount;
+    
+    document.getElementById("display2").innerText = chocolatespoonCount;
+    document.getElementById("see2").innerText ="Total Price:" +chocolatespoonCount;
+    document.getElementById("cart").innerText="Item selected: " +count;
+    }
+});
+document.getElementById("Buy3").addEventListener("click",function(){
+    if (chocolateforkCount>0){
+        count-=chocolateforkCount
+        chocolateforkCount-=chocolateforkCount;
+    
+
+    document.getElementById("display3").innerText = chocolateforkCount;
+     document.getElementById("see3").innerText ="Total Price:" +chocolateforkCount;
+    document.getElementById("cart").innerText="Item selected: " +count;
+    }
+});
+document.getElementById("Buy4").addEventListener("click",function(){
+    if (classicforkCount > 0) {
+        count -= classicforkCount
+        classicforkCount -= classicforkCount; 
+    document.getElementById("display4").innerText = classicforkCount;
+    document.getElementById("see4").innerText ="Total Price:" +classicforkCount;
+    document.getElementById("cart").innerText="Item selected: " +count;
+
+    }
+});
+document.getElementById("Buy5").addEventListener("click",function(){
+    if (classicbowlCount > 0) {
+        count -= classicbowlCount
+        classicbowlCount -= classicbowlCount;
+    document.getElementById("see5").innerText ="Total Price:" +classicbowlCount;
+    document.getElementById("cart").innerText="Item selected: " +count;
+    document.getElementById("display5").innerText = classicbowlCount;
+    }
+});
+document.getElementById("Buy6").addEventListener("click",function(){
+    if (chocolatebowlCount > 0){
+        count -=chocolatebowlCount
+        chocolatebowlCount -= chocolatebowlCount;
+    document.getElementById("see6").innerText ="Total Price:" +chocolatebowlCount;
+    document.getElementById("cart").innerText="Item selected: " +count;
+    
+    document.getElementById("display6").innerText = chocolatebowlCount;
+    }
+});
+document.getElementById("price1").addEventListener("click",function(){
+    let price1=classicspoonCount*prices.classicspoon;
+    document.getElementById("see1").innerText = "Total Price:" +price1 ;
+});
+document.getElementById("price2").addEventListener("click",function(){
+    let price2=chocolatespoonCount*prices.chocolatespoon;
+    document.getElementById("see2").innerText = "Total Price:" +price2 ;
+});
+document.getElementById("price3").addEventListener("click",function(){
+    let price2=chocolateforkCount*prices.chocolatefork;
+    document.getElementById("see3").innerText = "Total Price:" +price2 ;
+});
+document.getElementById("price4").addEventListener("click",function(){
+    let price2=classicforkCount*prices.classicfork;
+    document.getElementById("see4").innerText = "Total Price:" +price2 ;
+});
+document.getElementById("price5").addEventListener("click",function(){
+    let price2=classicbowlCount*prices.classicbowl;
+    document.getElementById("see5").innerText = "Total Price:" +price2 ;
+});
+document.getElementById("price6").addEventListener("click",function(){
+    let price2=chocolatebowlCount*prices.chocolatebowl;
+    document.getElementById("see6").innerText = "Total Price:" +price2 ;
 });
 
