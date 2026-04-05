@@ -119,7 +119,7 @@
       text-align: center;
       padding: 1rem;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 320px) {
 
   .topnav a {
     font-size: 12px;
@@ -130,7 +130,7 @@
       margin: 10px;
 
     }
-  @media  (max-width: 768px){
+  @media  (max-width: 320px){
       .Search{
         max-width: 	90%;
       }
