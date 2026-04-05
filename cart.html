@@ -19,6 +19,7 @@
         margin: 5px;
         cursor: pointer;
         color: aliceblue;
+        
     }
     p{
         line-height: 1.6;
@@ -52,23 +53,29 @@
     .section{
         width: 100%;
         max-width: 150px;
-        margin-left: 30px;
+
 
 
         
     }
     .section button{
         width: 100px;
-        background-color: chartreuse;
+        background-color: rgb(9, 135, 66);
     }
     .product-row button{
-        background-color: rgb(163, 152, 2);
+       background-color: darkslategrey;
         transition: all 0.2s ease;
         color: rgb(254, 254, 253);
         font-weight: 700;
-
-
     }
+    .product-row p{
+      font-size: 20px;
+
+      }
+    .buy button{
+      background-color: darkgreen;
+    }
+    
     .product-row button:hover{
         background-color: aquamarine;
         border-radius: 8px;
@@ -108,13 +115,24 @@
 <div class="product-row Product">
     <img src="image/Spoon.jpeg" alt="Classic Spoon" class="product-img" style="height: 150px;width: 150px;">
     <div>
-      <h2>Edible Spoon</h2>
-      <p style="word-spacing: 30px;font-size: 18px;">Flavour:Classic  Quatity:10pcs 🚚Delivery-time:3-4days</p>
-          <P id="see1"style="float: right;margin-right: 40px;">Total Price:0</P>
-        <p style="word-spacing: 30px;font-size: 18px;">Price:30Rs   🔄️Return-Policy:1Day</p>
-      <p style="word-spacing: 30px;font-size: 18px;">Rating:4.5⭐   💵COD:Available</p>
-      <button id="btn1" class="add-cart">➕</button><button id="display1" disabled style="background-color:   rgb(52, 52, 51);">0</button><button id="btn2" class="less-cart">➖</button><button id="price1" style="float: right;margin-right: 30px;width: 100px;">See Price</button>
-      <div class="section"><button class="add-buy" id="Buy1" >Buy Now</button></div>
+      <h2 style="margin-bottom: 10px;">Edible Spoon</h2>
+    <div class="product-grid">
+      <div><p >Flavour: Classic </p>
+          <p> Quatity: 10pcs</p>
+            <p>Price: 30Rs</p>
+            <p >Rating: 4.5⭐</p></div>
+      <div><p>🚚Delivery-time: 3-4 days</p>
+        <p>🔄️Return-Policy: 1 Day</p>
+         <p>💵COD: Available</p>
+          </div>
+      <div style="justify-content: center;">
+      <button id="btn1" class="add-cart" style="margin-top: 50px;border: 2px solid white;">➕</button><button id="display1" disabled style="background-color:   rgb(52, 52, 51);margin-top: 50px;border: 2px solid white;">0</button><button id="btn2" class="less-cart" style="margin-top: 50px;border: 2px solid white;">➖</button>
+      <p><div class="section"><button class="add-buy buy" id="Buy1">Buy Now</button></div>
+      <P id="see1"><div class="section">Total Price: 0</div></P> 
+      <p><div class="section"><button id="price1">See Price</button></div></p>
+      </div>
+
+    </div>
     </div>
   </div>
 
