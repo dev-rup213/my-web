@@ -202,7 +202,7 @@
     }
     .cart-section{
       flex: 2;
-      margin-right: 20px;
+      
       
 
     }
@@ -212,6 +212,7 @@
     .cart-section button{
       border-radius: 8px;
       margin-left: 20px;
+      float: right;
     }
     .cart-section button.buy:hover{
       background-color: bisque;
@@ -260,6 +261,7 @@
   }
   .cart-section button{
     width: 90px;
+    float: none;
  
     }
   .product-card{
