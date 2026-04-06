@@ -253,12 +253,15 @@
   }
   .cart-section div a{
     font-size: 13px;
-    margin-bottom: 10px;
   }
   .product-card img{
     height: 110px;
     width: 110px;
   }
+  .cart-section button{
+    width: 90px;
+ 
+    }
   .product-card{
     height: 480px;
   }
