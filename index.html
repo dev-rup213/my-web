@@ -7,8 +7,38 @@
   <title>Eat It Edible Utensils Pvt. Ltd</title>
   <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="all.min.css">
   <script src="js.scipt/search2.js"defer></script>
 <head>
+  <script>
+    const btn =document.getElementById("menu-btn")
+    const links =document.getElementById("nav-links")
+    btn.onclick = () => {
+      links.classList.toggle("active");
+    }
+  </script>
+  <style>
+    #nav-links {
+      gap: 20px
+    }
+    #menu-btn{
+      display: none;
+    }
+    @media (max-width: 768px) {
+    #nav-links{
+    display: none;
+    flex-direction: column;
+
+  }
+  #nav-links.active{
+    display: flex;
+  }
+  #menu-btn{
+    display: block;
+  }
+}
+
+  </style>
 </head>
 <body>
 
@@ -16,14 +46,19 @@
 
   
       <div class="topnav">
+      <span><i class="fa-solid fa-bars" id="menu-btn"></i></span>
+      <div id="nav-links">
         <a class="active" href="index.html">Home</a>
         <a href="Product.html">Product</a>
         <a href="Stores.html">Store</a>
         <a href="cart.html">Cart</a>
         <a href="Help.html">Help</a>
-        <input type="text" id="search-input"  placeholder="🔍Search" >
+      </div>
+      <input type="text" id="search-input"  placeholder="🔍Search" >
+       
       </div>
         <header>
+
 
       <img src="image/Picture1.png" alt="Eat It Logo" style="height: 150px; vertical-align: middle;">
     <h1>Eat It Edible Utensils Pvt. Ltd</h1>
