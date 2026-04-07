@@ -158,11 +158,11 @@
       
     }
     .about h2{
-      text-shadow: 2px 4px 8px rgb(254, 255, 254);
+      text-shadow: 2px 4px 8px rgb(0,0,0);
 
     }
     .about p{
-      text-shadow: 2px 4px 8px rgb(13, 14, 13);
+      text-shadow: 2px 4px 8px rgb(13,13,13);
 
     }
     .Spoon{
