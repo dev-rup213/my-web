@@ -1,4 +1,4 @@
-    body {
+    body {background-image: url('../image/blackbackground.jpeg') ;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -15,7 +15,10 @@
     .topnav a:hover {background-color: #ddd;color: black;}
     .topnav a.active {background-color: #2196f3;color: #e9e9e9;}
     .topnav input[type=text]{float : right;  padding: 6px;margin-top: 8px;margin-right: 16px;font-size: 17px}
-    .product-row1 {
+    .product-row1 {background-image: url(../image/modernblack.jpeg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
       display: flex;
       align-items: left;
       padding: 20px;
@@ -35,7 +38,10 @@
     .product-row:last-child {
       border-bottom: none;
     }
-        .product-row2 {
+        .product-row2 {background-image: url(../image/modernblack.jpeg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
       display: flex;
       align-items: right;
       padding: 20px;

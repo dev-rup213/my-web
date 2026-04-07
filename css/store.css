@@ -1,4 +1,4 @@
-    body {
+    body {background-image: url('../image/blackbackground.jpeg') ;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -203,7 +203,6 @@
     .cart-section{
       flex: 2;
       
-      
 
     }
     .cart-section div a{
@@ -254,6 +253,7 @@
   }
   .cart-section div a{
     font-size: 13px;
+    margin-bottom: 10px;
   }
   .product-card img{
     height: 110px;

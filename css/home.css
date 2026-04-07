@@ -31,13 +31,13 @@
       color: white;
       padding: 2rem;
       text-align: center;
-      text-shadow: 2px 4px 8px black;
+      text-shadow: 2px 4px 8px rgb(13, 14, 13);
     }
 
     header h1 {
       margin: 0;
       font-size: 2.5rem;
-        text-shadow: 2px 4px 8px black;
+      text-shadow: 2px 4px 8px rgb(13, 14, 13);
     }
 
     nav {
@@ -107,7 +107,7 @@
       padding: 1rem;
       border-radius: 8px;
       text-align: center;
-      box-shadow: 4px 4px 16px rgba(255, 253, 253, 0.1);
+      box-shadow: 4px 4px 16px rgba(8, 8, 8, 0.1);
       background-color: #4CAF50;
       color: white;
       box-sizing: content-box;
@@ -128,7 +128,7 @@
     }
     .product-card a:hover{
       text-decoration: dashed;
-      color: greenyellow;
+      color: rgb(254, 255, 254);
     }
     .product-card p{
       text-shadow: 2px 4px 8px #040404;
@@ -158,11 +158,13 @@
       
     }
     .about h2{
-        text-shadow: 2px 4px 8px white;}
-    .about p{
-        text-shadow: 2px 4px 8px black;
-    }
+      text-shadow: 2px 4px 8px rgb(254, 255, 254);
 
+    }
+    .about p{
+      text-shadow: 2px 4px 8px rgb(13, 14, 13);
+
+    }
     .Spoon{
       background-image: url(../image/Spoon.jpeg);
       background-size: cover;
@@ -189,6 +191,7 @@
       text-align: center;
       padding: 1rem;
     }
+
     @media (max-width: 768px) {
 
   .topnav a {
@@ -211,6 +214,18 @@
   }
   .p{
     font-size: 14px;
+    line-height: 1.6;
+  }
+  #nav-links{
+    display: none;
+    flex-direction: column;
+
+  }
+  #nav-links.active{
+    display: flex;
+  }
+  #menu-btn{
+    display: block;
   }
 
     }

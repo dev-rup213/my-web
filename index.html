@@ -7,22 +7,21 @@
   <title>Eat It Edible Utensils Pvt. Ltd</title>
   <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="all.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
   <script src="js.scipt/search2.js"defer></script>
 <head>
   <script>
-    const btn =document.getElementById("menu-btn")
-    const links =document.getElementById("nav-links")
-    btn.onclick = () => {
-      links.classList.toggle("active");
-    }
   </script>
   <style>
     #nav-links {
-      gap: 20px
-    }
-    #menu-btn{
       display: none;
+      flex-direction: column;
+    }
+    #nav-links.active{
+    display: flex;
+  }
+    #menu-btn{
+      display: block;
     }
     @media (max-width: 768px) {
     #nav-links{
@@ -46,7 +45,7 @@
 
   
       <div class="topnav">
-      <span><i class="fa-solid fa-bars" id="menu-btn"></i></span>
+      <a><i class="fa-solid fa-bars" id="menu-btn"></i></a>
       <div id="nav-links">
         <a class="active" href="index.html">Home</a>
         <a href="Product.html">Product</a>

@@ -1,4 +1,4 @@
-    body {
+    body {background-image: url('../image/blackbackground.jpeg') ;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -45,7 +45,7 @@
 
       width: 100%;
       max-width: 400px;
-      height: auto;
+      height: 300px;
       object-fit: cover;
       margin-right: 20px;
       box-shadow: 0 4px 12px rgba(71, 71, 71, 0.08);

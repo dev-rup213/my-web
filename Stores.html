@@ -6,7 +6,8 @@
     <title>Store</title>
     <!-- stores.html -->
     <link rel="stylesheet" href="css/store.css">
-        <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/all.min.css">
 <head>
   <script src="js.scipt/script2.js"defer></script>
   <script src="js.scipt/search2.js"defer></script>
@@ -16,6 +17,7 @@
 </head>
 <body>
   <div class="topnav">
+  <a><i class="fa-solid fa-bars"></i></a>
   <a  href="index.html">Home</a>
   <a href="Product.html">Product</a>
   <a class ="active" href="Stores.html">Store</a>
@@ -27,17 +29,18 @@
   </header>
   
   <div class="search-container">
-  <input class="Search" id="search-input"  placeholder="Search" >
+  <input class="Search" style="color: white;"id="search-input"    placeholder="Search" >
   </div>
 
   </div>
   <div class="main-section">
    <div class="cart-section">
-   <div style="background-color: rgb(34, 34, 34);border-top: 1px solid;border-bottom: 1px solid;padding: 10px;margin: 10px;border-radius: 8px; box-shadow: 2px 4px 8px black"><a style="margin-left: 20px;">🛒My Cart:
-    <a id="storecart" style="margin-left: 20px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: coral;">Items Seleted 0</a><a id="total" style="margin-left: 20px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: coral;" >Total price: 0</a> 
-    <button id="buy" class="add-buy" style="background-color: darkgreen;color: ghostwhite;border-color: darkgreen;height: 30px;width: 90px;cursor: pointer;margin-left: 200px;margin-bottom: 10px;margin-left: 20px;border-radius: 20px;">Buy Now</button>
-    <button id="seeprice" style="background-color: darkgreen;color: ghostwhite;border-color: darkgreen;height: 30px;width: 90px;cursor: pointer;margin-bottom: 10px;border-radius: 20px;">Total price</button>
-    <button id="remove" class="less-cart" style="background-color: red;color: #fffefe;border-color: red;height: 30px;width: 90px;cursor: pointer;margin-bottom: 10px;border-radius: 20px;">Remove all</button></a></div>
+   <div style="background-color: rgb(34, 34, 34);border-top: 1px solid;border-bottom: 1px solid;padding: 10px;margin: 10px;border-radius: 8px;box-shadow: 2px 4px 8px rgb(34, 34, 34);"><a style="margin-left: 20px;">🛒My Cart:
+    <a id="storecart" style="margin-left: 20px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: rgb(255, 255, 255);">Items Seleted 0</a><a id="total" style="margin-left: 20px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: rgb(255, 255, 255);" >Total price: 0</a> 
+    <button id="remove" class="less-cart" style="background-color: red;color: #fffefe;border-color: red;height: 30px;width: 150px;cursor: pointer;margin-bottom: 10px;border-radius: 20px;">Remove all</button>
+    <button id="buy" class="add-buy" style="background-color: darkgreen;color: ghostwhite;border-color: darkgreen;height: 30px;width: 150px;cursor: pointer;margin-left: 200px;margin-bottom: 10px;margin-left: 20px;border-radius: 20px;">Buy Now</button>
+    <button id="seeprice" style="background-color: darkgreen;color: ghostwhite;border-color: darkgreen;height: 30px;width: 150px;cursor: pointer;margin-bottom: 10px;border-radius: 20px;">Total price</button>
+    </a></div>
    </div>
   </div>
   <div class="product-grid ">
@@ -111,7 +114,7 @@
       <h3>Chocolate Bowl</h3>
       <img src="image/spoon2.jpeg" alt="Chocolate bowl">
       <p>Packet: 1</p>
-      <p>No. of Bowl: 5</p>
+      <p>No. of Bowl: 10</p>
       <p>Price: 35Rs.</p>
       <p>Delivery time: 3-4 days</p>
       <button class="add-buy">Buy Now</button><div class="section" >  <button id="bot8" class="add-cart">+ Add to Cart</button></div> 

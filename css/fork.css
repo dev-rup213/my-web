@@ -1,11 +1,11 @@
-    body {
+    body {background-image: url('../image/blackbackground.jpeg') ;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: #2f2f2f;
+    background-color: none;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     
