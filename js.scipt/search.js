@@ -22,4 +22,8 @@ searchinput.value.toLowerCase().trim();
         noResult.style.display = matchfound ? "none" : "block" ;
         
     });
-
+const btn =document.getElementById("menu-btn");
+const links =document.getElementById("nav-links");
+btn.onclick = () => {
+    links.classList.toggle("active");
+    }

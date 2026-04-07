@@ -184,6 +184,12 @@
       background-position: center;
       background-repeat: no-repeat;
     }
+    #nav-links {
+      gap: 20px
+    }
+    #menu-btn{
+      display: none;
+    }
 
     footer {
       background-color: #2e7d32;
@@ -203,6 +209,7 @@
     margin: 10px;
 
   }
+  
   .h1{
     font-size: 24px;
   }
