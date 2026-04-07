@@ -124,11 +124,11 @@
     .product-card a{
       text-decoration: none;
       color: #040404;
-      text-shadow: 2px 4px 8px #f9f4f4;
+      text-shadow: 2px 4px 8px black;
     }
     .product-card a:hover{
       text-decoration: dashed;
-      color: rgb(254, 255, 254);
+      color: rgb(0,0,0);
     }
     .product-card p{
       text-shadow: 2px 4px 8px #040404;
