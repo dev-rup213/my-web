@@ -13,10 +13,12 @@
     #nav-links{
     display: none;
     flex-direction: column;
+    float: left;
 
   }
   #nav-links.active{
     display: flex;
+    float: left;
   }
   #menu-btn{
     display: block;
