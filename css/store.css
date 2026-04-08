@@ -125,8 +125,8 @@
       max-width: 1500px;
       border-radius: 8px;
       box-sizing: border-box;
-      background-color:#575757; ;
-      color: #fafafa;
+      background-color:#fffdfd; ;
+      color: #060606;
       box-sizing: border-box;
       padding: 6px 18px;
       height: 30px;
@@ -213,13 +213,12 @@
       margin-left: 20px;
       float: right;
       border: none;
-      box-shadow: 2px 4px 12px black;
-      transition: all 0.3s ease;
+      
     }
-    .cart-section button.buy:hover{
+    .cart-section button:hover{
       background-color: bisque;
-      transform: translateZ(5000px);
-       box-shadow: 2px 4px 12px black;
+      transform: translateZ(50000px);
+      box-shadow: 2px 4px 8px rgb(0, 0, 0);
     }
     @media  (max-width: 768px){
       .Search{

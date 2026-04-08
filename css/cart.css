@@ -39,12 +39,17 @@
     }
     .section{
         width: 100%;
-        max-width: 150px;
-        margin-left: 30px;
+        max-width: 90px;
+        justify-self: center;
         
+    }
+    .size{
+        width: 90px;
+        border-radius: 8px;
     }
     .product-row{
         padding: 20px;
+        font-size: 24px;
         
     }
     .section button{
@@ -52,25 +57,37 @@
         background-color: chartreuse;
     }
     .product-row button{
-        background-color: rgb(163, 152, 2);
+        background-color: rgb(41, 134, 59);
         transition: all 0.2s ease;
         color: rgb(254, 254, 253);
         font-weight: 700;
 
 
     }
+        #cart{
+        font-size: 64px;
+    }
+    #total{
+        font-size: 32px;
+    }
+    #cart1{
+        font-size: 24px;
+    }
           .Search{
       width: 100%;
       max-width: 2000px;
       border-radius: 8px;
       box-sizing: border-box;
-      background-color:#575757; ;
-      color: #fafafa;
+      background-color:#fffefe; ;
+      color: #070707;
       box-sizing: border-box;
       padding: 6px 18px;
       height: 30px;
       margin-top: 10px;
 
+    }
+    .col{
+       text-align: center;
     }
     .product-row button:hover{
         background-color: aquamarine;
@@ -83,4 +100,16 @@
       .product-row div{
         text-align: center;
       }
+    .product-row {
+        font-size: 18px;
+    }
+    #cart{
+        font-size: 18px;
+    }
+    #total{
+        font-size: 14px;
+    }
+    #cart1{
+        font-size: 13px;
+    }
     }

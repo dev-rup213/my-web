@@ -11,91 +11,7 @@
     <script src="js.scipt/search.js"defer></script>
     
 
-<style>
-  body{
-      font-family: 'Segoe UI', sans-serif;
-    }
-    button{
-        width: 50px;
-        height: 30px;
-        margin: 5px;
-        cursor: pointer;
-        color: aliceblue;
-        
-    }
-    p{
-        line-height: 1.6;
-    }
-    p button{
-        width: 150px;
-        background-color: darkcyan;
-        border-color: darkcyan;
-        color: #fefcfc;
-        border-radius: 8px;
-        height: 30px;
-        transition: all 0.3s ease;
-    }
-    p button:hover{
-        background-color: aqua;
-        border-color: aqua;
-        transform: translateZ(100px);
-        box-shadow: 0 4px 8px rgb(52, 52, 51);
-    }
-    a{
-        color: white;
-        text-decoration: none;
-    }
-    .product-grid{
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-      gap: 0px;
-      padding: 10px;
 
-
-    }
-    .product-row{
-      padding: 20px;
-    }
-    .section{
-        width: 100%;
-        max-width: 150px;
-
-
-
-        
-    }
-    .section button{
-        width: 100px;
-        background-color: rgb(9, 135, 66);
-    }
-    .product-row button{
-       background-color: darkslategrey;
-        transition: all 0.2s ease;
-        color: rgb(254, 254, 253);
-        font-weight: 700;
-    }
-    .product-row p{
-      font-size: 20px;
-
-      }
-    
-    
-    .product-row button:hover{
-        background-color: aquamarine;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgb(52, 52, 51);
-        transform: translateZ(1000px);
-    
-    }
-    @media (max-width: 768px){
-      .product-row div{
-        text-align: center;
-        font-size: 14px;
-        
-      }
-      
-    }
-</style>
 
 
 </head>
@@ -116,12 +32,12 @@
 
 
 <div class="product-card" style="border: 1px dashed white;text-align: center;margin: 50px;background: dimgrey;justify-content: center;display: flex;align-items: center;flex-direction: column;border-radius: 8px;">
-    <p id="cart" style="font-size: 64px;">🛒 Your cart is empty</p>
-    <p id="total" style="font-size: 24px;"></p>
-    <p id="cart" style="font-size: 32px;">Add Items and Click on Buy Now</p>
+    <p id="cart"><i class="fa-solid fa-shopping-cart"></i>Your cart is empty</p>
+    <p id="total"></p>
+    <p id="cart1">Add Items and Click on Buy Now</p>
     <p><button><a style="text-decoration: none;cursor: pointer" href=" Stores.html">Visit Stores</a></button><button class="add-buy">Buy Now</button><button id="seeprice">Total Price</button><button id="buyall">Clear all</button>
 </div>
-<h2>Recommended For you :</h2>
+<h2 style="color: white;">Recommended For you :</h2>
 <div class="product-row Product">
     <img src="image/Spoon.jpeg" alt="Classic Spoon" class="product-img" style="height: 150px;width: 150px;">
     <div>
@@ -135,11 +51,11 @@
         <p>🔄️Return-Policy: 1 Day</p>
          <p>💵COD: Available</p>
       </div>
-      <div>
-        <button id="btn1" class="add-cart" style="margin-top: 50px;border: 2px solid white;">➕</button><button id="display1" disabled style="background-color:   rgb(52, 52, 51);margin-top: 50px;border: 2px solid white;">0</button><button id="btn2" class="less-cart" style="margin-top: 50px;border: 2px solid white;">➖</button>
-        <p><div class="section"><button class="add-buy" id="Buy1" style="background-color: forestgreen;height: 30px;" >Buy Now</button></div>
-        <div class="section"><P id="see1">Total Price: 0</P></div> 
-        <p><div class="section"><button id="price1">See Price</button></div></p>
+      <div class="col">
+        <button id="btn2" class="less-cart" style="margin-top: 50px;border: 2px solid white;"><i class="fa-solid fa-minus"></i></button><button id="display1" disabled style="background-color:   rgb(52, 52, 51);margin-top: 50px;border: 2px solid white;">0</button><button id="btn1" class="add-cart" style="margin-top: 50px;border: 2px solid white;"><i class="fa-solid fa-plus"></i></button>
+        <p><button class="add-buy" id="Buy1" style="background-color: forestgreen;height: 30px;" >Buy Now</button></p>
+        <P id="see1">Total Price: 0</P>
+        <p><button id="price1">See Price</button></p>
       </div>
 
     </div>
@@ -160,11 +76,11 @@
         <p>🔄️Return-Policy: 1 Day</p>
          <p>💵COD: Available</p>
           </div>
-      <div>
-        <button id="btn3" class="add-cart" style="margin-top: 50px;border: 2px solid white;">➕</button><button id="display2" disabled style="background-color:   rgb(52, 52, 51);margin-top: 50px;border: 2px solid white;">0</button><button id="btn4" class="less-cart" style="margin-top: 50px;border: 2px solid white;">➖</button>
-        <p><div class="section"><button class="add-buy" id="Buy2" style="background-color: forestgreen;height: 30px;" >Buy Now</button></div>
-        <div class="section"><P id="see2">Total Price: 0</P></div>
-        <p><div class="section"><button id="price2">See Price</button></div></p>
+      <div class="col">
+        <button id="btn4" class="less-cart" style="margin-top: 50px;border: 2px solid white;"><i class="fa-solid fa-minus"></i></button><button id="display2" disabled style="background-color:   rgb(52, 52, 51);margin-top: 50px;border: 2px solid white;">0</button><button id="btn3" class="add-cart" style="margin-top: 50px;border: 2px solid white;"><i class="fa-solid fa-plus"></i></button>
+        <p><button class="add-buy" id="Buy2" style="background-color: forestgreen;height: 30px;" >Buy Now</button></p>
+        <P id="see2">Total Price: 0</P>
+        <p><button id="price2">See Price</button></p>
       </div>
 
     </div>
@@ -184,11 +100,11 @@
         <p>🔄️Return-Policy: 1 Day</p>
          <p>💵COD: Available</p>
           </div>
-      <div>
-        <button id="btn5" class="add-cart" style="margin-top: 50px;border: 2px solid white;">➕</button><button id="display3" disabled style="background-color:   rgb(52, 52, 51);margin-top: 50px;border: 2px solid white;">0</button><button id="btn6" class="less-cart" style="margin-top: 50px;border: 2px solid white;">➖</button>
-        <p><div class="section"><button class="add-buy" id="Buy3" style="background-color: forestgreen;height: 30px;" >Buy Now</button></div>
-        <div class="section"><P id="see3">Total Price: 0</P></div>
-        <p><div class="section"><button id="price3">See Price</button></div></p>
+      <div class="col">
+        <button id="btn6" class="less-cart" style="margin-top: 50px;border: 2px solid white;"><i class="fa-solid fa-minus"></i></button><button id="display3" disabled style="background-color:   rgb(52, 52, 51);margin-top: 50px;border: 2px solid white;">0</button><button id="btn5" class="add-cart" style="margin-top: 50px;border: 2px solid white;"><i class="fa-solid fa-plus"></i></button>
+        <p><button class="add-buy" id="Buy3" style="background-color: forestgreen;height: 30px;" >Buy Now</button></p>
+        <P id="see3">Total Price: 0</P>
+        <p><button id="price3">See Price</button></p>
       </div>
 
     </div>
@@ -208,11 +124,11 @@
         <p>🔄️Return-Policy: 1 Day</p>
          <p>💵COD: Available</p>
           </div>
-      <div>
-        <button id="btn7" class="add-cart" style="margin-top: 50px;border: 2px solid white;">➕</button><button id="display4" disabled style="background-color:   rgb(52, 52, 51);margin-top: 50px;border: 2px solid white;">0</button><button id="btn8" class="less-cart" style="margin-top: 50px;border: 2px solid white;">➖</button>
-        <p><div class="section"><button class="add-buy" id="Buy4" style="background-color: forestgreen;height: 30px;" >Buy Now</button></div>
-        <div class="section"><P id="see4">Total Price: 0</P></div> 
-        <p><div class="section"><button id="price4">See Price</button></div></p>
+      <div class="col">
+        <button id="btn8" class="less-cart" style="margin-top: 50px;border: 2px solid white;"><i class="fa-solid fa-minus"></i></button><button id="display4" disabled style="background-color:   rgb(52, 52, 51);margin-top: 50px;border: 2px solid white;">0</button><button id="btn7" class="add-cart" style="margin-top: 50px;border: 2px solid white;"><i class="fa-solid fa-plus"></i></button>
+        <p><button class="add-buy" id="Buy4" style="background-color: forestgreen;height: 30px;" >Buy Now</button></p>
+        <P id="see4">Total Price: 0</P> 
+        <p><button id="price4">See Price</button></p>
       </div>
 
     </div>
@@ -223,7 +139,7 @@
     <img src="image/bowl.jpeg" alt="Classic Bowl" class="product-img" style="height: 150px;width: 150px;">
     <div>
         <h2>Edible Bowl🥣</h2>
-            <div class="product-grid">
+      <div class="product-grid">
       <div><p >Flavour: Classic </p>
         <p> Quatity: 10pcs</p>
             <p>Price: 60Rs</p>
@@ -232,11 +148,11 @@
         <p>🔄️Return-Policy: 1 Day</p>
          <p>💵COD: Available</p>
           </div>
-      <div>
-        <button id="btn9" class="add-cart" style="margin-top: 50px;border: 2px solid white;">➕</button><button id="display5" disabled style="background-color:   rgb(52, 52, 51);margin-top: 50px;border: 2px solid white;">0</button><button id="btn10" class="less-cart" style="margin-top: 50px;border: 2px solid white;">➖</button>
-        <p><div class="section"><button class="add-buy" id="Buy5" style="background-color: forestgreen;height: 30px;" >Buy Now</button></div>
-        <div class="section"><P id="see5">Total Price: 0</P></div>
-        <p><div class="section"><button id="price5">See Price</button></div></p>
+      <div class="col">
+        <button id="btn10" class="less-cart" style="margin-top: 50px;border: 2px solid white;"><i class="fa-solid fa-minus"></i></button><button id="display5" disabled style="background-color:   rgb(52, 52, 51);margin-top: 50px;border: 2px solid white;">0</button><button id="btn9" class="add-cart" style="margin-top: 50px;border: 2px solid white;"><i class="fa-solid fa-plus"></i></button>
+        <p><button class="add-buy" id="Buy5" style="background-color: forestgreen;height: 30px;" >Buy Now</button>
+        <P id="see5">Total Price: 0</P>
+        <p><button id="price5">See Price</button></p>
       </div>
 
     </div>
@@ -256,11 +172,11 @@
         <p>🔄️Return-Policy: 1 Day</p>
          <p>💵COD: Available</p>
           </div>
-      <div>
-        <button id="btn11" class="add-cart" style="margin-top: 50px;border: 2px solid white;">➕</button><button id="display6" disabled style="background-color:   rgb(52, 52, 51);margin-top: 50px;border: 2px solid white;">0</button><button id="btn12" class="less-cart" style="margin-top: 50px;border: 2px solid white;">➖</button>
-        <p><div class="section"><button class="add-buy" id="Buy6" style="background-color: forestgreen;height: 30px;" >Buy Now</button></div>
-       <div class="section"><P id="see6">Total Price: 0</P></div> 
-        <p><div class="section"><button id="price6">See Price</button></div></p>
+      <div class="col"> 
+        <button id="btn12" class="less-cart" style="margin-top: 50px;border: 2px solid white;"><i class="fa-solid fa-minus"></i></button><button id="display6" disabled style="background-color:   rgb(52, 52, 51);margin-top: 50px;border: 2px solid white;">0</button><button id="btn11" class="add-cart" style="margin-top: 50px;border: 2px solid white;"><i class="fa-solid fa-plus"></i></button>
+        <p><button class="add-buy" id="Buy6" style="background-color: forestgreen;height: 30px;" >Buy Now</button>
+     <P id="see6">Total Price: 0</P>
+        <p><button id="price6">See Price</button></p>
       </div>
 
     </div>

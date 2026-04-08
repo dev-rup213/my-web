@@ -109,8 +109,8 @@
       max-width: 1500px;
       border-radius: 8px;
       box-sizing: border-box;
-      background-color:#575757; ;
-      color: #fafafa;
+      background-color:#fcfafa; ;
+      color: #070707;
       box-sizing: border-box;
       padding: 6px 18px;
       height: 30px;
@@ -124,6 +124,9 @@
      
 
 
+    }
+    .Search :active{
+      border: 1px solid rgb(31, 113, 244);
     }
     .Search:hover{
     
