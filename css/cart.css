@@ -73,18 +73,26 @@
     #cart1{
         font-size: 24px;
     }
-          .Search{
+    .search-box {
+      position: relative;
       width: 100%;
-      max-width: 2000px;
-      border-radius: 8px;
-      box-sizing: border-box;
-      background-color:#fffefe; ;
-      color: #070707;
-      box-sizing: border-box;
-      padding: 6px 18px;
-      height: 30px;
-      margin-top: 10px;
+      max-width: 1650px;
+      margin: 20px;
 
+    
+    }
+    .search-box input[type="search"] {
+      width: 100%;
+      padding: 10px 10px 10px 40px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .search-box i {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+      color: #060606;
     }
     .col{
        text-align: center;
@@ -104,12 +112,16 @@
         font-size: 18px;
     }
     #cart{
-        font-size: 24px;
-    }
-    #total{
         font-size: 18px;
     }
+    #total{
+        font-size: 14px;
+    }
     #cart1{
-        font-size: 16px;
+        font-size: 13px;
+    }
+    .product-img{
+        height: 150px;
+        width: 150px;
     }
     }

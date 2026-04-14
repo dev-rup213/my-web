@@ -104,7 +104,7 @@
         border-color: none;
     }
 
-      .Search{
+    .search-container input[type=search]{
       width: 100%;
       max-width: 1500px;
       border-radius: 8px;

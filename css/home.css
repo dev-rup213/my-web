@@ -199,7 +199,7 @@
   .topnav a {
     font-size: 12px;
   }
-  .topnav input[type=text]{
+  .topnav input[type=search]{
     float: none;
     width: 90%;
     margin: 10px;

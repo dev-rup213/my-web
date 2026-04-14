@@ -2,9 +2,9 @@
     .topnav a{float: left;display: block;color: rgb(254, 253, 253);text-align: center;padding: 14px 16px;text-decoration: dashed;font-size: 17px;}
     .topnav a:hover {background-color: #ddd;color: black;}
     .topnav a.active {background-color: #2196f3;color: #e9e9e9;border-top-left-radius: 8px;border-top-right-radius: 8px ;border-bottom-left-radius: 0px ;border-bottom-right-radius: 0px;}
-    .topnav input[type=text]{float : right;  padding: 6px;margin-top: 8px;margin-right: 16px;font-size: 17px;border-radius: 12px;}
+    .topnav input[type=search]{float : right;  padding: 6px;margin-top: 8px;margin-right: 16px;font-size: 17px;border-radius: 12px;}
     #nav-links {
-      gap: 5px
+      gap: 20px
     }
     #menu-btn{
       display: none;
@@ -13,12 +13,10 @@
     #nav-links{
     display: none;
     flex-direction: column;
-    float: left;
 
   }
   #nav-links.active{
     display: flex;
-    float: left;
   }
   #menu-btn{
     display: block;
