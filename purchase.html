@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>payment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="desciption" content="Login interface to enter in our website">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/common.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #232323, #5c5c5c);
+            min-height: 100vh;
+            margin: 0px;
+            align-items: center;
+        }
+
+        .login-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 900px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            margin-top: 50px;
+            margin-left: 300px;
+            margin-left: 300px;
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            text-align: left;
+            margin-bottom: 20px;
+            font-weight: 200;
+            padding: 20px;
+            border-radius: 8px;
+            
+        }
+        h3 {
+            margin-bottom: 20px;
+            font-weight: 200;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid black;
+            box-shadow: 2px 4px 4px black;
+
+        }
+        h4{
+            font-weight: 100;
+            font-size: 14px;
+            margin: 10px;
+        }
+        p {
+            margin-bottom: 20px;
+            font-weight: 200;
+            font: 18px sans-serif;
+            padding: 20px;
+            border-bottom: 1px solid black;
+
+        }
+
+        h3:hover{
+            cursor: pointer;
+            transform: translateY(-4px);
+        }
+
+        input {
+            width: 100%;
+            max-width: 380px;
+            padding: 10px;
+            margin-left: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #4facfe;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        #cardnumber{
+            width: 100%;
+            max-width: 800px;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+
+        }
+        button:hover {
+            background: #00c6ff;
+        }
+        .check {
+            float: right;
+            border-radius: 30px;
+        }
+        span {
+            float: right;
+            font-size: 18px;
+        }
+        select {
+            font-size: 18px;
+            border: none;
+            background-color: none;
+            cursor: pointer;
+        }
+        .cardpayment{
+            border: 1px solid black;margin: 0px;border-radius: 10px;padding: 20px;
+            box-shadow: 2px 4px 4px black;
+        }
+        .cardpayment:hover{
+            cursor: pointer;
+            transform: translateY(-4px);
+        }
+
+        .error {
+            color: red;
+            font-size: 13px;
+            display: none;
+        }
+
+        .link {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .link a {
+            color: #4facfe;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<Body>
+      <div class="topnav">
+    <a><i class="fa-solid fa-bars" id="menu-btn"></i></a>
+  <div id="nav-links">
+  <a  href="index.html">Home</a>
+  <a href="Product.html">Product</a>
+  <a  href="Stores.html">Store</a>
+  <a href="cart.html">Cart</a>
+<a class ="active" href="purchase.html">Orders</a>
+  <a href="Help.html">Help</a>
+  <a href="http://127.0.0.1:8000/">Performance</a></div>
+      </div>
+    <div class="login-box">
+        <h1 style="background-color: rgb(3, 0, 100);color: #ccc;border-radius: 8px;padding: 20px;margin: 10px;">Order Overview:<span id="total">Total Amount Payable:</span></h1>
+        <h2> Select a payment method from below:</h2>
+        <h3>Pay via UPI<span><select>
+             <option value="1" style="display: none;">Choose</option>
+            <option value="2">G-Pay</option>
+            <option value="3">Paytm</option>
+            <option value="4">Phone pay</option>
+            <option value="5">Others</option>
+        </select></span><button style="margin-top: 20px;">Proceed to pay</button></h3>
+      <div class="cardpayment"><p>Pay via Card<span><select>
+            <option value="1">Debit Card</option>
+            <option value="2">Credit Card</option>
+
+        </select></span>
+        <h4>Provide your card details:</h4>
+        <input type="text" placeholder="First name"><input type="text" placeholder="Last Name">
+        <input type="text" placeholder="Card number" id="cardnumber">
+        <h4>Expiry Date</h4>
+        <input type="text" placeholder="YYYY/MM/DD"> <input type="text" placeholder="Security Code">
+        <button>Proceed to pay</button>
+      </div>
+        <h3>Cash on Delivery
+        <button >Proceed to Pay</button></h3>
+    </div>
+</Body>
