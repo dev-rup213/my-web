@@ -97,6 +97,13 @@
     .col{
        text-align: center;
     }
+    .col a{
+            text-decoration: none;
+            color: ehite;
+    }
+    .col button {
+            border: none;
+    }
     .product-row button:hover{
         background-color: aquamarine;
         border-radius: 8px;
