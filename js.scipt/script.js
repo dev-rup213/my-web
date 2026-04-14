@@ -1,271 +1,116 @@
-document.querySelectorAll('.add-cart').forEach(function(button){button.onclick=function(){alert("Item Added to cart!");};});
-document.querySelectorAll('.add-buy').forEach(function(button){button.onclick=function(){alert("Congratulations !!! Your order recorded sucessfully.");};});
-document.querySelectorAll('.less-cart').forEach(function(button){button.onclick=function(){alert("Item is deducted from your cart!!")}})
-// Load from localStorage or default to 0
-let count = parseInt(localStorage.getItem('count')) || 0;
-let classicspoonCount = parseInt(localStorage.getItem('classicspoonCount')) || 0;
-let chocolatespoonCount = parseInt(localStorage.getItem('chocolatespoonCount')) || 0;
-let classicforkCount = parseInt(localStorage.getItem('classicforkCount')) || 0;
-let chocolateforkCount = parseInt(localStorage.getItem('chocolateforkCount')) || 0;
-let classicbowlCount = parseInt(localStorage.getItem('classicbowlCount')) || 0;
-let chocolatebowlCount = parseInt(localStorage.getItem('chocolatebowlCount')) || 0;
-
 const prices = {
-    classicspoon: 30,
-    chocolatespoon: 35,
-    classicfork: 30,
-    chocolatefork: 35,
-    classicbowl: 60,
-    chocolatebowl: 70
+    classicspoon: 30, chocolatespoon: 35,
+    classicfork: 30, chocolatefork: 35,
+    classicbowl: 60, chocolatebowl: 70,
+    classicset: 100, chocolateset: 120
 };
 
-// Save all data to localStorage
-function saveData() {
-    localStorage.setItem('count', count);
-    localStorage.setItem('classicspoonCount', classicspoonCount);
-    localStorage.setItem('chocolatespoonCount', chocolatespoonCount);
-    localStorage.setItem('classicforkCount', classicforkCount);
-    localStorage.setItem('chocolateforkCount', chocolateforkCount);
-    localStorage.setItem('classicbowlCount', classicbowlCount);
-    localStorage.setItem('chocolatebowlCount', chocolatebowlCount);
-    localStorage.setItem('price', JSON.stringify(prices));
+const itemMap = {
+    1: "classicspoon", 2: "chocolatespoon", 
+    3: "chocolatefork", 4: "classicfork", 
+    5: "classicbowl", 6: "chocolatebowl"
+};
+
+function getCartState() {
+    return {
+        cartCount: parseInt(localStorage.getItem('cartCount')) || 0,
+        classicspoonCount: parseInt(localStorage.getItem('classicspoonCount')) || 0,
+        chocolatespoonCount: parseInt(localStorage.getItem('chocolatespoonCount')) || 0,
+        classicforkCount: parseInt(localStorage.getItem('classicforkCount')) || 0,
+        chocolateforkCount: parseInt(localStorage.getItem('chocolateforkCount')) || 0,
+        classicbowlCount: parseInt(localStorage.getItem('classicbowlCount')) || 0,
+        chocolatebowlCount: parseInt(localStorage.getItem('chocolatebowlCount')) || 0,
+        classicsetCount: parseInt(localStorage.getItem('classicsetCount')) || 0,
+        chocolatesetCount: parseInt(localStorage.getItem('chocolatesetCount')) || 0
+    };
 }
 
-// Update UI
+function saveData(state) {
+    Object.keys(state).forEach(key => localStorage.setItem(key, state[key]));
+}
+
 function updateUI() {
-    document.getElementById("display1").innerText = classicspoonCount;
-    document.getElementById("display2").innerText = chocolatespoonCount;
-    document.getElementById("display3").innerText = chocolateforkCount;
-    document.getElementById("display4").innerText = classicforkCount;
-    document.getElementById("display5").innerText = classicbowlCount;
-    document.getElementById("display6").innerText = chocolatebowlCount;
-    document.getElementById("cart").innerText = "Item selected: " + count;
+            const s = getCartState();
+    
+    for (let i = 1; i <= 6; i++) {
+        const el = document.getElementById(`display${i}`);
+        if (el) el.innerText = s[`${itemMap[i]}Count`];
+    }
+
+    const cartEl = document.getElementById("cart");
+    if (cartEl) {
+        cartEl.innerHTML = s.cartCount > 0 
+            ? `<i class="fa-solid fa-shopping-cart"></i> Item selected: ${s.cartCount}` 
+            : `<i class="fa-solid fa-shopping-cart"></i> Your cart is empty`;
+    }
 }
 
-// Initialize UI on load
-updateUI();
-
-// Add / Remove buttons
-document.getElementById("btn1").onclick = () => {
-    classicspoonCount++; count++;
-    alert("Item-added to the cart!!!");
-    saveData(); updateUI();
-};
-
-document.getElementById("btn2").onclick = () => {
-    if (classicspoonCount > 0) {
-        classicspoonCount--; count--;
-         alert("Item-deducted from the cart!!!");
-        saveData(); updateUI();
-    }
-};
-
-document.getElementById("btn3").onclick = () => {
-    chocolatespoonCount++; count++;
-    alert("Item-added to the cart!!!");
-    saveData(); updateUI();
-};
-
-document.getElementById("btn4").onclick = () => {
-    if (chocolatespoonCount > 0) {
-        chocolatespoonCount--; count--;
-         alert("Item-deducted from the cart!!!");
-        saveData(); updateUI();
-    }
-};
-
-document.getElementById("btn5").onclick = () => {
-    chocolateforkCount++; count++;
-    alert("Item-added to the cart!!!");
-    saveData(); updateUI();
-};
-
-document.getElementById("btn6").onclick = () => {
-    if (chocolateforkCount > 0) {
-        chocolateforkCount--; count--;
-         alert("Item-deducted from the cart!!!");
-        saveData(); updateUI();
-    }
-};
-
-document.getElementById("btn7").onclick = () => {
-    classicforkCount++; count++;
-    alert("Item-added to the cart!!!");
-    saveData(); updateUI();
-};
-
-document.getElementById("btn8").onclick = () => {
-    if (classicforkCount > 0) {
-        classicforkCount--; count--;
-         alert("Item-deducted from the cart!!!");
-        saveData(); updateUI();
-    }
-};
-
-document.getElementById("btn9").onclick = () => {
-    classicbowlCount++; count++;
-    alert("Item-added to the cart!!!");
-    saveData(); updateUI();
-};
-
-document.getElementById("btn10").onclick = () => {
-    if (classicbowlCount > 0) {
-        classicbowlCount--; count--;
-         alert("Item-deducted from the cart!!!");
-        saveData(); updateUI();
-    }
-};
-
-document.getElementById("btn11").onclick = () => {
-    chocolatebowlCount++; count++;
-    alert("Item-added to the cart!!!");
-    saveData(); updateUI();
-};
-
-document.getElementById("btn12").onclick = () => {
-    if (chocolatebowlCount > 0) {
-        chocolatebowlCount--; count--;
-         alert("Item-deducted from the cart!!!");
-        saveData(); updateUI();
-    }
-};
-
-// Calculate total
-function calculatetotal() {
-    return (
-        classicspoonCount * prices.classicspoon +
-        chocolatespoonCount * prices.chocolatespoon +
-        classicforkCount * prices.classicfork +
-        chocolateforkCount * prices.chocolatefork +
-        classicbowlCount * prices.classicbowl +
-        chocolatebowlCount * prices.chocolatebowl
-    );
+function calculateTotal() {
+    const s = getCartState();
+    return Object.keys(prices).reduce((total, key) => total + (s[`${key}Count`] || 0) * prices[key], 0);
 }
 
-// Show total price
-document.getElementById("seeprice").onclick = () => {
-    saveData(),updateUI();
-    document.getElementById("total").innerText =
-        "Total price: Rs." + calculatetotal();
+document.addEventListener("DOMContentLoaded", () => {
+    for (let i = 1; i <= 6; i++) {
+        const addBtn = document.getElementById(`btn${(i * 2) - 1}`);
+        const lessBtn = document.getElementById(`btn${i * 2}`);
+        const key = `${itemMap[i]}Count`;
+
+        if (addBtn) addBtn.onclick = () => {
+            let s = getCartState();
+            s[key]++; s.cartCount++;
+            saveData(s); updateUI();
+            alert("Item added to the cart!!!");
 };
 
-// Buy all (reset everything)
-document.getElementById("buyall").onclick = () => {
-    count = 0;
-    classicspoonCount = 0;
-    chocolatespoonCount = 0;
-    classicforkCount = 0;
-    chocolateforkCount = 0;
-    classicbowlCount = 0;
-    chocolatebowlCount = 0;
+        if (lessBtn) lessBtn.onclick = () => {
+            let s = getCartState();
+            if (s[key] > 0) {
+                s[key]--; s.cartCount--;
+                saveData(s); updateUI();
+                alert("Item deducted from the cart!!!");
+            }
+    };
 
-    saveData();
+        const pBtn = document.getElementById(`price${i}`);
+        if (pBtn) pBtn.onclick = () => {
+            const s = getCartState();
+            const seePriceEl = document.getElementById(`see${i}`);
+            if (seePriceEl) seePriceEl.innerText = `Total Price: ${s[key] * prices[itemMap[i]]}`;
+};
+
+        const bBtn = document.getElementById(`Buy${i}`);
+        if (bBtn) bBtn.onclick = () => {
+            let s = getCartState();
+            if (s[key] > 0) {
+                s.cartCount -= s[key];
+                s[key] = 0;
+                saveData(s); updateUI();
+                const seePriceEl = document.getElementById(`see${i}`);
+                if (seePriceEl) seePriceEl.innerText = "Total Price: 0";
+                alert("Congratulations !!! Your order for this item recorded successfully.");
+    }
+};
+    }
+
+    document.getElementById("seeprice")?.addEventListener("click", () => {
+        const totalEl = document.getElementById("total");
+        if (totalEl) totalEl.innerText = `Total price: Rs.${calculateTotal()}`;
+    });
+
+    document.getElementById("buyall")?.addEventListener("click", () => {
+        const reset = { cartCount: 0, classicspoonCount: 0, chocolatespoonCount: 0, classicforkCount: 0, chocolateforkCount: 0, classicbowlCount: 0, chocolatebowlCount: 0, classicsetCount: 0, chocolatesetCount: 0 };
+        saveData(reset); updateUI();
+        const totalEl = document.getElementById("total");
+        if (totalEl) totalEl.innerText = "";
+        for(let i=1; i<=6; i++) {
+            const seePriceEl = document.getElementById(`see${i}`);
+            if (seePriceEl) seePriceEl.innerText = "Total Price: 0";
+    }
+    });
+
+    document.querySelector('.product-card .add-buy')?.addEventListener("click", () => {
+        window.location.href = "purchase.html";
+    });
     updateUI();
-
-    document.getElementById("total").innerText = "";
-    document.getElementById("cart").innerText = "🛒 Your Cart is empty!!";
-};
-function calculatetotal(){
-    let total =
-        (classicspoonCount * prices.classicspoon)+
-        (chocolatespoonCount *prices.chocolatespoon)+
-        (classicforkCount * prices.classicfork)+
-        (chocolateforkCount * prices.chocolatefork)+
-        (classicbowlCount * prices.classicbowl)+
-        (chocolatebowlCount * prices.chocolatebowl);
-    return total
-}
-
-
-document.getElementById("seeprice").onclick = () =>{
-    let totalPrice = calculatetotal();
-    saveData(); updateUI();
-    document.getElementById("total").innerText ="Total price: Rs." + totalPrice;
-};
-document.getElementById("Buy1").addEventListener("click",function(){
-    if(classicspoonCount>0) {
-        count -=classicspoonCount;
-    
-    
-    classicspoonCount -=classicspoonCount;
-    document.getElementById("display1").innerText = +classicspoonCount;
-    document.getElementById("see1").innerText ="Total Price:" +classicspoonCount;
-    document.getElementById("cart").innerText="Item selected: " +count;
-
-    }
 });
-document.getElementById("Buy2").addEventListener("click",function(){
-    if (chocolatespoonCount>0){
-        count -=chocolatespoonCount
-        chocolatespoonCount -=chocolatespoonCount;
-    
-    document.getElementById("display2").innerText = chocolatespoonCount;
-    document.getElementById("see2").innerText ="Total Price:" +chocolatespoonCount;
-    document.getElementById("cart").innerText="Item selected: " +count;
-    }
-});
-document.getElementById("Buy3").addEventListener("click",function(){
-    if (chocolateforkCount>0){
-        count-=chocolateforkCount
-        chocolateforkCount-=chocolateforkCount;
-    
-
-    document.getElementById("display3").innerText = chocolateforkCount;
-     document.getElementById("see3").innerText ="Total Price:" +chocolateforkCount;
-    document.getElementById("cart").innerText="Item selected: " +count;
-    }
-});
-document.getElementById("Buy4").addEventListener("click",function(){
-    if (classicforkCount > 0) {
-        count -= classicforkCount
-        classicforkCount -= classicforkCount; 
-    document.getElementById("display4").innerText = classicforkCount;
-    document.getElementById("see4").innerText ="Total Price:" +classicforkCount;
-    document.getElementById("cart").innerText="Item selected: " +count;
-
-    }
-});
-document.getElementById("Buy5").addEventListener("click",function(){
-    if (classicbowlCount > 0) {
-        count -= classicbowlCount
-        classicbowlCount -= classicbowlCount;
-    document.getElementById("see5").innerText ="Total Price:" +classicbowlCount;
-    document.getElementById("cart").innerText="Item selected: " +count;
-    document.getElementById("display5").innerText = classicbowlCount;
-    }
-});
-document.getElementById("Buy6").addEventListener("click",function(){
-    if (chocolatebowlCount > 0){
-        count -=chocolatebowlCount
-        chocolatebowlCount -= chocolatebowlCount;
-    document.getElementById("see6").innerText ="Total Price:" +chocolatebowlCount;
-    document.getElementById("cart").innerText="Item selected: " +count;
-    
-    document.getElementById("display6").innerText = chocolatebowlCount;
-    }
-});
-document.getElementById("price1").addEventListener("click",function(){
-    let price1=classicspoonCount*prices.classicspoon;
-    document.getElementById("see1").innerText = "Total Price:" +price1 ;
-});
-document.getElementById("price2").addEventListener("click",function(){
-    let price2=chocolatespoonCount*prices.chocolatespoon;
-    document.getElementById("see2").innerText = "Total Price:" +price2 ;
-});
-document.getElementById("price3").addEventListener("click",function(){
-    let price2=chocolateforkCount*prices.chocolatefork;
-    document.getElementById("see3").innerText = "Total Price:" +price2 ;
-});
-document.getElementById("price4").addEventListener("click",function(){
-    let price2=classicforkCount*prices.classicfork;
-    document.getElementById("see4").innerText = "Total Price:" +price2 ;
-});
-document.getElementById("price5").addEventListener("click",function(){
-    let price2=classicbowlCount*prices.classicbowl;
-    document.getElementById("see5").innerText = "Total Price:" +price2 ;
-});
-document.getElementById("price6").addEventListener("click",function(){
-    let price2=chocolatebowlCount*prices.chocolatebowl;
-    document.getElementById("see6").innerText = "Total Price:" +price2 ;
-});
-
