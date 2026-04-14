@@ -237,7 +237,11 @@
     @media  (max-width: 768px){
       .Search{
         max-width: 	90%;
+
       }
+      .search-container input[type="search"] {
+      width: 90%;
+    }
     }
     /* 📱 MOBILE FIXES */
 @media (max-width: 768px) {

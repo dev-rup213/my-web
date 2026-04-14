@@ -1,0 +1,173 @@
+body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #232323, #5c5c5c);
+            min-height: 100vh;
+            margin: 0px;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .login-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 900px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            margin-top: 50px;
+            margin-left: 300px;
+            margin-left: 300px;
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            text-align: left;
+            margin-bottom: 20px;
+            font-weight: 200;
+            padding: 20px;
+            border-radius: 8px;
+            
+        }
+        h1{
+            background-color: rgb(3, 0, 100);color: #ccc;border-radius: 8px;padding: 20px;margin: 10px;
+        }
+        h3 {
+            margin-bottom: 20px;
+            font-weight: 200;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid black;
+            box-shadow: 2px 4px 4px black;
+
+        }
+        h4{
+            font-weight: 100;
+            font-size: 14px;
+            margin: 10px;
+        }
+        p {
+            margin-bottom: 20px;
+            font-weight: 200;
+            font: 18px sans-serif;
+            padding: 20px;
+            border-bottom: 1px solid black;
+
+        }
+
+        h3:hover{
+            cursor: pointer;
+            transform: translateY(-4px);
+        }
+
+        input {
+            width: 100%;
+            max-width: 380px;
+            padding: 10px;
+            margin-left: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #4facfe;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        #cardnumber{
+            width: 100%;
+            max-width: 790px;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+
+        }
+        button:hover {
+            background: #00c6ff;
+        }
+        .check {
+            float: right;
+            border-radius: 30px;
+        }
+        span {
+            float: right;
+            font-size: 18px;
+        }
+        select {
+            font-size: 18px;
+            border: none;
+            background-color: none;
+            cursor: pointer;
+        }
+        .cardpayment{
+            border: 1px solid black;margin: 0px;border-radius: 10px;padding: 20px;
+            box-shadow: 2px 4px 4px black;
+        }
+        .cardpayment:hover{
+            cursor: pointer;
+            transform: translateY(-4px);
+        }
+
+        .error {
+            color: red;
+            font-size: 13px;
+            display: none;
+        }
+
+        .link {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .link a {
+            color: #4facfe;
+            text-decoration: none;
+        }
+         @media (max-width: 768px) {
+        input {
+            width: 100%;
+            max-width: 300px;
+            padding: 10px;
+            margin-left: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+         #cardnumber{
+            width: 100%;
+            max-width: 700px;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+
+        }
+        .login-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 900px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            margin-top: 50px;
+            margin-left: 20px;
+            margin-left: 20px;
+            margin-bottom: 50px;
+        }
+
+        h1{
+            font-size: 24px;
+        }
+            
+        }

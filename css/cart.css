@@ -124,4 +124,8 @@
         height: 150px;
         width: 150px;
     }
+    .search-box input[type="search"] {
+      width: 90%;
+    }
+
     }
