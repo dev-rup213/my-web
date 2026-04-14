@@ -3,6 +3,7 @@ body {
             background: linear-gradient(135deg, #232323, #5c5c5c);
             min-height: 100vh;
             margin: 0px;
+            display: flex;
             align-items: center;
             justify-content: center;
 
