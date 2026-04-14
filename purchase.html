@@ -9,19 +9,24 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/purchase.css">
     <script src="js.scipt/tog.js"defer></script>
+
+    <style>
+
+    </style>
 </head>
-<body>
-<div class="topnav">
-         <a><i class="fa-solid fa-bars" id="menu-btn"></i></a>
+<Body>
+      <div class="topnav">
+    <a><i class="fa-solid fa-bars" id="menu-btn"></i></a>
   <div id="nav-links">
-          <a  href="index.html">Home</a>
-          <a href="Product.html">Product</a>
-          <a  href="Stores.html">Store</a>
-          <a href="cart.html">Cart</a>
-          <a class ="active" href="purchase.html">Orders</a>
-          <a href="Help.html">Help</a>
-  </div>
-</div>
+    <a  href="index.html">Home</a>
+    <a href="Product.html">Product</a>
+    <a  href="Stores.html">Store</a>
+    <a href="cart.html">Cart</a>
+    <a class ="active" href="purchase.html">Orders</a>
+    <a href="Help.html">Help</a>
+    <a href="http://127.0.0.1:8000/">Performance</a>
+    </div>
+      </div>
     <div class="login-box">
         <h1>Order Overview:<span id="total">Total Amount Payable:0</span></h1>
         <h2> Select a payment method from below:</h2>
@@ -29,7 +34,7 @@
              <option value="1" style="display: none;">Choose</option>
             <option value="2">G-Pay</option>
             <option value="3">Paytm</option>
-            <option value="4">Phone pay</option>
+            <option value="4">PhonePe</option>
             <option value="5">Others</option>
         </select></span><button style="margin-top: 20px;">Proceed to pay</button></h3>
       <div class="cardpayment"><p>Pay via Card<span><select>
@@ -41,10 +46,35 @@
         <input type="text" placeholder="First name"><input type="text" placeholder="Last Name">
         <input type="text" placeholder="Card number" id="cardnumber">
         <h4>Expiry Date</h4>
-        <input type="text" placeholder="MM/YY"> <input type="text" placeholder="Security Code">
+        <input type="text" placeholder="YYYY/MM/DD"> <input type="text" placeholder="Security Code">
         <button>Proceed to pay</button>
       </div>
         <h3>Cash on Delivery
         <button >Proceed to Pay</button></h3>
     </div>
-</body>
+<script>
+    function displayFinalTotal() {
+        const prices = {
+            classicspoon: 30, chocolatespoon: 35,
+            classicfork: 30, chocolatefork: 35,
+            classicbowl: 60, chocolatebowl: 70,
+            classicset: 100, chocolateset: 120
+        };
+
+        const total = 
+            (parseInt(localStorage.getItem('classicspoonCount')) || 0) * prices.classicspoon +
+            (parseInt(localStorage.getItem('chocolatespoonCount')) || 0) * prices.chocolatespoon +
+            (parseInt(localStorage.getItem('classicforkCount')) || 0) * prices.classicfork +
+            (parseInt(localStorage.getItem('chocolateforkCount')) || 0) * prices.chocolatefork +
+            (parseInt(localStorage.getItem('classicbowlCount')) || 0) * prices.classicbowl +
+            (parseInt(localStorage.getItem('chocolatebowlCount')) || 0) * prices.chocolatebowl +
+            (parseInt(localStorage.getItem('classicsetCount')) || 0) * prices.classicset +
+            (parseInt(localStorage.getItem('chocolatesetCount')) || 0) * prices.chocolateset;
+
+        document.getElementById("total").innerText = "Total Amount Payable: Rs." + total;
+    }
+
+    window.onload = displayFinalTotal;
+</script>
+</Body>
+</html>
