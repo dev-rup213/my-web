@@ -154,6 +154,10 @@ body {
             margin-bottom: 20px;
 
         }
+         #total{
+          flex-direction: column;
+           text-align: left;
+         }
         .login-box {
             background: white;
             padding: 16px;
