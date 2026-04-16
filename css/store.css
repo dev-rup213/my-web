@@ -120,6 +120,11 @@
     background: rgb(9, 250, 5)
       
     }	
+    .got{
+      font-size: 18px;
+    }
+
+
     .Search{
       width: 100%;
       max-width: 1500px;
@@ -228,6 +233,9 @@
       float: right;
       border: none;
       
+    }
+    .cart-section button a{
+      font-size: 12px;
     }
     .cart-section button:hover{
       background-color: bisque;

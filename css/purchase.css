@@ -1,20 +1,26 @@
 body {
             font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #232323, #5c5c5c);
-            min-height: 100vh;
+            min-height: 200vh;
             margin: 0px;
-            
 
         }
 
         .login-box {
-            background: white;
+            background: rgb(5, 1, 33);
+            color: #fefdfd;
             padding: 30px;
             border-radius: 10px;
             width: 100%;
             max-width: 900px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            box-shadow: 2px 4px 8px black;
             margin: 50px auto;
+        }
+        i{
+            font-size: 32px;
+        }
+        .gpay-icon{
+            background: linear-gradient(90deg,#4285f4,#34a853,#fbbc05,#ea4335 );
         }
 
         h2 {
@@ -27,11 +33,11 @@ body {
         }
         h1{
             background-color: rgb(3, 0, 100);
-                    color: #ccc;
-                    border-radius: 8px;
-                    padding: 20px;
-                    margin: 10px;
-                    font-weight: 500;
+            color: #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            font-weight: 400;
         }
         h3 {
             margin-bottom: 20px;
@@ -40,20 +46,43 @@ body {
             border-radius: 8px;
             border: 1px solid black;
             box-shadow: 2px 4px 4px black;
+            background-color: rgb(2, 2, 52);
+            color: white;
 
+        }
+        h1{
+            text-shadow: 2px 4px 8px black;
+        }
+        option{
+            border-radius: 12px;
+        }
+        input [type="radio"] {
+            margin-left: 5px;
+            padding: none;
+            
         }
         h4{
             font-weight: 100;
-            font-size: 14px;
+            font-size: 18px;
             margin: 10px;
         }
         p {
-            margin-bottom: 20px;
             font-weight: 200;
             font: 18px sans-serif;
-            padding: 20px;
-            border-bottom: 1px solid black;
+            margin:none;
+        }
+        h5 {
+            font-weight: 300;
+            font: 24px sans-serif;
+            padding: 10px;
+            border-bottom: 1px solid rgb(252, 251, 251);
 
+        }
+        p:hover{
+            background-color: #4facfe;
+            color: #fefdfd;
+            border-radius: 20px;
+            padding: 10px;
         }
 
         h3:hover{
@@ -74,12 +103,14 @@ body {
         button {
             width: 100%;
             padding: 10px;
-            background: #4facfe;
+            height: 50px;
+            background: #04457d;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             margin-top: 10px;
+            font-size: 24px;
         }
         #cardnumber{
             width: 100%;
@@ -110,29 +141,17 @@ body {
             cursor: pointer;
         }
         .cardpayment{
-            border: 1px solid black;margin: 0px;border-radius: 10px;padding: 20px;
+            border: 1px solid black;margin: 0px;border-radius: 10px;padding: 10px;
             box-shadow: 2px 4px 4px black;
+            background-color: rgb(2, 2, 52);
+            color: white;
+            margin: 0px;
         }
         .cardpayment:hover{
             cursor: pointer;
             transform: translateY(-4px);
         }
 
-        .error {
-            color: red;
-            font-size: 13px;
-            display: none;
-        }
-
-        .link {
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        .link a {
-            color: #4facfe;
-            text-decoration: none;
-        }
          @media (max-width: 768px) {
         input {
             width: 100%;
@@ -154,10 +173,6 @@ body {
             margin-bottom: 20px;
 
         }
-         #total{
-          flex-direction: column;
-           text-align: left;
-         }
         .login-box {
             background: white;
             padding: 16px;
@@ -167,7 +182,7 @@ body {
             box-shadow: 0 8px 20px rgba(0,0,0,0.2);
             margin-top: 50px;
             margin-left: 5px;
-            margin-right: 5px;
+            margin-left: 5px;
             margin-bottom: 50px;
         }
 

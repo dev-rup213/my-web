@@ -26,6 +26,10 @@
         transform: translateZ(100px);
         box-shadow: 0 4px 8px rgb(52, 52, 51);
     }
+    button a{
+        text-decoration: none;
+        color: #ccc;
+    }
     a{
         color: white;
         text-decoration: none;
@@ -98,11 +102,11 @@
        text-align: center;
     }
     .col a{
-            text-decoration: none;
-            color: white;
+        text-decoration: none;
+        color: #ccc;
     }
-    .col button {
-            border: none;
+    .col button{
+        border: none;
     }
     .product-row button:hover{
         background-color: aquamarine;

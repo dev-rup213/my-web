@@ -2,56 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>payment</title>
+    <title>Payment | Eat It</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="desciption" content="Login interface to enter in our website">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/purchase.css">
-    <script src="js.scipt/tog.js"defer></script>
-
-    <style>
-
-    </style>
+    <script src="js.scipt/tog.js" defer></script>
 </head>
-<Body>
-      <div class="topnav">
-    <a><i class="fa-solid fa-bars" id="menu-btn"></i></a>
+<body>
+    <nav class="topnav">
+        <a href="#"><i class="fa-solid fa-bars" id="menu-btn"></i></a>
   <div id="nav-links">
-    <a  href="index.html">Home</a>
+            <a href="index.html">Home</a>
     <a href="Product.html">Product</a>
-    <a  href="Stores.html">Store</a>
+            <a href="Stores.html">Store</a>
     <a href="cart.html">Cart</a>
-    <a class ="active" href="purchase.html">Orders</a>
+            <a class="active" href="purchase.html">Orders</a>
     <a href="Help.html">Help</a>
+      <a href="http://127.0.0.1:8000/">Performance</a>
     </div>
-      </div>
-    <div class="login-box">
-        <h1>Order Overview:<h3 id="total">Total Amount payable:0</3></h1>
-        <h2> Select a payment method from below:</h2>
-        <h3>Pay via UPI <i class="fa-brands fa-google-pay"></i> <i class="fa-brands fa-paypal"></i> <i class="fa-brands fa-amazon-pay"></i><span><select>
-             <option value="1" style="display: none;">Choose</option>
-            <option value="2">G-Pay</option>
-            <option value="3">Paytm</option>
-            <option value="4">PhonePe</option>
-            <option value="5">Others</option>
-        </select></span><button style="margin-top: 20px;">Proceed to pay</button></h3>
-      <div class="cardpayment"><p>Pay via Card <i class="fa-brands fa-cc-visa"></i> <i class="fa-brands fa-cc-mastercard"></i>
-          <span><select>
-            <option value="1">Debit Card</option>
-            <option value="2">Credit Card</option>
+    </nav>
 
-        </select></span>
-        <h4>Provide your card details:</h4>
-        <input type="text" placeholder="First name"><input type="text" placeholder="Last Name">
-        <input type="text" placeholder="Card number" id="cardnumber">
-        <h4>Expiry Date</h4>
-        <input type="text" placeholder="MM/YY"> <input type="text" placeholder="Security Code(CVV)">
-        <button>Proceed to pay</button>
-      </div>
-        <h3>Cash on Delivery
-        <button >Proceed to Pay</button></h3>
+    <div class="login-box">
+        <h1>Order Overview: </h1>
+        <h3 id="total">Total Amount Payable: Rs.0</h3>
+        <h2>Select a payment method:</h2>
+
+        <!-- UPI Section with Radio Buttons -->
+        <div class="cardpayment">
+            <h5>Pay via UPI </h5>
+   
+                   <div class="pay"><p><label><input type="radio" name="payment" value="gpay">
+                    Google Pay </label>  <i class="fa-brands fa-google-pay"></i></p>
+                    <p><label><input type="radio" name="payment" value="amazon">Amazon Pay   <i class="fa-brands fa-amazon-pay"></i></label></p>
+                    <p><label><input type="radio" name="payment" value="paypal">
+                   
+                    PayPal  <i class="fa-brands fa-paypal"></i> </label></p>
+            
+                    <p><label><input type="radio" name="payment" value="others">
+                     Others</label><input type="text" placeholder="Enter Your UPI-ID"></p></div>
+        </div>
+ 
+        <br>
+        <!-- Card Payment Section -->
+        <div class="cardpayment">
+            <h5>Pay via Card 
+                <i class="fa-brands fa-cc-visa" style="color: #1a1f71;"></i> 
+                <i class="fa-brands fa-cc-mastercard" style="color: #f79e1b"></i>
+            </h5>
+            <div class="card-type-select">
+                <p><label><input type="radio" name="payment" value="debit"> Debit Card</label></p>
+                <p><label><input type="radio" name="payment" value="Credit"> Credit Card</label></p>
+            </div>
+            <h4>Provide your card details:</h4>
+            <input type="text" placeholder="Card holder name" class="full-width">
+            <input type="text" placeholder="Card number" class="full-width">
+            <div class="card-expiry">
+                <input type="text" placeholder="MM/YY">
+                <input type="text" placeholder="CVV">
+            </div>
+        </div>
+
+        <!-- COD Section -->
+
+            <h3><label><input type="radio" name="payment" value="COD">Cash on Delivery <i class="fa-solid fa-wallet" style="color: #f79e1b;"></i></label>
+            </h3> 
+
+        <button class="pay-btn" id="pay">Proceed to Pay</button>
     </div>
+
 <script>
     function displayFinalTotal() {
         const prices = {
@@ -61,7 +80,7 @@
             classicset: 100, chocolateset: 120
         };
 
-        const total = 
+            const total = 
             (parseInt(localStorage.getItem('classicspoonCount')) || 0) * prices.classicspoon +
             (parseInt(localStorage.getItem('chocolatespoonCount')) || 0) * prices.chocolatespoon +
             (parseInt(localStorage.getItem('classicforkCount')) || 0) * prices.classicfork +
@@ -71,10 +90,13 @@
             (parseInt(localStorage.getItem('classicsetCount')) || 0) * prices.classicset +
             (parseInt(localStorage.getItem('chocolatesetCount')) || 0) * prices.chocolateset;
 
-        document.getElementById("total").innerText = "Total Amount payable: Rs." + total;
+        document.getElementById("total").innerText = "Total Amount Payable: Rs." + total;
+        document.getElementById("pay").innerText = "Proceed to Pay: Rs." + total;
     }
-
     window.onload = displayFinalTotal;
 </script>
-</Body>
+</body>
 </html>
+    </div>
+
+<script>
