@@ -56,11 +56,6 @@ body {
         option{
             border-radius: 12px;
         }
-        input [type="radio"] {
-            margin-left: 5px;
-            padding: none;
-            
-        }
         h4{
             font-weight: 100;
             font-size: 18px;
@@ -90,7 +85,7 @@ body {
             transform: translateY(-4px);
         }
 
-        input {
+        .input {
             width: 100%;
             max-width: 380px;
             padding: 10px;
@@ -98,6 +93,16 @@ body {
             border-radius: 8px;
             border: 1px solid #ccc;
             margin-bottom: 20px;
+        }
+        .full-width {
+            width: 100%;
+            max-width: 380px;
+            padding: 10px;
+            margin-left: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+
         }
 
         button {
@@ -141,6 +146,8 @@ body {
             cursor: pointer;
         }
         .cardpayment{
+            display: block;
+            gap: 10px;
             border: 1px solid black;margin: 0px;border-radius: 10px;padding: 10px;
             box-shadow: 2px 4px 4px black;
             background-color: rgb(2, 2, 52);
@@ -155,9 +162,9 @@ body {
          @media (max-width: 768px) {
         input {
             width: 100%;
-            max-width: 300px;
+            max-width: 300px auto;
             padding: 10px;
-            margin-left: 10px;
+            margin: 10px auto;
             border-radius: 8px;
             border: 1px solid #ccc;
             margin-bottom: 20px;
