@@ -175,6 +175,10 @@ body {
         .login-box {
             padding: 16px;
         }
+        .input,.full-width {
+          width: 100%;
+          max-width: 300px
+        }
 
         h1{
             font-size: 24px;
