@@ -1,5 +1,6 @@
-        body{background-image: url('../image/blackbackground.jpeg') ;
+        body{background-color: black;
       font-family: 'Segoe UI', sans-serif;
+            background-repeat: no-repeat;
     }
     button{
         width: 50px;
@@ -9,7 +10,7 @@
         color: aliceblue;
     }
     p{
-        line-height: 1.6;
+        line-height: 1.4;
     }
     p button{
         width: 150px;
@@ -28,19 +29,13 @@
     }
     button a{
         text-decoration: none;
-        color: #ccc;
+        color: #fcfafa;
     }
     a{
         color: white;
         text-decoration: none;
     }
-    h1{
-        text-align: left;
-       
-      color: #fefcfc;
-      margin-left: 20px;
-        
-    }
+
     .section{
         width: 100%;
         max-width: 90px;
@@ -60,27 +55,13 @@
         width: 100px;
         background-color: chartreuse;
     }
-    .product-row button{
-        background-color: rgb(41, 134, 59);
-        transition: all 0.2s ease;
-        color: rgb(254, 254, 253);
-        font-weight: 700;
 
 
-    }
-        #cart{
-        font-size: 64px;
-    }
-    #total{
-        font-size: 32px;
-    }
-    #cart1{
-        font-size: 24px;
-    }
+
     .search-box {
       position: relative;
       width: 100%;
-      max-width: 1650px;
+      max-width: 1400px;
       margin: 20px;
 
     
@@ -98,12 +79,14 @@
       transform: translateY(-50%);
       color: #060606;
     }
-    .col{
-       text-align: center;
-    }
+
     .col a{
         text-decoration: none;
-        color: #ccc;
+        color: #fefdfd;
+    }
+    .product-img {
+        height: 200px;
+        width: 200px;
     }
     .col button{
         border: none;
@@ -115,6 +98,9 @@
         transform: translateZ(1000px);
     
     }
+    .product-grid p{
+        line-height: 1.4;
+    }
     @media (max-width: 768px){
       .product-row div{
         text-align: center;
@@ -123,13 +109,10 @@
         font-size: 18px;
     }
     #cart{
-        font-size: 20px;
-    }
-    #total{
         font-size: 24px;
     }
-    #cart1{
-        font-size: 13px;
+    #total{
+        font-size: 32px;
     }
     .product-img{
         height: 150px;

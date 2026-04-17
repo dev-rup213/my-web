@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Payment | Eat It</title>
+    <title>Payment | Eat It
+    </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="desciption" content="User frindly payment interface with multiple Payment option and ordre Overview.">
+
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/purchase.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="js.scipt/tog.js" defer></script>
 </head>
 <body>
@@ -16,14 +20,11 @@
             <a href="index.html">Home</a>
     <a href="Product.html">Product</a>
             <a href="Stores.html">Store</a>
-    <a href="cart.html">Cart</a>
+    <a href="cart2.html">Cart</a>
             <a class="active" href="purchase.html">Orders</a>
     <a href="Help.html">Help</a>
-    
     </div>
     </nav>
-
-    <div class="login-box">
         <h1>Order Overview: </h1>
         <h3 id="total">Total Amount Payable: Rs.0</h3>
         <h2>Select a payment method:</h2>
@@ -32,12 +33,12 @@
         <div class="cardpayment">
             <h5>Pay via UPI </h5>
    
-                  <p><input type="radio" name="payment">Google Pay <i class="fa-brands fa-google-pay"></i></p>
-                 <p><input type="radio" name="payment">Amazon Pay   <i class="fa-brands fa-amazon-pay"></i></p>
-                    <p><input type="radio" name="payment">PayPal  <i class="fa-brands fa-paypal"></i></p>
+                  <tr><input type="radio" name="payment">  Google Pay <i class="fa-brands fa-google-pay"></i></tr>
+                 <tr><input type="radio" name="payment">   Amazon Pay   <i class="fa-brands fa-amazon-pay"></i><tr>
+                    <tr><input type="radio" name="payment">  PhonePe  <i class="fa-brands fa-paypal"></i></tr>
             
-                    <p><input type="radio" name="payment" value="others">
-                     Others<input type="text" placeholder="Enter Your UPI-ID" class="input"></p>
+                  <tr><input type="radio" name="payment" value="others" id="others">
+                     Others<input type="text" placeholder="Enter Your UPI-ID" class="input-upi" id="upi"></tr>
         </div>
  
         <br>
@@ -48,32 +49,26 @@
                 <i class="fa-brands fa-cc-mastercard" style="color: #f79e1b"></i>
             </h5>
             <div class="card-type-select">
-                <p><label><input type="radio" name="payment" value="debit"> Debit Card</label></p>
-                <p><label><input type="radio" name="payment" value="Credit"> Credit Card</label></p>
+                <tr><input type="radio" name="payment" value="debit"><label> Debit Card</label></tr>
+                <tr><input type="radio" name="payment" value="Credit"><label> Credit Card </label></tr>
             </div>
+          <div class="details">
             <h4>Provide your card details:</h4>
             <input type="text" placeholder="Card holder name" class="full-width">
             <input type="text" placeholder="Card number" class="full-width">
-            <div class="card-expiry">
-                <input type="text" placeholder="MM/YY" class="input">
-                <input type="text" placeholder="CVV" class="input">
-            </div>
+            <input type="text" placeholder="MM/YY" class="full-width">
+            <input type="text" placeholder="CVV" class="full-width">
+          </div>
         </div>
 
         <!-- COD Section -->
 
-            <h3><label><input type="radio" name="payment" value="COD">Cash on Delivery <i class="fa-solid fa-wallet" style="color: #f79e1b;"></i></label>
+            <h3><label><input type="radio" name="payment" value="COD"> Cash on Delivery <i class="fa-solid fa-wallet" style="color: #f79e1b;"></i></label>
             </h3> 
 
-        <button class="pay-btn" id="pay">Proceed to Pay</button>
-        <br>
+        <button class="pay-btn" id="pay"><a href="feedback.html">Proceed to Pay:Rs 0</a></button>
+         <button><a href="feedback.html">Give us feedback⭐</a></button>
 
-<a href="https://forms.gle/34dS29H6S5AZjKF7A" target="_blank"
-   style="display:inline-block; padding:14px 28px; background:#1a73e8; color:#fff; 
-          text-decoration:none; border-radius:8px; font-weight:600; margin: 10px; width: 100%;max-width: 300px;text-align: center;">
-   Give Feedback ⭐
-</a>
-    </div>
 
 <script>
     function displayFinalTotal() {
@@ -97,9 +92,18 @@
         document.getElementById("total").innerText = "Total Amount Payable: Rs." + total;
         document.getElementById("pay").innerText = "Proceed to Pay: Rs." + total;
     }
+    document.getElementById("pay").onclick = () =>{
+      alert("Congratulation Order recorded successfully🎉🎉!!")
+      
+    }
     window.onload = displayFinalTotal;
+    document.getElementById("others").onchange = () => {
+      document.getElementById("others").style.display = none;
+      document.getElementById("upi").style.display = block;
+    }
 </script>
 </body>
+
 </html>
     </div>
 

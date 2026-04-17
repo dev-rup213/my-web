@@ -35,6 +35,8 @@ function updateUI() {
     for (let i = 1; i <= 6; i++) {
         const el = document.getElementById(`display${i}`);
         if (el) el.innerText = s[`${itemMap[i]}Count`];
+        const totalEl = document.getElementById("total");
+        if (totalEl) totalEl.innerText = `Total price: Rs.${calculateTotal()}`;
     }
 
     const cartEl = document.getElementById("cart");
@@ -54,7 +56,9 @@ document.addEventListener("DOMContentLoaded", () => {
     for (let i = 1; i <= 6; i++) {
         const addBtn = document.getElementById(`btn${(i * 2) - 1}`);
         const lessBtn = document.getElementById(`btn${i * 2}`);
+        const removeBtn = document.getElementById(`btnr${i}`)
         const key = `${itemMap[i]}Count`;
+
 
         if (addBtn) addBtn.onclick = () => {
             let s = getCartState();
@@ -70,6 +74,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 saveData(s); updateUI();
                 alert("Item deducted from the cart!!!");
             }
+        };
+        if (removeBtn) removeBtn.onclick = () => {
+            let s = getCartState();
+            if (s[key]>0) {
+                s.cartCount -= s[key];
+                s[key] = 0
+                saveData(s); updateUI();
+                alert(`${itemMap[i]} removed from cart!!`)
+            }
+
     };
 
         const pBtn = document.getElementById(`price${i}`);
@@ -93,10 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
 };
     }
 
-    document.getElementById("seeprice")?.addEventListener("click", () => {
-        const totalEl = document.getElementById("total");
-        if (totalEl) totalEl.innerText = `Total price: Rs.${calculateTotal()}`;
-    });
+
 
     document.getElementById("buyall")?.addEventListener("click", () => {
         const reset = { cartCount: 0, classicspoonCount: 0, chocolatespoonCount: 0, classicforkCount: 0, chocolateforkCount: 0, classicbowlCount: 0, chocolatebowlCount: 0, classicsetCount: 0, chocolatesetCount: 0 };

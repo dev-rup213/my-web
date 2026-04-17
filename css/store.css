@@ -39,10 +39,11 @@
       height: 650px;
       padding: 20px;
       text-align: center;
-      background-color: #2f2f2f;
+      background-color:rgb(32, 31, 31);
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       transition: all 0.2s ease;
+      border: 1px solid  #c8e6c9;
     }
     .product-card:hover{
       transform: translateY(-20px);     
@@ -127,7 +128,7 @@
 
     .Search{
       width: 100%;
-      max-width: 1500px;
+      max-width: 1400px;
       border-radius: 8px;
       box-sizing: border-box;
       background-color:#fffdfd; ;
