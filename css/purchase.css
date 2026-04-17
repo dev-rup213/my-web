@@ -7,8 +7,8 @@ body {
         }
 
         .login-box {
-            background: rgb(5, 1, 33);
-            color: #fefdfd;
+            background: white;
+            color: black;
             padding: 30px;
             border-radius: 10px;
             width: 100%;
