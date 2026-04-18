@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0px;
 }
-i {
+.brand {
     font-size: 32px;
 }
 
@@ -88,8 +88,12 @@ input {
 
 /* Total */
 .total {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
+  margin-top: 15px;
+}
+.delivery {
+  font-size: 18px;
   margin-top: 15px;
 }
 
@@ -116,6 +120,7 @@ input {
   float: right;
 }
 .total-box{
+    font-size: 18px;
     margin: 20px;
 }
 .feedback-btn{

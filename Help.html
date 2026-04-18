@@ -14,9 +14,6 @@
 
     <body>
         <div class="topnav">
-     <a><i class="fa-solid fa-bars" id="menu-btn"></i></a>
-     <a><i class="fa-solid fa-search" id="search-btn"></i></a>
-      <a href="cart2.html"><i class="fa-solid fa-shopping-cart" id="shop"></i></a>
         <div id="nav-links">
         <a  href="index.html">Home</a>
         <a  href="Product.html">Product</a>
@@ -25,12 +22,39 @@
         <a  href="purchase.html">Orders</a>
         <a class="active" herf="Help.html">Help</a>
     </div>
-   
-        <a><i class="fa-solid fa-toolbox"></i></a>
-        <a><i class="fa-solid fa-headset"></i></a>
-        <a><i class="fa-solid fa-tools"></i></a>
-    
     </div>
+        <div class="side-nav-overlay" id="navOverlay"></div>
+  <nav class="side-nav" id="sideNav">
+    <div class="side-nav-header">
+      <img src="image/Picture1.png" alt="EAT IT" style="height:32px;"><span>EAT IT</span>
+      <button class="side-nav-close" id="navClose">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="side-nav-links">
+      <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="Product.html"><i class="fa-solid fa-utensils"></i> Product</a>
+      <a href="Stores.html"><i class="fa-solid fa-store"></i> Store</a>
+      <a href="cart2.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+      <a href="purchase.html"><i class="fa-solid fa-box"></i> Orders</a>
+      <a href="Help.html"><i class="fa-solid fa-circle-question"></i> Help</a>
+    </div>
+  </nav>
+
+  <!-- Your existing header -->
+  <header class="site-header">
+    <div class="mobile-header-bar">
+      <button class="hamburger" id="navOpen">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="mobile-icons">
+        <i class="fa-solid fa-search" id="search-btn"></i>
+        <a href="cart2.html"><i class="fa-solid fa-bag-shopping"></i></a>
+        <a><i class="fa-solid fa-toolbox"></i></a>
+        <a><i class="fa-solid fa-tools"></i></a>
+      </div>
+    </div>
+  </header>
     <div class="search-container">
     <input class="Search" id="search-input"  placeholder="🔍 Search" ></div>
     <header>
