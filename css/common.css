@@ -57,17 +57,20 @@
     font-size: 17px;
     font-weight: 600;
     transition: background-color 0.3s;
+    opacity: 0.8;
 }
 
 .topnav a:hover {
     background-color: #044624; 
     color: rgb(255, 255, 255);
+    opacity: 1;
 }
 
 .topnav a.active {
     background-color: #1b5e20;
     color: #ffffff;
-    border-radius: 4px; 
+    border-radius: 4px;
+    opacity: 1;
 }
 /* Accessibility: High-contrast focus for keyboard users */
 a:focus, button:focus, input:focus {
