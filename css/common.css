@@ -5,7 +5,7 @@
     vertical-align: top;
     display: flex; 
     align-items: center;
-    padding: 0 15px; /* Removed justify-content to allow custom spacing */
+    padding: 10px 16px; /* Removed justify-content to allow custom spacing */
 }
     .search-container input[type=search]{
       width: 100%;
@@ -27,14 +27,21 @@
 
 
     }
+    .logo{
+        display: block;
+        margin: 30px auto 10px;
+        width: 180px;
+        height: auto;
+        filter: none;
+    }
     #search-input{
         display: block;
     }
     header{
     text-align: center;
     color: #fafafa;
-    font-size: 64px;
-    font-weight: 700;
+    font-size: 48px;
+    font-weight: 600;
     margin-top: 0;
     margin-bottom: 0;
     background:linear-gradient(90deg,#1b5e20 0%,#388e3c 100%);
@@ -53,12 +60,12 @@
 }
 
 .topnav a:hover {
-    background-color: #e8dbdb; 
-    color: rgb(9, 9, 9);
+    background-color: #044624; 
+    color: rgb(255, 255, 255);
 }
 
 .topnav a.active {
-    background-color: #2196f3;
+    background-color: #1b5e20;
     color: #ffffff;
     border-radius: 4px; 
 }
@@ -89,6 +96,7 @@ a:focus, button:focus, input:focus {
     font-size: 18px;
     color: white;
     padding: 16px;
+    background: transparent;
 }
 #search-btn {
     display: none;
@@ -96,6 +104,7 @@ a:focus, button:focus, input:focus {
     font-size: 18px;
     color: white;
     padding: 16px;
+    background: transparent;
 }
 #shop {
     display: none;
@@ -103,6 +112,7 @@ a:focus, button:focus, input:focus {
     font-size: 18px;
     color: white;
     padding: 16px;
+    background: transparent;
 
 }
 

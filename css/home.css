@@ -150,6 +150,9 @@ body {
 
 
     }
+    .shop-btn:hover {
+      background-color: #1b5e20;
+    }
     .food{
       color: #030303;
     }
