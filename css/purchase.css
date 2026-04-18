@@ -1,6 +1,5 @@
-body {
+body {background-color: #f8f9fa;
             font-family: Arial, sans-serif;
-    background: white;
     min-height: 100vh;
             margin: 0px;
             color: black;
@@ -40,15 +39,16 @@ body {
         h2 {
             text-align: left;
             margin-bottom: 20px;
-            font-weight: 200;
+            font-weight: 400;
             padding: 20px;
             border-radius: 8px;
             color: black;
+            font-size: 24px;
 
         }
        
 h1 {
-    background-color: #1a237e;
+    background:linear-gradient(90deg,#1b5e20 0%,#388e3c 100%);
     color: #fff;
            margin: 0px;
             padding: 20px;
@@ -58,18 +58,16 @@ h1 {
     text-align: center;
         }
         h3 {
-    background-color: #f5f5f5;
-    color: #333;
+            box-shadow: 2px 4px 4px black;
+    color: #fbf8f8;
             margin-bottom: 20px;
             font-weight: 200;
             padding: 20px;
             border: 1px solid black;
-            box-shadow: 2px 4px 4px black;
-            background-color: rgb(2, 2, 52);
-            color: white;
+            background:white;
+            color: rgb(0, 0, 0);
 
     padding: 15px;
-    border-radius: 10px;
     border: 1px solid #ddd;
     margin: 15px 0;
     transition: 0.3s;
@@ -153,10 +151,10 @@ h3:hover {
 
         button {
             width: 100%;
-            max-width: 800px;
+            max-width: 600px;
             padding: 10px;
             height: 50px;
-            background: #04457d;
+            background: #12870c;
             color: white;
             border: none;
             border-radius: 5px;
@@ -201,13 +199,15 @@ h4 {
             cursor: pointer;
         }
         .cardpayment{
-            display: block;
+            display: flex;
             gap: 10px;
+            max-width: 1000px;
             border: 1px solid black;margin: 0px;padding: 10px;
             box-shadow: 2px 4px 4px black;
-            background-color: rgb(2, 2, 52);
-            color: white;
-            margin: 0px;
+            background-color:white;
+            color: rgb(0, 0, 0);
+            margin: 50px auto;
+            border-radius: 8px;
         }
         .cardpayment:hover{
             cursor: pointer;
@@ -230,8 +230,6 @@ h5 {
             padding: 10px;
             margin-left: 10px;
             margin-right: 10px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
             margin-bottom: 20px;
 
     border-bottom: 1px solid #ddd;
@@ -295,7 +293,6 @@ button, .pay-btn {
     width: 90%;
     padding: 12px;
     height: 50px;
-    background: #020956;
     color: white;
     border: none;
     border-radius: 5px;
@@ -310,7 +307,6 @@ button, .pay-btn {
     padding: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    border-radius: 8px;
     border: 1px solid #ccc;
     margin-bottom: 20px;
 }
@@ -330,10 +326,7 @@ span {
     display: block;
     gap: 10px;
     border: 1px solid #ddd;
-    border-radius: 10px;
     padding: 15px;
-    background-color: rgb(2, 2, 52);
-    color: white;
 
     margin: 15px 0;
     transition: 0.3s;

@@ -16,6 +16,9 @@ function updateStoreUI() {
     const count = parseInt(localStorage.getItem('cartCount')) || 0;
     const storeCart = document.getElementById("storecart");
     if (storeCart) storeCart.innerText = "Item selected: " + count;
+    const total = calculatetotal();
+    const totalDisplay = document.getElementById("total");
+    if (totalDisplay) totalDisplay.innerText = "Total price: Rs." + total;
 }
 
 function syncWithGlobalCart(itemKey, delta) {
@@ -89,12 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Congratulations !!! Your order recorded sucessfully.");
             resetCart();
         };
-    });
-
-    document.getElementById("seeprice")?.addEventListener("click", () => {
-        const total = calculatetotal();
-        const totalDisplay = document.getElementById("total");
-        if (totalDisplay) totalDisplay.innerText = "Total price: Rs." + total;
     });
 
     updateStoreUI();

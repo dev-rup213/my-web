@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Payment | Eat It
-    </title>
+    <title>Checkout | Eat It Edible Utensils</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="desciption" content="User frindly payment interface with multiple Payment option and ordre Overview.">
+    <meta name="description" content="Secure payment interface for your edible utensil orders.">
 
+    <!-- CSS Links -->
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/purchase.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/purchase2.css">
     <script src="js.scipt/tog.js" defer></script>
 </head>
 <body>
     <nav class="topnav">
-        <a href="#"><i class="fa-solid fa-bars" id="menu-btn"></i></a>
+        <a><i class="fa-solid fa-bars" id="menu-btn"></i></a>
+        <a href="cart2.html"><i class="fa-solid fa-shopping-cart" id="shop"></i></a>
   <div id="nav-links">
             <a href="index.html">Home</a>
     <a href="Product.html">Product</a>
@@ -25,52 +25,83 @@
     <a href="Help.html">Help</a>
     </div>
     </nav>
-        <h1>Order Overview: </h1>
-        <h3 id="total">Total Amount Payable: Rs.0</h3>
-        <h2>Select a payment method:</h2>
 
-        <!-- UPI Section with Radio Buttons -->
-        <div class="cardpayment">
-            <h5>Pay via UPI </h5>
-   
-                  <tr><input type="radio" name="payment">  Google Pay <i class="fa-brands fa-google-pay"></i></tr>
-                 <tr><input type="radio" name="payment">   Amazon Pay   <i class="fa-brands fa-amazon-pay"></i><tr>
-                    <tr><input type="radio" name="payment">  PhonePe  <i class="fa-brands fa-paypal"></i></tr>
-            
-                  <tr><input type="radio" name="payment" value="others" id="others">
-                     Others<input type="text" placeholder="Enter Your UPI-ID" class="input-upi" id="upi"></tr>
-        </div>
- 
-        <br>
-        <!-- Card Payment Section -->
-        <div class="cardpayment">
-            <h5>Pay via Card 
-                <i class="fa-brands fa-cc-visa" style="color: #1a1f71;"></i> 
-                <i class="fa-brands fa-cc-mastercard" style="color: #f79e1b"></i>
-            </h5>
-            <div class="card-type-select">
-                <tr><input type="radio" name="payment" value="debit"><label> Debit Card</label></tr>
-                <tr><input type="radio" name="payment" value="Credit"><label> Credit Card </label></tr>
+    <header class="checkout-header">
+        <h1>Order Overview</h1>
+    </header>
+            <div class="container">
+  <div class="payment-card">
+    <h2>Select Payment Method</h2>
+
+            <!-- Payment Method Tabs -->
+    <div class="payment-options">
+      <div class="option active" data-method="upi">UPI</div>
+      <div class="option" data-method="card">Card</div>
+      <div class="option" data-method="cod">COD</div>
+    </div>
+
+    <!-- UPI Section -->
+    <div id="upi" class="method active">
+                <p class="method-desc">Choose your preferred UPI app:</p>
+                <div class="upi-tiles">
+                    <div class="tile" data-upi="gpay">
+                        <i class="fa-brands fa-google-pay"></i>
+                    
+      </div>
+                    <div class="tile" data-upi="phonepe">
+                       
+                        <span>PhonePe</span>
+    </div>
+                    <div class="tile" data-upi="amazon">
+                        <i class="fa-brands fa-amazon-pay"></i>
+                       
+      </div>
+    </div>
+    </div>
+
+            <!-- Card Section -->
+            <div id="card" class="method">
+                <div class="card-inputs">
+                    <input type="text" placeholder="Card Holder Name" aria-label="Card Holder Name">
+                    <input type="text" placeholder="Card Number" aria-label="Card Number">
+                    <div class="row">
+                        <input type="text" placeholder="MM/YY" aria-label="Expiry Date">
+                        <input type="text" placeholder="CVV" aria-label="CVV">
+    </div>
+  </div>
+</div>
+
+            <!-- COD Section -->
+            <div id="cod" class="method">
+                <div class="cod-info">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <p>Pay at your doorstep upon delivery.</p>
+</div>
             </div>
-          <div class="details">
-            <h4>Provide your card details:</h4>
-            <input type="text" placeholder="Card holder name" class="full-width">
-            <input type="text" placeholder="Card number" class="full-width">
-            <input type="text" placeholder="MM/YY" class="full-width">
-            <input type="text" placeholder="CVV" class="full-width">
-          </div>
+
+            <!-- Summary & CTA -->
+            <div class="payment-footer">
+                <div class="total-box">
+                    <span class="total-label">Total Amount:</span>
+                    <span id="total" class="total-amount">Rs. 0</span>
+                </div>
+                <button class="pay-btn" id="pay">Pay Rs. 0</button>
+            </div>
         </div>
+    </div>
 
-        <!-- COD Section -->
-
-            <h3><label><input type="radio" name="payment" value="COD"> Cash on Delivery <i class="fa-solid fa-wallet" style="color: #f79e1b;"></i></label>
-            </h3> 
-
-        <button class="pay-btn" id="pay"><a href="feedback.html">Proceed to Pay:Rs 0</a></button>
-         <button><a href="https://forms.gle/34dS29H6S5AZjKF7A">Give us feedback⭐</a></button>
-
-
+    <!-- Feedback Sticky Bar -->
+    <div class="sticky-bar">
+        <span>How was your experience?</span>
+        <a href="https://forms.gle/34d529H655AZjKF7A" target="_blank" class="feedback-btn">
+            Give Feedback
+        </a>
+    </div>
+<footer class="main-footer">
+    <p>© 2025 Eat It Edible Utensils Pvt. Ltd. All rights reserved.</p>
+  </footer>
 <script>
+        // Synchronized Calculation Logic
     function displayFinalTotal() {
         const prices = {
             classicspoon: 30, chocolatespoon: 35,
@@ -89,22 +120,38 @@
             (parseInt(localStorage.getItem('classicsetCount')) || 0) * prices.classicset +
             (parseInt(localStorage.getItem('chocolatesetCount')) || 0) * prices.chocolateset;
 
-        document.getElementById("total").innerText = "Total Amount Payable: Rs." + total;
-        document.getElementById("pay").innerText = "Proceed to Pay: Rs." + total;
+            document.getElementById("total").innerText = "Rs. " + total;
+            document.getElementById("pay").innerText = "Proceed to Pay: Rs. " + total;
     }
-    document.getElementById("pay").onclick = () =>{
-      alert("Congratulation Order recorded successfully🎉🎉!!")
-      
-    }
+
     window.onload = displayFinalTotal;
-    document.getElementById("others").onchange = () => {
-      document.getElementById("others").style.display = none;
-      document.getElementById("upi").style.display = block;
-    }
+
+        // Payment Method Toggling
+    const options = document.querySelectorAll(".option");
+const methods = document.querySelectorAll(".method");
+        const tiles = document.querySelectorAll(".tile");
+
+options.forEach(option => {
+  option.addEventListener("click", () => {
+    options.forEach(o => o.classList.remove("active"));
+    methods.forEach(m => m.classList.remove("active"));
+    option.classList.add("active");
+                const methodId = option.getAttribute('data-method');
+                document.getElementById(methodId).classList.add("active");
+});
+        });
+tiles.forEach(tile => {
+  tile.addEventListener("click", () => {
+    tiles.forEach(t => t.classList.remove("active"));
+    tile.classList.add("active");
+                console.log("Selected UPI:", tile.dataset.upi);
+  });
+        });
+        
+        // Final "Pay" Action
+        document.getElementById("pay").onclick = () => {
+            alert("Thank you for choosing sustainability! Your order has been placed.");
+        };
 </script>
 </body>
-
 </html>
-    </div>
-
-<script>

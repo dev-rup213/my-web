@@ -8,11 +8,14 @@
   <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/all.min.css">
-  <script src="js.scipt/search2.js"defer></script>
+   <script src="js.scipt/tog.js"defer></script>
+   <script src="js.scipt/btn.js"defer></script>
 
 <body>
       <div class="topnav">
       <a><i class="fa-solid fa-bars" id="menu-btn"></i></a>
+      <a><i class="fa-solid fa-search" id="search-btn"></i></a>
+      <a href="cart2.html"><i class="fa-solid fa-shopping-cart" id="shop"></i></a>
       <div id="nav-links">
         <a class="active" href="index.html">Home</a>
         <a href="Product.html">Product</a>
@@ -20,49 +23,52 @@
         <a href="cart2.html">Cart</a>
         <a  href="purchase.html">Orders</a>
         <a href="Help.html">Help</a>
+      </div>      
       </div>
-      <input type="search" id="search-input"  placeholder="🔍Search" >
-       
-      </div>
-        <header>
-
-
-      <img src="image/Picture1.png" alt="Eat It Logo" style="height: 150px; vertical-align: middle;">
-    <h1>Eat It Edible Utensils Pvt. Ltd</h1>
+ 
+    <div class="search-container">
+    <input type="search" id="search-input"  placeholder="🔍Search" ></div>
+             <header class="Product">
+      <img src="image/Picture1.png" alt="Eat It Logo" style="height: 150px; vertical-align: middle;"><br>
+    Eat It Edible Utensils Pvt. Ltd
     <p>Eco-friendly. Edible. Exceptional.</p>
+
   </header>
+  
+  
+  
+  
 
-  
-  
-  
-
-  <section id="about" class="about">
-    <h2 style="color: #fefefe;">About Us</h2>
-    <p style="color: #f1fde9;font-size: 20px;">
+  <section id="about" class=" about Product">
+    <h2 style="color: #000000;">About Us</h2>
+    <p style="color: #070707;font-size: 20px;">
       Eat It Edible Utensils Pvt. Ltd is dedicated to reducing plastic waste by offering 100% biodegradable, edible cutlery and tableware. Our products are made from natural ingredients and are safe, sustainable, and delicious.
     </p>
   </section>
 
   <section id="products" class="products">
-    <div class="product-card Spoon" href="Edible Spoon.html">
+    <div class="product-card Product Spoon" href="Edible Spoon.html">
+      <img src="image/Spoon.jpeg">
       
-      <h3 ><a href="Edible Spoon.html">Edible Spoons</a></h3>
-      <p style="color: #ffffff;">Crunchy, tasty spoons that go great with soups and desserts.</p>
-      <button href="Stores.html"><a href="Stores.html">Shop now</a></button>
+      <h3 ><a href="Edible Spoon.html" class="food">Edible Spoons</a></h3>
+      <p style="color: #0a0a0a;">Crunchy, tasty spoons that go great with soups and desserts. Try it now !!</p>
+      <a class="shop-btn" href="Stores.html" >Shop now</a>
     </div>
-    <div class="product-card Fork" href="Edible Fork.html">
-      <h3 ><a href="Edible Fork.html">Edible Forks</a></h3>
-      <p style="color: #ffffff;">Sturdy forks made from grains and flavors, perfect for salads and more.</p>
-      <button href="Stores.html"><a href="Stores.html">Shop now</a></button>
+    <div class="product-card Product Fork" href="Edible Fork.html">
+      <img src="image/Fork.jpeg">
+      <h3 ><a href="Edible Fork.html" class="food">Edible Forks</a></h3>
+      <p style="color: #0e0e0e;">Sturdy forks made from grains and flavors, perfect for salads and more.</p>
+      <a class="shop-btn" href="Stores.html" >Shop now</a>
     </div>
-    <div class="product-card Bowl" href="bowl.html">
-      <h3><a href="bowl.html">Edible Bowls</a></h3>
-      <p style="color: #ffffff;">Serve your meal in a bowl you can eat too – no waste and fully eatable!</p>
-      <button href="Stores.html"><a href="Stores.html">Shop now</a></button>
+    <div class="product-card  Product Bowl" href="bowl.html">
+      <img src="image/bowl.jpeg">
+      <h3><a href="bowl.html" class="food">Edible Bowls</a></h3>
+      <p style="color: #000000;">Serve your meal in a bowl you can eat too – no waste and fully eatable!</p>
+      <a  class="shop-btn" href="Stores.html">Shop now</a>
     </div>
   </section>
   <p id="noResults" style="display: none;text-align: center;font-size: 24px;color: #f9faf9;">No product found</p>
-  <section id="contact" class="contact" style="background-color: #e3e8e3;border-radius: 8px;">
+  <section id="contact" class="contact Product" style="background-color: #e3e8e3;border-radius: 8px;border: 1px solid black;">
     <h2 style="color: #125e24;">Contact Us</h2>
     <p style="color: #024b02;font-weight: bold;">Email: info@eatitutensils.com</p>
     <p style="color: #013b01;font-weight: bold;">Phone: ‪+91-7003215022‬</p>

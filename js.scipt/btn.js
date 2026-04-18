@@ -1,20 +1,20 @@
 const searchinput = document.getElementById("search-input")
-const cards = document.querySelectorAll(".product-card")
+const products = document.querySelectorAll(".Product")
 const noResult = document.getElementById("noResults")
 searchinput.addEventListener("input",function(){
     const query =
 searchinput.value.toLowerCase().trim();
     let matchfound = false;
 
-    cards.forEach(card => {
+    products.forEach(Product => {
         const text =
-        card.innerText.toLowerCase();
+        Product.innerText.toLowerCase();
         if (text.includes(query)) {
-            card.style.display = "";
+            Product.style.display = "block";
             matchfound= true;
         }
         else{
-            card.style.display = "none";
+            Product.style.display = "none";
 
 
         }
@@ -22,11 +22,6 @@ searchinput.value.toLowerCase().trim();
         noResult.style.display = matchfound ? "none" : "block" ;
         
     });
-const btn =document.getElementById("menu-btn");
-const links =document.getElementById("nav-links");
-btn.onclick = () => {
-    links.classList.toggle("active");
-    }
 const search = document.getElementById("search-btn");
 const container = document.getElementById("search-input")
 

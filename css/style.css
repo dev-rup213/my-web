@@ -6,7 +6,7 @@
     --primary: #2e7d32;       /* Forest Green */
     --primary-light: #4caf50; /* Eco Green */
     --secondary: #db1515;    /* Earthy Brown */
-    --bg-light: #f1f8e9;     /* Very Light Green Tint */
+    --bg-light: #f5f5f5;     /* Very Light Green Tint */
     --text-main: #1b5e20;    /* Dark Green Text */
     --white: #ffffff;
     --border: #c8e6c9;
@@ -52,12 +52,14 @@ body {
 
 /* Modern Eco-Card */
 .product-card {
-    background: var(--dark);
+    background: var(--white);
     border-radius: 15px;
     padding: var(--space-lg);
     border: 1px solid var(--border);
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 2px 4px 8px black;
+    color: var(--dark);
+    margin: 20px;
     
 }
 

@@ -27,3 +27,11 @@ const links =document.getElementById("nav-links");
 btn.onclick = () => {
     links.classList.toggle("active");
     }
+const search = document.getElementById("search-btn");
+const container = document.getElementById("search-input")
+
+search.onclick = () => {
+
+        container.style.display = "block";
+
+    }

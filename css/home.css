@@ -1,30 +1,18 @@
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    background-image: url('../image/cutlery%20set.jpeg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    filter: blur(8px);
-    z-index: -1;
-}
 
 body {
+      background:   #f5f5f5; ;
       min-height: 100vh;
       margin: 0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Poppins', sans-serif;
       color: #333;
     }
 
     header {
-    background-color: #388e3c;
+    background:linear-gradient(90deg,#1b5e20 0%,#388e3c 100%);
       color: white;
     padding: 3rem 1rem;
       text-align: center;
+      font-size: 64px;
     }
 
     header h1 {
@@ -105,10 +93,11 @@ body {
       text-align: center;
       height: max-content;
       box-shadow: 4px 4px 16px rgba(8, 8, 8, 0.1);
-      background-color: #4CAF50;
-      color: white;
+      background-color: #fcfffd;
+      color: rgb(8, 8, 8);
       box-sizing: content-box;
       transition: all 0.2s ease;
+      font-weight: 500;
     }
     .product-card:hover{
 
@@ -116,76 +105,55 @@ body {
       box-shadow: 0 8px 12px rgb(90, 89, 89);
 
       cursor: pointer;
-      color: greenyellow;
+    }
+    p{
+      font-size: 24px;
     }
     .product-card a{
       text-decoration: none;
-      color: #faf9f9;
-      text-shadow: 2px 4px 8px #030303;
+      font-size: 24px;
     }
-    .product-card a:hover{
-      text-decoration: dashed;
-      color: rgb(255, 254, 254);
-    }
+
     .product-card p{
-      text-shadow: 2px 4px 8px #040404;
-      font-weight: 600;
+      font-weight: 400;
     }
-    .product-card button{
-      border-radius: 12px;
-      background-color: #077213;
-      color: white;
-      margin-top: 20px;
-      vertical-align: bottom;
-      height: 40px;
-      box-shadow: 2px 4px 12px rgba(255, 253, 253, 0.1);
-      border: 1px solid white;
-      cursor: pointer;
 
-    }
-    .product-card button a{
-      color: #fbfefb;
-      font-weight: 300;
-    }
-    .product-card button:hover{
-      background-color: #aefcae;
-      box-shadow: 2px 4px 12px rgba(12, 12, 12, 0.1);
-      color: #f9f7f7;
-      cursor: pointer;
-      transform: translateZ(2000pc);
-
-    }
     .about h2{
-      text-shadow: 2px 4px 8px rgb(4, 4, 4);
+      color: #030303;
 
     }
     .about p{
-          background-color: rgba(0,0,0,0.4); /* Dark overlay for readability */
+          /* Dark overlay for readability */
           padding: 20px;
           border-radius: 8px;
           line-height: 1.8;
-          text-shadow: 2px 4px 8px rgb(13, 14, 13);
+          color: #030303;
+          border: 1px solid black;
+          box-shadow: 2px 4px 4px black;
+          box-sizing: border-box;
+          background: rgb(255, 254, 254);
+         
 
     }
-    .Spoon{
-      background-image: url(../image/Spoon.jpeg);
-      background-size: cover; 
-      background-position: center;
-      background-repeat: no-repeat;
+    .product-card img {
+      height: 300px;
+      width: 100%;
+      border-radius: 12px;
     }
-    .Fork{
-      background-image: url(../image/fork2.jpeg);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+
+    .shop-btn{
+      background: green;
+      color: white;
+      width: 50px;
+      border-radius: 8px;
+      padding: 10px;
+
 
     }
-    .Bowl{
-      background-image: url(../image/bowl.jpeg);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+    .food{
+      color: #030303;
     }
+
 
     footer {
       background-color: #2e7d32;
@@ -196,6 +164,10 @@ body {
 
     @media (max-width: 768px) {
 
+  header{
+    font-size: 32px;
+  }
+
   .topnav a {
     font-size: 12px;
   }
@@ -204,6 +176,9 @@ body {
     width: 90%;
     margin: 10px;
 
+  }
+  a i{
+    color: #030303;
   }
 
   .h1{

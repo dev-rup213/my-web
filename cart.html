@@ -6,14 +6,11 @@
     <link rel="stylesheet" href="css/product.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/cart.css">
+
     <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="js.scipt/script.js"defer></script>
     <script src="js.scipt/search.js"defer></script>
-    
-
-
-
-
 </head>
 <body>
     <div class="topnav">
@@ -25,26 +22,26 @@
       <a class="active" href="cart.html">Cart</a>
       <a  href="purchase.html">Orders</a>
       <a href="Help.html">Help</a>
+      <a href="http://127.0.0.1:8000/">Performance</a>
     </div>
 
     </div>
-    <header>Eat IT Cart</header>
+    <header>EAT IT  Cart <i class="fa-solid fa-shopping-cart"></i></header>
     <div class="search-box">
     <input type="search" id="search-input"  placeholder="Search" ><i class="fa-solid fa-search"></i></div> 
-    
 
 
-<div class="product-card" style="border: 1px dashed white;text-align: center;margin: 50px;background: dimgrey;justify-content: center;display: flex;align-items: center;flex-direction: column;border-radius: 8px;">
+<div class="product-card">
     <p id="cart"><i class="fa-solid fa-shopping-cart"></i>Your cart is empty</p>
     <p id="total"></p>
     <p id="cart1">Add Items and Click on Buy Now</p>
-<p><button ><a href="purchase.html">Buy Now</a></button><button id="seeprice">Total Price</button><button id="buyall">Clear all</button>
+    <p><button class="btn-primary" ><a href="purchase.html">Buy Now</a></button><button class="btn-primary" id="seeprice">Total Price</button><button class="btn-secondary" id="buyall">Clear all</button>
 </div>
 <h2 style="color: white;">Recommended For you :</h2>
 <div class="product-row Product">
-    <img src="image/Spoon.jpeg" alt="Classic Spoon" class="product-img" style="height: 300px;width: 200px;">
+    <img src="image/Spoon.jpeg" alt="Classic Spoon" class="product-img">
     <div>
-      <h2 style="margin-bottom: 10px;">Edible Spoon</h2>
+      <h2>Edible Spoon</h2>
     <div class="product-grid">
       <div><p >Flavour: Classic </p>
         <p> Quatity: 10pcs</p>
@@ -67,7 +64,7 @@
 
 
 <div class="product-row Product">
-    <img src="image/bowl2.jpeg" alt="Chocolate Spoon" class="product-img" style="height: 300px;width: 200px;">
+    <img src="image/bowl2.jpeg" alt="Chocolate Spoon" class="product-img">
     <div>
         <h2>Edible Spoon🥄</h2>
       <div class="product-grid">
@@ -91,7 +88,7 @@
   </div>
 
 <div class="product-row Product">
-    <img src="image/fork2.jpeg" alt="Chocolate Fork" class="product-img" style="height: 300px;width: 200px;">
+    <img src="image/fork2.jpeg" alt="Chocolate Fork" class="product-img">
     <div>
         <h2>Edible Fork</h2>
             <div class="product-grid">
@@ -115,7 +112,7 @@
   </div>
 
 <div class="product-row Product">
-    <img src="image/Fork.jpeg" alt="Classic Fork" class="product-img" style="height: 300px;width: 200px;">
+    <img src="image/Fork.jpeg" alt="Classic Fork" class="product-img">
     <div>
         <h2>Edible Fork</h2>
             <div class="product-grid">
@@ -139,7 +136,7 @@
   </div>
 
 <div class="product-row Product">
-    <img src="image/bowl.jpeg" alt="Classic Bowl" class="product-img" style="height: 300px;width: 200px;">
+    <img src="image/bowl.jpeg" alt="Classic Bowl" class="product-img" >
     <div>
         <h2>Edible Bowl🥣</h2>
       <div class="product-grid">
@@ -152,7 +149,7 @@
          <p>💵COD: Available</p>
           </div>
       <div class="col">
-        <button id="btn10" class="less-cart" style="margin-top: 50px;border: 2px solid white;"><i class="fa-solid fa-minus"></i></button><button id="display5" disabled style="background-color:   rgb(52, 52, 51);margin-top: 50px;border: 2px solid white;">0</button><button id="btn9" class="add-cart" style="margin-top: 50px;border: 2px solid white;"><i class="fa-solid fa-plus"></i></button>
+        <button id="btn10" class="less-cart" style="border: 2px solid white;"><i class="fa-solid fa-minus"></i></button><button id="display5" disabled style="background-color:   rgb(52, 52, 51);border: 2px solid white;">0</button><button id="btn9" class="add-cart" style="border: 2px solid white;"><i class="fa-solid fa-plus"></i></button>
         <p><button ><a href="purchase.html">Buy Now</a></button></p>
         <P id="see5">Total Price: 0</P>
         <p><button id="price5"style="border: none;">See Price</button></p>
@@ -163,7 +160,7 @@
   </div>
 
 <div class="product-row Product">
-    <img src="image/spoon2.jpeg" alt="Chocolate Bowl" class="product-img" style="height: 300px;width: 200px;">
+    <img src="image/spoon2.jpeg" alt="Chocolate Bowl" class="product-img" >
     <div>
         <h2>Edible Bowl</h2>
             <div class="product-grid">
@@ -190,7 +187,7 @@
 
 </div>
 </body>
-      <footer>
+  <footer class="main-footer">
     <p>© 2025 Eat It Edible Utensils Pvt. Ltd. All rights reserved.</p>
   </footer>
 </html>
