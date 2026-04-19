@@ -16,9 +16,13 @@ function updateStoreUI() {
     const count = parseInt(localStorage.getItem('cartCount')) || 0;
     const storeCart = document.getElementById("storecart");
     if (storeCart) storeCart.innerText = "Item selected: " + count;
+    const storeCart1 = document.getElementById("storecart1");
+    if (storeCart1) storeCart1.innerText = ": " + count;
     const total = calculatetotal();
     const totalDisplay = document.getElementById("total");
+    const totalamount = document.getElementById("amount");
     if (totalDisplay) totalDisplay.innerText = "Total price: Rs." + total;
+     if (totalamount) totalamount.innerText = "Total amount: Rs." + total;
 }
 
 function syncWithGlobalCart(itemKey, delta) {

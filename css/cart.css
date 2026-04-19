@@ -1,7 +1,4 @@
-        body{background-color: black;
-      font-family: 'Segoe UI', sans-serif;
-            background-repeat: no-repeat;
-    }
+
     button{
         width: 50px;
         height: 30px;
@@ -56,30 +53,6 @@
         background-color: chartreuse;
     }
 
-
-
-    .search-box {
-      position: relative;
-      width: 100%;
-      max-width: 1400px;
-      margin: 20px;
-
-    
-    }
-    .search-box input[type="search"] {
-      width: 100%;
-      padding: 10px 10px 10px 40px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-    .search-box i {
-      position: absolute;
-      top: 50%;
-      left: 15px;
-      transform: translateY(-50%);
-      color: #060606;
-    }
-
     .col a{
         text-decoration: none;
         color: #fefdfd;
@@ -101,8 +74,19 @@
     .product-grid p{
         line-height: 1.4;
     }
+    #cart,#total{
+        font-weight: 500;
+    }
     @media (max-width: 768px){
-      .product-row div{
+        .product-row{
+            align-items: center;
+        }
+
+    .product-row h2{
+        text-align: center;
+        margin-left: 20px;
+    }
+      .product-grid div{
         text-align: center;
       }
     .product-row {
@@ -116,10 +100,8 @@
     }
     .product-img{
         height: 150px;
-        width: 150px;
-    }
-    .search-box input[type="search"] {
-      width: 90%;
+        width: 100%;
+        border-radius: 12px;
     }
 
     }

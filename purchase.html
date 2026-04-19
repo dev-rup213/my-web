@@ -49,24 +49,25 @@
       </div>
     </div>
   </header>
-    <header class="checkout-header">
-        <h1>Order Overview</h1>
+    <header >
+        <img src="image/logo.png" class="logo">
+        Order Overview
     </header>
             <div class="container">
   <div class="payment-card">
     <h2>Select Payment Method</h2>
 
     <div class="payment-options">
-      <div class="option active" data-method="upi">UPI</div>
-      <div class="option" data-method="card">Card</div>
-      <div class="option" data-method="cod">COD</div>
+      <div class="option active" data-method="upi" id="UPI">UPI</div>
+      <div class="option" data-method="card" id="CARD">Card</div>
+      <div class="option" data-method="cod" id="cash">COD</div>
     </div>
 
     <!-- UPI Section -->
     <div id="upi" class="method active">
                 <p class="method-desc">Choose your preferred UPI app:</p>
                 <div class="upi-tiles">
-                    <div class="tile" data-upi="gpay">
+                    <div class="tile active" data-upi="gpay">
                         <i class="fa-brands fa-google-pay brand"></i>
                     
       </div>
@@ -116,79 +117,13 @@
     <!-- Feedback Sticky Bar -->
     <div class="sticky-bar">
         <span>How was your experience?</span>
-        <a href="https://forms.gle/34dS29H6S5AZjKF7A" target="_blank" class="feedback-btn">
+        <a href="https://forms.gle/34d529H655AZjKF7A" target="_blank" class="feedback-btn">
             Give Feedback
         </a>
     </div>
+
+</body>
 <footer class="main-footer">
     <p>© 2025 Eat It Edible Utensils Pvt. Ltd. All rights reserved.</p>
   </footer>
-<script>
-        // Synchronized Calculation Logic
-    function displayFinalTotal() {
-        const prices = {
-            classicspoon: 30, chocolatespoon: 35,
-            classicfork: 30, chocolatefork: 35,
-            classicbowl: 60, chocolatebowl: 70,
-            classicset: 100, chocolateset: 120
-        };
-
-            const total = 
-            (parseInt(localStorage.getItem('classicspoonCount')) || 0) * prices.classicspoon +
-            (parseInt(localStorage.getItem('chocolatespoonCount')) || 0) * prices.chocolatespoon +
-            (parseInt(localStorage.getItem('classicforkCount')) || 0) * prices.classicfork +
-            (parseInt(localStorage.getItem('chocolateforkCount')) || 0) * prices.chocolatefork +
-            (parseInt(localStorage.getItem('classicbowlCount')) || 0) * prices.classicbowl +
-            (parseInt(localStorage.getItem('chocolatebowlCount')) || 0) * prices.chocolatebowl +
-            (parseInt(localStorage.getItem('classicsetCount')) || 0) * prices.classicset +
-            (parseInt(localStorage.getItem('chocolatesetCount')) || 0) * prices.chocolateset;
-
-            document.getElementById("total").innerText = "Rs. " + total;
-            document.getElementById("pay").innerText = "Proceed to Pay: Rs. " + total;
-
-        return total;
-
-
-    }
-
-    function delivery() {
-        const total = displayFinalTotal();
-        if (total > 0) {
-            document.getElementById("delivery").innerText = "Estimated delivery time : 3-4 days";      }
-
-
-  
-    }
-    window.onload = function() {
-        delivery();
-    }
-
-        // Payment Method Toggling
-    const options = document.querySelectorAll(".option");
-const methods = document.querySelectorAll(".method");
-        const tiles = document.querySelectorAll(".tile");
-
-options.forEach(option => {
-  option.addEventListener("click", () => {
-    options.forEach(o => o.classList.remove("active"));
-    methods.forEach(m => m.classList.remove("active"));
-    option.classList.add("active");
-                const methodId = option.getAttribute('data-method');
-                document.getElementById(methodId).classList.add("active");
-});
-        });
-tiles.forEach(tile => {
-  tile.addEventListener("click", () => {
-    tiles.forEach(t => t.classList.remove("active"));
-    tile.classList.add("active");
-                console.log("Selected UPI:", tile.dataset.upi);
-  });
-        });
-        
-        // Final "Pay" Action
-        document.getElementById("pay").onclick = () => {
-            alert("Thank you for choosing sustainability! Your order has been placed.");
-        };
-</script>
-</body>
 </html>
