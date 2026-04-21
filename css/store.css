@@ -8,6 +8,7 @@
 
 
     }
+
     select{
       position: relative;
       margin-left: 30px;
@@ -260,24 +261,8 @@
     /* 📱 MOBILE FIXES */
 @media (max-width: 768px) {
 
-  /* HEADER */
-    #search-btn {
-        display: block;
-        margin-right: auto;
-          background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.25rem;
-  cursor: pointer;
-  padding: 0.5rem;
-    }
 
-  /* GRID SMALLER */
-    select{
-      margin-left: 10px;
-    }
-
-  /* STACK LAYOUT */
+  /* GRID SMALLER   /* STACK LAYOUT */
   .main-section {
     flex-direction: column;
     display: none;
@@ -332,6 +317,9 @@
     }
   select{
     color: white;
+    margin-left: 0px;
+    padding: 8px;
+    font-size: 14px;
   }
 }
 

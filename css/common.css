@@ -192,7 +192,7 @@ h1, h2, h3, .logo-text {
   padding: 0;
   visibility: none;
   margin-bottom: 0px;
-  gap: 60px;
+  gap: 40px;
 }
 .hamburger, .mobile-icons a {
   background: none;
@@ -358,6 +358,7 @@ body.nav-open .side-nav-overlay {
         align-items: center;
         overflow: hidden;
          transform: translateX(-20px);
+         gap: 10px;
     }
 
     .mobile-header-bar .search-wrapper.active {
