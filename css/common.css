@@ -192,7 +192,7 @@ h1, h2, h3, .logo-text {
   padding: 0;
   visibility: none;
   margin-bottom: 0px;
-  gap: 100px;
+  gap: 60px;
 }
 .hamburger, .mobile-icons a {
   background: none;
