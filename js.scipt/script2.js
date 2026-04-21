@@ -48,6 +48,17 @@ function calculatetotal() {
         (parseInt(localStorage.getItem('chocolatesetCount')) || 0) * prices.chocolateset
     );
 }
+const button = document.querySelectorAll('.button');
+const total = calculatetotal();
+
+button.forEach(button =>{
+    if (total > 0) {
+        button.style.display = "";
+    }
+    else {
+        button.style.display = "none";
+    }
+});
 
 document.addEventListener("DOMContentLoaded", () => {
     Object.entries(botMappings).forEach(([id, key]) => {
@@ -56,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
             el.onclick = () => {
                 syncWithGlobalCart(key, 1);
                 alert("Item added to the cart!!!");
+                document.querySelectorAll('.button').forEach(cart => cart.style.display = "");
         };
         }
     });
@@ -64,6 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!button.id || !botMappings[button.id]) {
             button.addEventListener('click', () => {
                 alert("Item added!");
+                document.querySelectorAll('.button').forEach(cart => cart.style.display = "");
     });
         }
 });
@@ -71,6 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.less-cart').forEach(button => {
         button.addEventListener('click', () => {
             alert("Item deducted from your cart!!");
+            document.querySelectorAll('.button').forEach(cart => cart.style.display = "none");
         });
     });
 
@@ -89,6 +103,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("remove")?.addEventListener("click", () => {
         resetCart();
         alert("Cart cleared!");
+        document.querySelectorAll('.button').forEach(cart => cart.style.display = "none");
+       
     });
 
     document.querySelectorAll('.add-buy').forEach(button => {
@@ -97,6 +113,5 @@ document.addEventListener("DOMContentLoaded", () => {
             resetCart();
         };
     });
-
-    updateStoreUI();
+  updateStoreUI();
 });

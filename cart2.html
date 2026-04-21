@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js.scipt/script.js"defer></script>
     <script src="js.scipt/search.js"defer></script>
+    <script src="js.scipt/filter.js"defer></script>
 </head>
 <body>
     <div class="topnav">
@@ -21,12 +22,20 @@
       <a  href="purchase.html">Orders</a>
       <a href="Help.html">Help</a>
     </div>
-
+    <select id="select1" ><option value="all">All
+    </option>
+  <option value="classic">Classic</option>
+  <option value="cake">Chocolate</option>
+</select>
+    <div class="search-wrapper" id="searchWrapper">
+        <i class="fa-solid fa-search" id="search-trigger"></i>
+        <input type="search" id="search-input" placeholder="Search eco-products...">
+    </div>      
     </div>
       <div class="side-nav-overlay" id="navOverlay"></div>
   <nav class="side-nav" id="sideNav">
     <div class="side-nav-header">
-      <img src="image/Picture1.png" alt="EAT IT" style="height:32px;"><span>EAT IT</span>
+      <img src="image/logo.png" alt="EAT IT" style="height:32px;"><span>EAT IT</span>
       <button class="side-nav-close" id="navClose">
         <i class="fa-solid fa-xmark"></i>
       </button>
@@ -48,19 +57,24 @@
         <i class="fa-solid fa-bars"></i>
       </button>
       <div class="mobile-icons">
-        <i class="fa-solid fa-search" id="search-btn"></i>
-        <a href="help.html"><i class="fa-solid fa-headset"></i></a>
+      <div class="search-wrapper mobile-only-search pls">
+        <i class="fa-solid fa-search "></i>
+        <input type="search" id="mobile-search-input" placeholder="Search eco-products...">
+      </div>
+        <a href="help.html" class="mobile"><i class="fa-solid fa-headset"></i></a>
+            <select id="select2" class="mobile" ><option value="all">All
+    </option>
+  <option value="classic">Classic</option>
+  <option value="cake">Chocolate</option>
+</select>
       </div>
     </div>
   </header>
 
     <header>
         <img src="image/logo.png" class="logo">
-        EAT IT  Cart 
-    <div class="search-container" role="search">
-    <input type="search" id="search-input"  placeholder="Search" class="search-bar" ></div>
+      <h1>EAT iT  Cart</h1>
 </header>
-    <br>
 
 
 <div class="product-card">
@@ -71,7 +85,7 @@
     <p><button class="btn-primary" ><a href="purchase.html">Checkout</a></button><button class="btn-secondary" id="buyall">Clear Cart</button>
 </div>
 <h2 style="color: rgb(7, 7, 7);text-align: center;">------ Recommended For you --------</h2>
-<div class="product-row Product">
+<div class="product-row Product classic">
     <img src="image/Spoon.jpeg" alt="Classic Spoon" class="product-img">
     <div>
       <h2>Edible Spoon</h2>
@@ -92,7 +106,7 @@
   </div>
 
 
-<div class="product-row Product">
+<div class="product-row Product cake">
     <img src="image/bowl2.jpeg" alt="Chocolate Spoon" class="product-img">
     <div>
         <h2>Edible Spoon</h2>
@@ -109,7 +123,7 @@
     </div>
   </div>
 
-<div class="product-row Product">
+<div class="product-row Product cake">
     <img src="image/fork2.jpeg" alt="Chocolate Fork" class="product-img">
     <div>
         <h2>Edible Fork</h2>
@@ -127,7 +141,7 @@
     </div>
   </div>
 
-<div class="product-row Product">
+<div class="product-row Product classic">
     <img src="image/Fork.jpeg" alt="Classic Fork" class="product-img">
     <div>
         <h2>Edible Fork</h2>
@@ -146,7 +160,7 @@
     </div>
   </div>
 
-<div class="product-row Product">
+<div class="product-row Product classic">
     <img src="image/bowl.jpeg" alt="Classic Bowl" class="product-img" >
     <div>
         <h2>Edible Bowl</h2>
@@ -164,7 +178,7 @@
     </div>
   </div>
 
-<div class="product-row Product">
+<div class="product-row Product cake">
     <img src="image/spoon2.jpeg" alt="Chocolate Bowl" class="product-img" >
     <div>
         <h2>Edible Bowl</h2>

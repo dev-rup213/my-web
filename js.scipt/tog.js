@@ -66,7 +66,7 @@ document.querySelectorAll('.side-nav-links a').forEach(link => {
             return;
          }
         if (total >= 500) {
-            document.getElementById("delivery").innerText = "Estimated delivery time : Within 1 day";
+            document.getElementById("delivery").innerText = "Just wait i am coming baby!!!";
             return;
         }
 

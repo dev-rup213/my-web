@@ -1,4 +1,61 @@
-const searchinput = document.getElementById("search-input")
+// Toggle Search Bar
+const searchWrapper = document.querySelector('.search-wrapper');
+const searchInput = document.getElementById('search-input');
+const searchIcon = document.getElementById('search-btn');
+
+// When clicking the wrapper or icon, toggle 'active'
+searchWrapper.addEventListener('click', (e) => {
+    searchWrapper.classList.toggle('active');
+    if (searchWrapper.classList.contains('active')) {
+        searchInput.focus();
+    }
+});
+
+
+// Prevent search bar from closing when clicking inside the input
+searchInput.addEventListener('click', (e) => {
+    e.stopPropagation();
+});
+
+// Close search if clicking outside
+document.addEventListener('click', (e) => {
+    if (!searchWrapper.contains(e.target)) {
+        searchWrapper.classList.remove('active');
+    }
+});
+const searchwrapper = document.querySelector('.mobile-only-search');
+const search = document.getElementById('mobile-search-input');
+const mobile = document.querySelectorAll('.mobile')
+const Icon = document.getElementById('search-btn');
+// When clicking the wrapper or icon, toggle 'active'
+searchwrapper.addEventListener('click', (e) => {
+    searchwrapper.classList.toggle('active');
+    if (searchwrapper.classList.contains('active')) {
+        search.focus();
+        mobile.forEach(item => item.style.display = "none");
+    }
+    else {
+      mobile.forEach(item => item.style.display = "");
+    }
+});
+
+
+// Prevent search bar from closing when clicking inside the input
+search.addEventListener('click', (e) => {
+    e.stopPropagation();
+});
+
+// Close search if clicking outside
+document.addEventListener('click', (e) => {
+    if (!searchwrapper.contains(e.target)) {
+        searchwrapper.classList.remove('active');
+        mobile.forEach(item => item.style.display = "");
+    }
+});
+
+
+
+const searchinput = document.getElementById("search-input");
 const products = document.querySelectorAll(".help-card")
 const noResult = document.getElementById("noResults")
 searchinput.addEventListener("input",function(){
@@ -10,7 +67,7 @@ searchinput.value.toLowerCase().trim();
         const text =
         Product.innerText.toLowerCase();
         if (text.includes(query)) {
-            Product.style.display = "";
+            Product.style.display = "block";
             matchfound= true;
         }
         else{
@@ -23,14 +80,34 @@ searchinput.value.toLowerCase().trim();
         
     });
 
-const search = document.getElementById("search-btn");
-const container = document.getElementById("search-input")
 
-search.onclick = () => {
 
-        container.style.display = "block";
 
-    }
+
+const Searchinput = document.getElementById("mobile-search-input");
+const Products = document.querySelectorAll(".help-card")
+const NoResult = document.getElementById("noResults")
+Searchinput.addEventListener("input",function(){
+    const query =
+Searchinput.value.toLowerCase().trim();
+    let matchfound = false;
+
+    Products.forEach(Product => {
+        const text =
+        Product.innerText.toLowerCase();
+        if (text.includes(query)) {
+            Product.style.display = "block";
+            matchfound= true;
+        }
+        else{
+            Product.style.display = "none";
+
+
+        }
+        });
+        NoResult.style.display = matchfound ? "none" : "block" ;
+        
+    });
 // Side Nav Toggle
 const navOpen = document.getElementById('navOpen');
 const navClose = document.getElementById('navClose');

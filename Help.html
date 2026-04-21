@@ -22,11 +22,15 @@
         <a  href="purchase.html">Orders</a>
         <a class="active" herf="Help.html">Help</a>
     </div>
+        <div class="search-wrapper" id="searchWrapper">
+        <i class="fa-solid fa-search" id="search-trigger"></i>
+        <input type="search" id="search-input" placeholder="Search eco-products...">
+    </div>      
     </div>
         <div class="side-nav-overlay" id="navOverlay"></div>
   <nav class="side-nav" id="sideNav">
     <div class="side-nav-header">
-      <img src="image/Picture1.png" alt="EAT IT" style="height:32px;"><span>EAT IT</span>
+      <img src="image/logo.png" alt="EAT IT" style="height:32px;"><span>EAT IT</span>
       <button class="side-nav-close" id="navClose">
         <i class="fa-solid fa-xmark"></i>
       </button>
@@ -48,19 +52,20 @@
         <i class="fa-solid fa-bars"></i>
       </button>
       <div class="mobile-icons">
-        <i class="fa-solid fa-search" id="search-btn"></i>
-        <a href="cart2.html"><i class="fa-solid fa-bag-shopping"></i></a>
-        <a><i class="fa-solid fa-toolbox"></i></a>
-        <a><i class="fa-solid fa-tools"></i></a>
+              <div class="search-wrapper mobile-only-search">
+        <i class="fa-solid fa-search"></i>
+        <input type="search" id="mobile-search-input" placeholder="Search...">
+      </div>
+        <a href="cart2.html" class="mobile"><i class="fa-solid fa-bag-shopping"></i></a>
+        <a class="mobile"><i class="fa-solid fa-toolbox"></i></a>
+        <a class="mobile"><i class="fa-solid fa-tools"></i></a>
       </div>
     </div>
   </header>
 
     <header>
         <img src="image/logo.png" class="logo">
-        Help Center 
-    <div class="search-container" role="search">
-    <input type="search" id="search-input"  placeholder="Search" class="search-bar" ></div>   
+     <h1>Help Center</h1>    
 </header>
         <section id="Orders" class="help">
         <div class="help-card">

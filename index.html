@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/all.min.css">
    <script src="js.scipt/btn.js"defer></script>
-
 <body>
       <div class="topnav" role="navigation">
       <div id="nav-links">
@@ -19,12 +18,16 @@
         <a href="cart2.html">Cart</a>
         <a  href="purchase.html">Orders</a>
         <a href="Help.html">Help</a>
-      </div>      
+      </div>
+    <div class="search-wrapper" id="searchWrapper">
+        <i class="fa-solid fa-search" id="search-trigger"></i>
+        <input type="search" id="search-input" placeholder="Search eco-products...">
+    </div>      
       </div>
     <div class="side-nav-overlay" id="navOverlay"></div>
   <nav class="side-nav" id="sideNav">
     <div class="side-nav-header">
-      <img src="image/Picture1.png" alt="EAT IT" style="height:32px;"><span>EAT IT</span>
+      <img src="image/logo.png" alt="EAT IT" style="height:32px;"><span>EAT IT</span>
       <button class="side-nav-close" id="navClose">
         <i class="fa-solid fa-xmark"></i>
       </button>
@@ -39,38 +42,35 @@
     </div>
   </nav>
 
-  <!-- Your existing header -->
+
   <header class="site-header">
     <div class="mobile-header-bar">
       <button class="hamburger" id="navOpen">
         <i class="fa-solid fa-bars"></i>
       </button>
       <div class="mobile-icons">
-        <i class="fa-solid fa-search" id="search-btn"></i>
-        <a href="cart2.html"><i class="fa-solid fa-bag-shopping"></i></a>
-        <a href="help.html"><i class="fa-solid fa-headset"></i></a>
+      <div class="search-wrapper mobile-only-search">
+        <i class="fa-solid fa-search"></i>
+        <input type="search" id="mobile-search-input" placeholder="Search...">
+      </div>
+        <a href="cart2.html"class="mobile"><i class="fa-solid fa-bag-shopping"></i></a>
+        <a href="help.html" class="mobile"><i class="fa-solid fa-headset"></i></a>
       </div>
     </div>
   </header>
 
-    <header class="Product" role="banner">
-    <img src="image/logo.png" class="logo" alt="company logo">
-    <h1>Eat It Edible Utensils Pvt. Ltd</h1>
-    <p>Eco-friendly. Edible. Exceptional.</p>
-    <div class="search-container" role="search">
-    <input type="search" id="search-input"  placeholder="Search" class="search-bar" ></div>
-
-
-  </header>
-  
-  
-  
-  
-
+    <header  role="banner">
+   <img src="image/logo.png" class="logo">
+    <h1>EAT iT Pvt. Ltd</h1>
+    
+    </header>
+      <p class="tag-line">"Eco-friendly, Edible, Exceptional"</p>
   <section id="about" class=" about Product" role="definition">
-    <h2 style="color: #000000;">About Us</h2>
+
+    <h2 style="color: #000000;">About Us</h2>  
     <p style="color: #070707;font-size: 20px;">
-      Eat It Edible Utensils Pvt. Ltd is dedicated to reducing plastic waste by offering 100% biodegradable, edible cutlery and tableware. Our products are made from natural ingredients and are safe, sustainable, and delicious.
+      EAT iT Edible Utensils Pvt. Ltd is dedicated to reducing plastic waste by offering 100% biodegradable, edible cutlery and tableware. Our products are made from natural ingredients and are safe, sustainable, and delicious.
+
     </p>
   </section>
 

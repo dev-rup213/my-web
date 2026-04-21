@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/all.min.css">
   <script src="js.scipt/script2.js"defer></script>
   <script src="js.scipt/search2.js"defer></script>
+  <script src="js.scipt/filter1.js"defer></script>
 </head>
 <body>
   <div class="topnav">
@@ -21,12 +22,16 @@
     <a  href="purchase.html">Orders</a>
     <a href="Help.html">Help</a>
   </div>
+      <div class="search-wrapper" id="searchWrapper">
+        <i class="fa-solid fa-search" id="search-trigger"></i>
+        <input type="search" id="search-input" placeholder="Search eco-products...">
+    </div>      
   </div>
   <!-- Side Nav Drawer -->
   <div class="side-nav-overlay" id="navOverlay"></div>
   <nav class="side-nav" id="sideNav">
     <div class="side-nav-header">
-      <img src="image/Picture1.png" alt="EAT IT" style="height:32px;"><span>EAT IT</span>
+      <img src="image/logo.png" alt="EAT IT" style="height:32px;"><span>EAT iT</span>
       <button class="side-nav-close" id="navClose">
         <i class="fa-solid fa-xmark"></i>
       </button>
@@ -48,9 +53,18 @@
         <i class="fa-solid fa-bars"></i>
       </button>
       <div class="mobile-icons">
-        <i class="fa-solid fa-search" id="search-btn"></i>
-        <a href="cart2.html"><i class="fa-solid fa-bag-shopping"></i></a>
-        <a href="help.html"><i class="fa-solid fa-headset"></i></a>
+              <div class="search-wrapper mobile-only-search">
+        <i class="fa-solid fa-search"></i>
+        <input type="search" id="mobile-search-input" placeholder="Search...">
+      </div>
+        <a href="cart2.html" class="mobile"><i class="fa-solid fa-bag-shopping"></i></a>
+        <a href="help.html"class="mobile"><i class="fa-solid fa-headset"></i></a>
+            <select id="select1"class="mobile" ><option value="all">All
+    </option>
+  <option value="classic">Classic</option>
+  <option value="cake">Chocolate</option>
+</select>
+
       </div>
     </div>
     <!-- rest of your header... -->
@@ -62,103 +76,107 @@
   
   <header>
     <img src="image/logo.png" class="logo">
-    Eat IT stores<div class="some"><a href="cart2.html"><i class="fa-solid fa-shopping-cart" style="color: white"></i></a><span id="storecart1">: 0</span></div>
-    <div class="search-container" role="search">
-    <input type="search" id="search-input"  placeholder="Search" class="search-bar" ></div>
-</header>
-
+   <h1>EAT iT stores</h1>
+  </header>
   <div class="main-section">
    <div class="cart-section">
    <div style="background-color: #fffefe;color: black;border-top: 1px solid;border-bottom: 1px solid;padding: 10px;margin: 10px;border-radius: 8px;box-shadow: 2px 4px 8px rgb(34, 34, 34);"><a style="margin-left: 20px;"class="car">🛒My Cart:
     <a id="storecart"class="car">Items Seleted: 0</a><a id="total" class="car">Total price: 0</a> 
-    <button id="remove" class="less-cart" style="background-color: rgb(250, 84, 84);color: #fffefe;border-color: red;height: 30px;width: 90px;cursor: pointer;margin-bottom: 10px;border-radius: 20px;">Remove all</button>
-    <button style="background-color: darkgreen;color: ghostwhite;border-color: darkgreen;height: 30px;width: 90px;cursor: pointer;margin-left: 200px;margin-bottom: 10px;margin-left: 20px;border-radius: 20px;"><a href="purchase.html" style="text-decoration: no;">Buy Now</a></button>
+    <select id="select" ><option value="all">All
+    </option>
+  <option value="classic">Classic</option>
+  <option value="cake">Chocolate</option>
+</select>
+    <button id="remove" class="less-cart button" style="background-color: rgb(250, 84, 84);color: #fffefe;border-color: red;height: 30px;width: 90px;cursor: pointer;margin-bottom: 10px;border-radius: 20px;">Remove all</button>
+    <button class="button" style="background-color: darkgreen;color: ghostwhite;border-color: darkgreen;height: 30px;width: 90px;cursor: pointer;margin-left: 200px;margin-bottom: 10px;margin-left: 20px;border-radius: 20px;"><a href="purchase.html" style="text-decoration: no;">Checkout</a></button>
 
     </a></div>
    </div>
   </div>
   <div class="product-grid ">
-    <div class="product-card">
+    <div class="product-card  classic ">
       <h3>Classic Spoon</h3>
       <img src="image/Spoon.jpeg" alt="Classic spoon">
       <p>Packet: 1</p>
       <p>No. of Spoon: 10</p>
-      <p>Price: 30Rs.</p>
+      <p class="price">₹30</p>
       <p>Delivery time: 3-4 days</p>
-      <button ><a href="cart2.html">Go to Cart</a></button><div class="section" ><button id="bot1" class="add-cart">+ Add to Cart</button></div>
+      <div class="section" ><button id="bot1" class="add-cart">+ Add to Cart</button></div>
     </div> 
-    <div class="product-card">
+    <div class="product-card  cake ">
       <h3>Chocolate Spoon</h3>
       <img src="image/bowl2.jpeg" alt="Chocolate spoon">
       <p>Packet: 1</p>
       <p>No. of Spoon: 10</p>
-      <p>Price: 35Rs.</p>
+      <p class="price">₹35</p>
       <p>Delivery time: 3-4 days</p>
-      <button ><a href="cart2.html">Go to Cart</a></button><div class="section" >  <button id="bot2" class="add-cart">+ Add to Cart</button></div> 
+      <div class="section" >  <button id="bot2" class="add-cart">+ Add to Cart</button></div> 
     
     </div>
-    <div class="product-card ">
+    <div class="product-card  classic ">
       <h3>Classic Fork</h3>
       <img src="image/Fork.jpeg" alt="Classic Fork">
       <p>Packet: 1</p>
       <p>No. of Fork: 10</p>
-      <p>Price: 30Rs.</p>
+      <p class="price">₹30</p>
       <p>Delivery time: 3-4 days</p>
-      <button ><a href="cart2.html">Go to Cart</a></button><div class="section" >  <button id="bot3" class="add-cart">+ Add to Cart</button></div>
+      </button><div class="section" >  <button id="bot3" class="add-cart">+ Add to Cart</button></div>
     </div>
-    <div class="product-card">
+    <div class="product-card  cake ">
       <h3>Chocolate Fork</h3>
       <img src="image/fork2.jpeg" alt="Chocolate Fork">
       <p>Packet: 1</p>
       <p>No. of Fork: 10</p>
-      <p>Price: 35Rs.</p>
+      <p class="price">₹35</p>
       <p>Delivery time: 3-4 days</p>
-      <button ><a href="cart2.html">Go to Cart</a></button><div class="section" >  <button id="bot4" class="add-cart">+ Add to Cart</button></div>     
+      <div class="section" >  <button id="bot4" class="add-cart">+ Add to Cart</button></div>     
 
     </div>
     
-    <div class="product-card ">
+    <div class="product-card  classic ">
       <h3>Classic Cutlary set</h3>
       <img src="image/cutlery set.jpeg" alt="Classic Set">
       <p>Packet: 1</p>
       <p>Fork: 12; Spoon: 12; Bowl: 6</p>
-      <p>Price: 100Rs.</p>
+      <p class="price">₹100</p>
       <p>Delivery time: 3-4 days</p>
-      <button ><a href="cart2.html">Go to cart</a></button><div class="section" > <button id="bot5" class="add-cart" >+ Add to Cart</button></div>
+      <div class="section" > <button id="bot5" class="add-cart" >+ Add to Cart</button></div>
     </div>
-    <div class="product-card">
+    <div class="product-card  cake ">
       <h3>Chocolate Cutlary Set</h3>
       <img src="image/cutlery set.jpeg" alt="Chocolate Set">
       <p>Packet: 1</p>
       <p>Item consists same as Classic</p>
-      <p>Price: 120Rs.</p>
+      <p class="price">₹120</p>
       <p>Delivery time: 4-5 days</p>
-      <button ><a href="cart2.html">Go to Cart</a></button><div class="section" >  <button id="bot6" class="add-cart">+ Add to Cart</button></div>
+      <div class="section" >  <button id="bot6" class="add-cart">+ Add to Cart</button></div>
     </div>
-    <div class="product-card ">
+    <div class="product-card  classic ">
       <h3>Classic Bowl</h3>
       <img src="image/bowl.jpeg" alt="Classic bowl">
       <p>Packet: 1</p>
       <p>No. of Bowl: 10</p>
-      <p>Price: 60Rs.</p>
+      <p class="price">₹60</p>
       <p>Delivery time: 3-4 days</p>
-      <button ><a href="cart2.html">Go to Cart</a></button><div class="section" >  <button id="bot7" class="add-cart">+ Add to Cart</button></div> 
+      <div class="section" >  <button id="bot7" class="add-cart">+ Add to Cart</button></div> 
     </div>
-    <div class="product-card">    
+    <div class="product-card  cake ">    
       <h3>Chocolate Bowl</h3>
       <img src="image/spoon2.jpeg" alt="Chocolate bowl">
       <p>Packet: 1</p>
       <p>No. of Bowl: 10</p>
-      <p>Price: 70Rs.</p>
+      <p class="price">₹70</p>
       <p>Delivery time: 3-4 days</p>
-      <button ><a href="cart2.html">Go to Cart</a></button><div class="section" >  <button id="bot8" class="add-cart">+ Add to Cart</button></div> 
+     <div class="section" >  <button id="bot8" class="add-cart">+ Add to Cart</button></div> 
 
     </div>
 
   </div>
   </div>
          <div class="sticky">
-      <span id="amount">Total amount:</span><a href="purchase.html">Pay Now</a>
+      <span id="amount">Total amount:</span><div class="some"><i class="fa-solid fa-shopping-cart" style="color: rgb(0, 0, 0)"></i><span id="storecart1">: 0</span></div>
+      <br>
+      <p><a href="purchase.html">Pay Now</a></p>
     </div>
    <p id="noResults" style="display: none;text-align: center;font-size: 24px;">No product found</p>
 

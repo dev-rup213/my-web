@@ -5,7 +5,7 @@
     /* Brand Colors (Greens) */
     --primary: #2e7d32;       /* Forest Green */
     --primary-light: #4caf50; /* Eco Green */
-    --secondary: #db1515;    /* Earthy Brown */
+    --secondary:  rgb(250, 84, 84);    /* Earthy Brown */
     --bg-light: #f5f5f5;     /* Very Light Green Tint */
     --text-main: #1b5e20;    /* Dark Green Text */
     --white: #ffffff;
@@ -31,17 +31,7 @@ body {
 /* --- Professional Components --- */
 
 /* Modernized Header (Matches your script logic) */
-.main-header {
-    background: var(--primary);
-    color: white;
-    padding: var(--space-md) 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    top: 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    font-family: 'Inter', sans-serif;
-}
+
 
 /* Flexible Grid for Cart & Store */
 .product-grid {
@@ -103,8 +93,3 @@ p {
     font-size: 18px;
 }
 
-/* Mobile Fix */
-@media (max-width: 768px) {
-    .product-grid { grid-template-columns: 1fr; }
-    .main-header { flex-direction: column; gap: 10px; }
-}

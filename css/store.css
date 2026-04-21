@@ -8,6 +8,38 @@
 
 
     }
+    select{
+      position: relative;
+      margin-left: 30px;
+      padding: 5px;
+      line-height: 1.5;
+      border: 1px solid white;
+      outline: none;
+      font-size: 18px;
+      border-radius: 8px;
+      background-color: rgba(0,0,0,0.1);
+      transition: border-color 0.2s ease;
+      cursor: pointer;
+      color: rgb(0, 0, 0);
+   
+    }
+    select:focus{
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(0 ,0 , 0 ,0.2);
+      color: rgb(0, 0, 0);
+    }
+    select:active{
+      color: #e9e9e9;
+    }
+    .price{
+      font-size: 32px;
+      font-weight: 600;
+      color: #000000;
+    }
+    option {
+      border-radius: 8px;
+      font-size: 18px;
+    }
     .product-card{
       box-sizing: border-box;
       border:none;
@@ -36,9 +68,8 @@
     .product-card img{
       width: 100%;
       height: 100%;
-      max-width: 200px;
       max-height: 200px;
-      
+      border-radius: 50px;
       object-fit: cover;
       margin-bottom: 10px;
       transition: all 0.2s ease;
@@ -50,7 +81,7 @@
       box-shadow: 0 4px 8px rgb(0, 0, 0);
     }
     .product-card button{
-    background: #4caf50;
+    background:#2f2f2f;
     color: #fafafa;
     border: none;
     padding: 10px 20px;
@@ -60,7 +91,7 @@
     }
 
     .product-card button:hover{
-    background: #89ff77;
+    background: #2f2f2f ;
     color: #fefdfd;
     transform: translateX(-4px);
     transform: translatey(-2px);
@@ -126,8 +157,10 @@
     }
     .section button{
       margin-left: 10px;
-      background-color: #2f2f2f;border-color: #e9e9e9;color: white;border-width: 1px;border-style: solid;
+      background-color: #4caf50 ;border-color: #e9e9e9;color: white;border-width: 1px;border-style: solid;
       border-radius: 8px;
+      font-size: 24px;
+      font-weight: 600;
     }
     .section button:hover{
     background-color: #afd5a9;
@@ -162,6 +195,14 @@
       
 
     }
+    #search-btn {
+    display: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    padding: 16px;
+    background: transparent;
+}
     .cart-section div button a{
       font-size: 13px;
       color: #f9f6f6;
@@ -206,9 +247,11 @@
     text-decoration: none;
     background-color: #4caf50;
     color: white;
-    padding: 20px;
+    padding: 10px;
     border-radius: 	20px;
     font-weight: bold;
+    float: right;
+    margin-bottom: 20px;
   }
   .sticky a:hover{
     background-color: #81fd89;
@@ -217,24 +260,22 @@
     /* 📱 MOBILE FIXES */
 @media (max-width: 768px) {
 
-  /* NAVBAR STACK */
-  .topnav a {
-    font-size: 12px;
-  }
-
-  .topnav input[type=text] {
-    float: none;
-    width: 90%;
-    margin: 10px;
-  }
-
   /* HEADER */
-  header {
-    font-size: 32px;
-  }
+    #search-btn {
+        display: block;
+        margin-right: auto;
+          background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.5rem;
+    }
 
   /* GRID SMALLER */
-
+    select{
+      margin-left: 10px;
+    }
 
   /* STACK LAYOUT */
   .main-section {
@@ -254,8 +295,9 @@
   }
 
   .product-card img{
-    height: 120px;
-    width: 180px;
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
   }
   .cart-section button{
     width: 90px;
@@ -266,31 +308,30 @@
     font-size: 18px;
   }
   .product-card{
-    height: 480px;
+    height: 600px;
     line-height: 1.4;
   }
+  
+  .cart-section {
+    padding: 1rem;
+    border: 1px solid white;
+    margin-left: 2.5rem;
+    width: 30px;
+  }
   .some{
-    display: inline;
+    display: block;
     float: right;
     font-size: 24px;
+    margin-right: 10px;
   }
   .sticky {
-        display: flex;
+        display: block;
         width: 95%;
+        height: 100px;
 
     }
-
-  /* TEXT SCALE */
-  h2 {
-    font-size: 24px;
-  }
-
-  h3 {
-    font-size: 22px;
-  }
-
-  p {
-    font-size: 18px;
+  select{
+    color: white;
   }
 }
 

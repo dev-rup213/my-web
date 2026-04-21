@@ -1,19 +1,4 @@
 
-
-    header h1 {
-      margin: 0;
-    font-size: clamp(1.8rem, 5vw, 2.8rem);
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
-    }
-
-
-    .Search:hover{
-
-    border-color: #2196f3;
-    }
-
-
-
     section {
       padding: 2rem;
       font-size: large;
@@ -42,7 +27,7 @@
     .product-card {
 
       padding: 1rem;
-      border-radius: 8px;
+      border-radius: 100px 8px;
       text-align: center;
       height: max-content;
       box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.8);
@@ -52,6 +37,14 @@
       transition: all 0.2s ease;
       font-weight: 500;
     }
+    #search-btn {
+    display: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    padding: 16px;
+    background: transparent;
+}
     .product-card:hover{
 
       transform: translatey(-20px);
@@ -70,6 +63,10 @@
     .product-card p{
       font-weight: 400;
     }
+    .tag-line {
+      font-style: italic;text-align: center;color: #013b01;font-weight: 600;
+      font-size: 32px;
+    }
 
     .about h2{
       color: #030303;
@@ -81,17 +78,19 @@
           border-radius: 8px;
           line-height: 1.8;
           color: #030303;
-          border: 1px solid rgb(190, 184, 184);
           box-shadow: 2px 4px 4px black;
           box-sizing: border-box;
           background: rgb(255, 254, 254);
+          font-style: italic;
          
 
     }
     .product-card img {
       height: 300px;
       width: 100%;
-      border-radius: 12px;
+      border-radius: 50%;
+      object-fit: 	cover;
+      aspect-ratio: 1/1;
     }
 
     .shop-btn{
@@ -120,21 +119,9 @@
 
     @media (max-width: 768px) {
 
-  header{
-    font-size: 32px;
+  .complex{
+    text-align: center;
   }
-
-  .topnav a {
-    font-size: 12px;
-  }
-  .topnav input[type=search]{
-    float: none;
-    width: 90%;
-    margin: 10px;
-
-  }
-
-
   .h1{
     font-size: 24px;
   }
@@ -148,6 +135,19 @@
     font-size: 14px;
     line-height: 1.6;
   }
+      #search-btn {
+        display: block;
+        margin-right: auto;
+          background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.5rem;
+    }
+    .tag-line{
+      font-size: 24px;
+    }
     }
   @media  (max-width: 768px){
       .Search{

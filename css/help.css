@@ -78,6 +78,14 @@
 
 
     }
+    #search-btn {
+    display: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    padding: 16px;
+    background: transparent;
+}
     .shd-btn{
         border-radius: 8px;
         height: 35px;
@@ -107,5 +115,15 @@
   .para{
     font-size: 24px;
   }
+      #search-btn {
+        display: block;
+        margin-right: auto;
+          background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.5rem;
+    }
 }
     
