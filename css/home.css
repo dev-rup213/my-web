@@ -60,9 +60,6 @@
       font-size: 24px;
     }
 
-    .product-card p{
-      font-weight: 400;
-    }
     .tag-line {
       font-style: italic;text-align: center;color: #013b01;font-weight: 600;
       font-size: 32px;
@@ -116,6 +113,160 @@
       text-align: center;
       padding: 1rem;
     }
+    .mysection{
+      background-color: white;
+      padding: 1.5rem;
+      display: block;
+      border-radius: 200px;
+      box-sizing: content-box;
+      height: max-content;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 2px 4px #444;
+      margin: 50px auto 50px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+    .mysection:hover{
+      transform: translateY(-20px);
+      cursor: pointer;
+      box-shadow: 2px 4px 8px #030303;
+
+    }
+    .fadeIn {
+      opacity: 0;
+      animation: fadeIn 5s ease forwards 1;
+
+    }
+    .offer{
+      font-weight: 600;
+    }
+    .discountflicker{
+      font-weight: 600;
+      color: #1a7f3c;
+      animation: discountpulse 1.5s ease 100;
+    }
+    .product-slider {
+  position: relative;
+  margin: 0 auto 3rem;
+  max-width: 980px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.slider-view {
+  overflow: hidden;
+  flex: 1;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 1rem;
+}
+
+.slider-slide {
+  min-width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.slider-slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  align-items: center;
+}
+.shop-btn-overlay{
+  position: absolute;
+  bottom: 16px;
+  right: 450px;
+  background: #1a7f3c;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 24px;
+  z-index: 5;
+  backdrop-filter: blur(4px);
+  background: rgba(26,127,60,0.9)
+  ;
+  transition: background .2s transform .2s;
+
+
+}
+.shop-btn-overlay:hover{
+  background: #2e7d32;
+  transform: scaleX(1);
+}
+
+.slider-control {
+  background: rgba(46, 125, 50, 0.1);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  color: var(--primary);
+  display: grid;
+  place-items: center;
+  transition: background 0.3s ease;
+}
+
+.slider-control:hover {
+  background: rgba(46, 125, 50, 0.25);
+}
+
+@media (max-width: 768px) {
+  .product-slider {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .slider-slide img {
+    height: 220px;
+  }
+  .slider-control {
+    width: 38px;
+    height: 38px;
+  }
+  .shop-btn-overlay{
+    font-size: 14px;
+    right: 16px;
+  }
+}
+    @keyframes fadeIn {
+      from{
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+
+    }
+    @keyframes discountpulse {
+      0%,100% {color: #1a7f3c;transform: scale(1);}
+      25% {color: #ea580c}
+      50% {transform: scale(1.06);}
+    }
+    .mysection h2{
+      color: #2e7d32;
+    }
+    .myimg{
+      width:100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
 
     @media (max-width: 768px) {
 
@@ -147,6 +298,10 @@
     }
     .tag-line{
       font-size: 24px;
+    }
+    .mysection{
+      display: flex;
+      flex-wrap: wrap;
     }
     }
   @media  (max-width: 768px){

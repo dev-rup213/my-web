@@ -14,7 +14,7 @@
         color: aliceblue;
     }
     p{
-        line-height: 1.4;
+        line-height: 1.6;
     }
     .pls{
         margin-top: 10px;
@@ -85,11 +85,17 @@
         padding: 20px;
         font-size: 24px;
         
+        
+    }
+    .highlight{
+        font-weight: 700;
+        font-size: 24px;
     }
     .section button{
         width: 100px;
         background-color: chartreuse;
     }
+
 
     .col a{
         text-decoration: none;

@@ -25,6 +25,23 @@ body {
 body {
   overflow-x: hidden;
 }
+    .oldprice{
+        text-decoration: line-through;
+        opacity: 0.6;
+    }
+    .offer{
+      font-weight: 600;
+    }
+    .discountflicker{
+      font-weight: 600;
+      color: #1a7f3c;
+      animation: discountpulse 1.5s ease infinite;
+    }
+    @keyframes discountpulse {
+      0%,100% {color: #1a7f3c;transform: scale(1);}
+      25% {color: #ea580c}
+      50% {transform: scale(1.06);}
+    }
 
 h1, h2, h3, .logo-text {
     font-family: 'Montserrat', sans-serif;
@@ -275,6 +292,9 @@ body.nav-open .side-nav {
 body.nav-open .side-nav-overlay {
   opacity: 1;
   visibility: visible;
+}
+#noResults{
+  color: black;
 }
 
 /* Show hamburger on mobile, hide desktop nav */

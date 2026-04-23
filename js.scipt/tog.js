@@ -114,8 +114,10 @@ tiles.forEach(tile => {
         document.getElementById("pay").onclick = () => {
         removeCart();
         const total = displayFinalTotal();
-        document.getElementById("delivery").innerText = "Your Cart is empty !!"; 
+        document.getElementById("delivery").innerText = "Your Cart is empty !!";
+        alert("Please wait....");
         alert("Thank you for choosing sustainability! Your order has been placed amounting.");
+
         
            
         };

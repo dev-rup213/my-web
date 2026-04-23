@@ -118,12 +118,19 @@ input {
   cursor: pointer;
   float: right;
 }
+.pay-btn:hover{
+  background-color: rgb(6, 174, 20);
+}
 .total-box{
     font-size: 18px;
     margin: 20px;
 }
 .feedback-btn{
     display: inline-block;padding: 14px 28px;background-color: rgb(4, 142, 45);color: white ;text-decoration: none;border-radius: 8px; font-weight: 600;
+}
+.feedback-btn:hover{
+  background:rgb(6, 174, 20) ;
+
 }
 
 @media (max-width: 768px) {

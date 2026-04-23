@@ -16,7 +16,7 @@
     }
     .product-row:hover{
       transform: translateX(-4px);
-      transform: translatey(-4px);
+      transform: translatey(-12px);
       box-shadow: 0 8px 12px rgb(23, 23, 23);
       transform: translateZ(50px);
       cursor: pointer;

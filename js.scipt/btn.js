@@ -143,3 +143,27 @@ document.querySelectorAll('.side-nav-links a').forEach(link => {
     link.style.fontWeight = '600';
   }
 });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const track = document.querySelector(".slider-track");
+    const slides = Array.from(document.querySelectorAll(".slider-slide"));
+    const prev = document.querySelector(".slider-control.prev");
+    const next = document.querySelector(".slider-control.next");
+    let index = 0;
+
+    const update = () => {
+      track.style.transform = `translateX(-${index * 100}%)`;
+    };
+
+    prev?.addEventListener("click", () => {
+      index = (index - 1 + slides.length) % slides.length;
+      update();
+    });
+
+    next?.addEventListener("click", () => {
+      index = (index + 1) % slides.length;
+      update();
+    });
+
+    window.addEventListener("resize", update);
+  });
